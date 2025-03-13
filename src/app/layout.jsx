@@ -4,6 +4,7 @@ import {
   Big_Shoulders_Display,
   Marcellus,
   Onest,
+  Arvo
 } from "next/font/google";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
@@ -11,6 +12,7 @@ import "./globals.scss";
 import "./globals.css";
 import Script from "next/script";
 import AnimationHeader from "../components/animation_header"
+
 const gellery = localFont({
   src: [
     {
@@ -74,6 +76,12 @@ const onEst = Onest({
   variable: "--tp-ff-onest",
 });
 
+const arvo = Arvo({
+  weight: ["400", "700" ],
+  subsets: ["latin"],
+  variable: "--tp-ff-arvo",
+});
+
 export const metadata = {
   title: "Secure 365 - Cybersecurity Solutions & Digital Portfolio",
   description:
@@ -85,7 +93,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressHydrationWarning={true}
-      // className={`${onEst.variable}`}
+      className={`${onEst.variable}`}
     >
       <head>
         <title>Secure 365 - A Creative Portfolio Template</title>
@@ -139,17 +147,7 @@ export default function RootLayout({ children }) {
       <body
         id="body"
         suppressHydrationWarning={true}
-        className={`
-          ${gellery.variable} 
-          ${onEst.variable} 
-          ${aladin.variable} 
-          ${syne_body.variable} 
-          ${syne_heading.variable} 
-          ${syne_p.variable} 
-          ${syne.variable} 
-          ${big_shoulders.variable} 
-          ${marcellus.variable} 
-          `}
+        className={`${gellery.variable} ${aladin.variable} ${syne_body.variable} ${syne_heading.variable} ${syne_p.variable} ${syne.variable} ${big_shoulders.variable} ${marcellus.variable} `}
       >
         <ThemeProvider defaultTheme="light">
           <AnimationHeader/>
