@@ -8,6 +8,8 @@ import TeamOne from "@/components/team/team-one";
 import TestimonialOne from "@/components/testimonial/testimonial-one";
 import BlogOne from "@/components/blog/blog-one";
 import FooterFour from "@/layouts/footers/footer-four";
+import RealEstateSection from "@/components/about/about-six";
+import WebDevelopment from "@/components/about/about-seven";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -19,12 +21,11 @@ import ProjectOne from "@/components/project/project-one";
 import ProjectFour from "@/components/project/project-four";
 import ProjectFive from "@/components/project/project-five";
 import ProjectSix from "@/components/project/project-six";
-import RealEstateSection from "@/components/about/about-six";
-
 // import bannerDiv from "../../../public/assets/img/inner-faq/faq/InnerDiv.png";
 import bannerDiv from "../../public/assets/img/inner-faq/faq/InnerDiv.png";
 import SecureSection from "@/components/whysecure/SecureSection";
 import HeroBannerAi from "@/components/hero-banner/hero-banner-ai";
+
 
 
 
@@ -100,90 +101,27 @@ export default function Home() {
           {/* <AnimationHeader /> */}
           <div id="content-scroll">
             <div id="main">
-             {/* <HeroSection data={data?.featured_section_heading} /> **/ }
-             <HeroBannerAi />
-             <RealEstateSection />
+              {/* <HeroSection data={data?.featured_section_heading} /> */}
+              <HeroBannerAi />
+              <RealEstateSection />
+              {/* <WebDevelopment /> */}
+             
 
-{/* 
-              <BrandOne /> */}
+              {/* <BrandOne /> */}
+           
 
               <div id="main-content">
                 <div id="main-page-content">
                   <div id="itemsWrapperLinks">
                     <div id="itemsWrapper" className="webgl-fitthumbs fx-one relative">
-           
-                      {/* <div
-                        className="content-row full row_padding_left row_padding_right light-section fadeout-element pt-10"
-                        data-bgcolor="#ebebeb"
-                      >
-                        <h2 className="text-align-center h1-title">
-                          {data?.we_empower_businesses_data?.map(
-                            (item, index) => (
-                              <React.Fragment key={index}>
-                                {item.we_empower_businesses_heading}{" "}
-                                {item.we_empower_businesses_image && (
-                                  <span
-                                    className="has-scale-image hide-ball"
-                                    data-img={item.we_empower_businesses_image}
-                                    data-bgcolor="#000"
-                                  >
-                                    <div
-                                      class="hidden-image"
-                                      style={{
-                                        backgroundImage: `url(${item.we_empower_businesses_image})`,
-                                        backgroundColor: "rgb(0, 0, 0)",
-                                      }}
-                                    ></div>
-                                  </span>
-                                )}
-                              </React.Fragment>
-                            )
-                          )}
-                        </h2>
-                      </div> */}
-
-                      {/* <div
-                        className="content-row light-section flex items-center  md:flex-row flex-col aboutsec"
-                        data-bgcolor="#ebebeb"
-                      > 
-
-                        <div className="one_half">
-                        </div>
-
-                        <div className="one_half last">
-                          <p className="bigger has-shuffle">
-                            {data?.home_page_challenge_section_challenge}
-                          </p>
-                          <p className="has-opacity" data-delay="0">
-                            {data?.home_page_challenge_section_paragraph}
-                          </p>
-
-                          <div className="button-wrap right button-link has-animation">
-                            <div className="icon-wrap parallax-wrap">
-                              <div className="button-icon parallax-ele  ment">
-                                <i className="fa-solid fa-arrow-right"></i>
-                              </div>
-                            </div>
-                            <Link
-                              className="ajax-link"
-                              data-type="page-transition"
-                              href="/about-us"
-                            >
-                              <div className="button-text sticky right">
-                                <span data-hover="About Us">About Us</span>
-                              </div>
-                            </Link>
-                          </div>
-                        </div>
-                      </div> */}
-
+          
                       <PainSection />
-
+   
                       
                       {/* <!-- Row --> */}
                       <div
                         className="content-row full text-align-center dark-section d-mb-none"
-                        data-bgcolor="#ebebeb"
+                        data-bgcolor="#EBEBEB"
                       >
                         <div className="projects-list-wrapper invert-header-color">
                           <ul className="projects-list-captions">
@@ -193,7 +131,7 @@ export default function Home() {
                                 data-type="page-transition"
                                 href="project04.html"
                               ></Link>
-                              <span>Artificial Intelligence</span>
+                              <span className="onest_display">Artificial Intelligence</span>
                             </li>
                             <li data-centerline="OPEN">
                               <Link
@@ -236,7 +174,7 @@ export default function Home() {
                               <span>SEO & Marketing</span>
                             </li>
                           </ul>
-
+                          
                           <ul className="projects-list-images">
                             <li className="trigger-item">
                               <div className="img-mask">
@@ -371,6 +309,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              <div className="awardsSec pt-10" >
+              <AwardOne data={data} />
+            </div>
             </div>
 
             <footer className="clapat-footer hidden">
@@ -476,9 +418,7 @@ export default function Home() {
 
             
             
-            <div className="awardsSec">
-              <AwardOne data={data} />
-            </div>
+
 
              {/* securesec */}
              <SecureSection />

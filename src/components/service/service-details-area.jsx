@@ -76,7 +76,7 @@ export default function ServiceDetailsArea({ serviceBannerData }) {
                         <React.Fragment key={index}>
                           {console.log(item, "item")}
                           <li>
-                            <h3 class="h5-title">{item?.heading}</h3>
+                            <h3 className="h5-title">{item?.heading}</h3>
                             <p>{item?.paragraph}</p>
                           </li>
                         </React.Fragment>

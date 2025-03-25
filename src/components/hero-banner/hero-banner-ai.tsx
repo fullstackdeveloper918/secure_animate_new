@@ -9,7 +9,6 @@ const HeroBannerAi = () => {
 
   const { scrollY } = useScroll();
 
-  // Scroll-based movement for images
   const yLayer01 = useTransform(scrollY, [0, 800], [0, -500]);
   const yLayer02 = useTransform(scrollY, [0, 800], [-100, -800]);
   const yLayer03 = useTransform(scrollY, [0, 800], [0, -700]);
@@ -17,21 +16,7 @@ const HeroBannerAi = () => {
   const yLayer05 = useTransform(scrollY, [0, 800], [0, -400]);
   const yLayer07 = useTransform(scrollY, [0, 800], [0, -600]);
 
-  // Mouse movement effect
-  // useEffect(() => {
-  //   const handleMouseMove = (e) => {
-  //     const rect = document.getElementById("bannersection").getBoundingClientRect();
-  //     const x = (e.clientX - rect.left - rect.width / 2) / 10; // Increased movement
-  //     const y = (e.clientY - rect.top - rect.height / 2) / 10; // Increased movement
-  //     setMousePosition({ x, y });
-  //   };
 
-  //   const section = document.getElementById("bannersection");
-  //   section?.addEventListener('mousemove', handleMouseMove);
-  //   return () => section?.removeEventListener('mousemove', handleMouseMove);
-  // }, []);
-
-  // Scroll visibility logic
   useEffect(() => {
     const handleScroll = () => {
       const section = document.getElementById("bannersection");
@@ -44,7 +29,7 @@ const HeroBannerAi = () => {
       }
     };
 
-    handleScroll(); // Check immediately on mount
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -60,7 +45,7 @@ const HeroBannerAi = () => {
         <div className="container p-relative Zindex100">
           <div className="row justify-content-center">
             <div className="banner-data">
-              {/* Hero Title */}
+  
               <div className="tp-hero-title-wrap mb-35 p-relative">
                 <div className="tp-hero-title-box text-center p-relative Zindex100">
                   <h1 className="space-title">
@@ -89,7 +74,6 @@ const HeroBannerAi = () => {
                 </div>
               </div>
 
-              {/* Call-to-Action Button */}
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -106,7 +90,7 @@ const HeroBannerAi = () => {
           </div>
         </div>
 
-        {/* Parallax Image Layers */}
+
         <div className="bann-imgs-wrap"    id="man-section">
           <div className="bann-ai">
             <motion.img

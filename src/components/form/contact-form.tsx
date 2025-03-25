@@ -41,7 +41,7 @@ export default function ContactForm({btnCls=''}:IProps) {
         <input id='subject' {...register("subject")} type="text" placeholder="Your@email.com" />
         {/* <ErrorMsg msg={errors.subject?.message!} /> */}
       </div>
-      <div className="cn-contactform-input mb-25">
+      <div className="cn-contactform-input">
         <label>Message</label>
         <textarea id='message' {...register("message")} placeholder="Tell Us About Your Project"></textarea>
         {/* <ErrorMsg msg={errors.message?.message!} /> */}

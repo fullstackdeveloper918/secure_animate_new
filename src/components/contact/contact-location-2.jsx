@@ -45,11 +45,11 @@ const location_data = [
 ];
 const ContactLocationTwo = ({contactData}) => {
   return (
-    <div className="cn-contact-2-info-area pb-50 pt-90">
-      <div className="container container-1530">
+    <div className="cn-contact-2-info-area pb-90 pt-90">
+      <div className="container contact-container">
         <div className="row">
           {contactData && contactData?.contact_secure_loop.map((item,index) => (
-            <div key={index} className="col-xl-4 col-lg-4 col-md-6 contact-col">
+            <div key={index} className="col-xl-4 col-lg-6 col-md-6 contact-col">
               <div className={`cn-contact-2-content ${index+1  == 2 ? "mt-20" : ""} text-center`}>
               <div className="cn-contact-2-thumb d-flex justify-content-center">
                <Image
@@ -65,12 +65,7 @@ const ContactLocationTwo = ({contactData}) => {
                   <p>
                     {item?.contact_secure_paragraph}
                   </p>
-                  {/* <a className="pb-15" href={item.map} target="_blank">
-                    {item.address}
-                  </a>
-                  <a href={`mailto:${item.email}`}>{item.email}</a>
-                  {item.phone && <a href={`tel:${item.phone}`}>{item.phone}</a>} */}
-                  {/* {item.note && <span>{item.note}</span>} */}
+                  
                 </div>
               </div>
             </div>

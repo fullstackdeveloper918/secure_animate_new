@@ -48,9 +48,13 @@ const ContactMain = ({contactData}) => {
                 "url(/assets/img/home-01/team/team-details-bg.png)",
             }}
           >
+
+        
             <main>
               {/* hero area start */}
-              <div className="tm-hero-area tm-hero-ptb p-relative bann-p-block ">
+
+              
+              <div className="tm-hero-area tm-hero-ptb p-relative bann-p-block contact-banner">
                 <div className="container">
                   <div className="row">
                     <div className="col-xl-12">
@@ -67,12 +71,12 @@ const ContactMain = ({contactData}) => {
                   </div>
                 </div>
               </div>
+           
 
               <ContactTwo />
-
               <ContactLocationTwo contactData={contactData} />
 
-              <ContactLocation contactData={contactData} />
+              {/* <ContactLocation contactData={contactData} /> */}
             </main>
 
             <FooterFour />

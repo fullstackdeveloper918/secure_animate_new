@@ -9,7 +9,7 @@ import timing from "../../../public/images/timing.svg";
 
 export default function ContactTwo() {
   return (
-    <div className="cn-contactform-area cn-contactform-style p-relative pt-50 lg:pb-50 pb-100 bg-black">
+    <div className="cn-contactform-area cn-contactform-style p-relative pt-50 lg:pb-50 pb-100">
       <div className="ab-2-hero-social-wrap d-none d-xxl-block">
         <div className="ab-2-hero-social">
           <Social />
@@ -18,19 +18,9 @@ export default function ContactTwo() {
           <span>Follow us</span>
         </div>
       </div>
-      <div className="container">
+      <div className="container contact-container">
         <div className="row">
-          <div className="col-xl-5">
-            <div className="ab-about-category-title-box  p-relative w-full">
-              {/* <h4 className="ab-about-category-title">
-                Send a Message <br />
-                <span>Contact Us</span>
-              </h4>
-              <Image
-                className="ab-about-shape-1 d-none d-xl-block"
-                src={shape}
-                alt="shape"
-              /> */}
+          <div className="conatct-col ab-about-category-title-box p-relative col-xl-5 ">
               <div className="contactDiv">
                 <div className="innerDivConatct">
                   <span>
@@ -69,9 +59,8 @@ export default function ContactTwo() {
                     </div>
                 </div>
               </div>
-            </div>
           </div>
-          <div className="col-xl-7 lg:mt-8 mt-20">
+          <div className="conatct-col col-xl-7">
             <div className="cn-contactform-wrap">
               {/* form start */}
               <ContactForm />
