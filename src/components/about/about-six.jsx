@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./RealEstateSection.module.css"; // We will use CSS Modules for styling
 
 const RealEstateSection = () => {
@@ -21,6 +21,22 @@ const RealEstateSection = () => {
 
     observer.observe(section);
   }, []);
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY); // Update scroll position
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Adjust the formula to move the rocket further upwards
+  const rocketPosition = Math.min(scrollY / 4, 400); // Adjust 300 to move the rocket higher (the larger the value, the higher it moves)
 
   return (
     <section id="real-estate-section" className={styles.realEstateSection}>
@@ -40,7 +56,13 @@ const RealEstateSection = () => {
         </p>
       </div>
       <div className={styles.rocketContainer}>
-        <div className={styles.rocket}>
+        <div
+          className={styles.rocket}
+          style={{
+            transform: `translateY(-${rocketPosition}px)`, // Adjust the translateY to move up more
+            opacity: Math.max(1 - rocketPosition / 400, 0), // Optional: fade out effect as it moves up
+          }}
+        >
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"

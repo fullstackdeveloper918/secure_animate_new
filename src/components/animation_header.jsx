@@ -1,29 +1,34 @@
+"use client"; // Add this line to mark the component as a Client Component
 
 import Link from "next/link";
-import React from "react";
-import {config} from '../../config'
-import Image from 'next/image';
+import React, { useState, useEffect } from "react";
+import { config } from "../../config";
+import Image from "next/image";
 
-const AnimationHeader = async () => {
+const AnimationHeader = () => {
+  const [headerData, setHeaderData] = useState(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        `${config.APP_URL}/secure-plugin/v1/navbar`,
+        {
+          cache: "no-store",
+        }
+      );
+      const data = await response.json();
+      setHeaderData(data);
+    };
 
-  const data = await fetch(
-    `${config.APP_URL}/secure-plugin/v1/navbar`,
-    {
-      cache: "no-store",
-    }
-  );
+    fetchData();
+  }, []); // Empty dependency array ensures this runs only once when the component is mounted
 
-
-  const response = await data.json();
-  const headerData = response;
-
-
-
+  if (!headerData) {
+    return <div>Loading...</div>; // Loading state until the data is fetched
+  }
 
   return (
     <>
-
       <div className="word"></div>
       <div className="cd-index cd-main-content">
         <div
@@ -39,7 +44,11 @@ const AnimationHeader = async () => {
 
             <div id="header-container">
               <div id="clapat-logo" className="hide-ball">
-                <Link className="ajax-link" data-type="page-transition" href="/">
+                <Link
+                  className="ajax-link"
+                  data-type="page-transition"
+                  href="/"
+                >
                   <Image
                     className="black-logo"
                     src="/images/secure365-logo-black.png"
@@ -60,50 +69,30 @@ const AnimationHeader = async () => {
               <nav className="clapat-nav-wrapper">
                 <div className="nav-height">
                   <ul data-breakpoint="1025" className="flexnav">
-
-                    {
-                      headerData && headerData?.menu_items?.map((item, index) => (
-                        <React.Fragment key={index}>
-                          <li className="menu-timeline link header-link">
-                            <Link
-                              className="ajax-link"
-                              data-type="page-transition"
-                              href={`/${item?.slug}`}
-                            >
-                              <div className="before-span">
-                                <span data-hover="About Us" data-text="About Us">{item?.title}</span>
-                              </div>
-                            </Link>
-                            {
-                              item?.children.length > 0 
-                              &&
-                              <div className="sub-menu">
-
-                            {
-                              item?.children?.map((child, childIndex) => (
+                    {headerData?.menu_items?.map((item, index) => (
+                      <React.Fragment key={index}>
+                        <li className="menu-timeline link header-link">
+                          <Link
+                            className="ajax-link"
+                            data-type="page-transition"
+                            href={`/${item?.slug}`}
+                          >
+                            {item?.title}::YOO
+                          </Link>
+                          {item?.children?.length > 0 && (
+                            <div className="sub-menu">
+                              {item?.children?.map((child, childIndex) => (
                                 <React.Fragment key={childIndex}>
-                                  
-                                  {/* <ul>
-                                    <li>
-                                    <Link
-                                    className="ajax-link"
-                                    href={`/service/${child?.slug}`}
-                                    data-type="page-transition"
-                                    >
+                                  <Link href={`/service/${child?.slug}`}>
                                     {child?.title}
-                                    </Link>
-                                    </li>
-                                    </ul> */}
-                                  <Link href={`/service/${child?.slug}`}>{child?.title}</Link>
+                                  </Link>
                                 </React.Fragment>
-                              ))
-                            }
-</div>
-                            }
-                          </li>
-                        </React.Fragment>
-                      ))
-                    }
+                              ))}
+                            </div>
+                          )}
+                        </li>
+                      </React.Fragment>
+                    ))}
                   </ul>
                 </div>
               </nav>
@@ -147,7 +136,6 @@ const AnimationHeader = async () => {
           </header>
         </div>
       </div>
-      {/* </main> */}
     </>
   );
 };
