@@ -77,7 +77,7 @@ const AnimationHeader = () => {
                             data-type="page-transition"
                             href={`/${item?.slug}`}
                           >
-                            {item?.title}::YOO
+                            {item?.title}
                           </Link>
                           {item?.children?.length > 0 && (
                             <div className="sub-menu">
