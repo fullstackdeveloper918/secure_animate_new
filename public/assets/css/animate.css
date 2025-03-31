@@ -1616,6 +1616,9 @@ img.rightImage {
   line-height: 30px;
   font-size: 14px !important;
 }
+.classic-menu .flexnav li .sub-menu a{
+  height: 100%;
+ }
 .cardtitile {
   font-size: 26px;
   text-align: left;
@@ -2159,4 +2162,9 @@ p.bigger.has-opacity{
   .classic-menu .flexnav li a span{
     height: 63px;
   }
+}
+@media (min-width: 1025px) {
+  .classic-menu .flexnav li a {
+    height: 83px;
+}
 }
