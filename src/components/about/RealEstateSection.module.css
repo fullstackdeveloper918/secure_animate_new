@@ -171,13 +171,14 @@
 
 @media (max-width: 991px) {
   .content h2 {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.4;
   }
 
   .realEstateSection {
-    padding: 4rem 20px 110px;
+    padding: 2rem 20px 10rem;
     height: 100%;
+    margin-top: 0px;
   }
 
   .rocket {

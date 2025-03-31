@@ -491,14 +491,15 @@
 	.cn-contact-right h2 {
 		font-size: 30px;
 	}
+
 }
 
 @media screen and (max-width: 1299px) { 
+	.banner-ai{
+		height: 140vh !important;
+	  }
 	.ab-about-category-list ul li {
 		width: 50% !important;
-	}
-	.banner-ai{
-		height: 100vh;
 	}
 	.banner-ai .space-title {
 		font-size: 50px !important;
@@ -545,7 +546,6 @@
 	.ab-about-category-list ul li {
 		width: 100% !important;
 	}
-	
 }
 @media (max-width:1024px){
 	.ab-counter.flex {
@@ -579,9 +579,6 @@
 		.ab-award-style .col-xl-12.col-lg-7.row.pt-20.grid.grid-cols-2.gap-5 {
 		grid-template-columns: 1fr;
 		}
-		.banner-ai{
-			height: 80vh;
-		}
 	
 }
 
@@ -599,6 +596,11 @@
 }
 
 @media (max-width: 991px){
+
+	.bann-ai {
+		position: unset;
+		height: 70vh !important;
+	}
 	.contact-col{
 		margin-bottom: 20px;
 	}
@@ -626,7 +628,7 @@
 		padding-top: 100px;
 	}
 	.banner-ai .space-title{
-		font-size: calc(1rem + 3vw) !important;
+		font-size: calc(1rem + 7vw) !important;
 	}
 	.banner-ai h2{
 		max-width: 100%;
@@ -1739,6 +1741,24 @@
 	to {
 	  width: 0;
 	  opacity: 0;
+	}
+}
+@media (max-width:475px){
+	.banner-ai {
+		height: 550px !important;
+	}
+	.bann-ai img {
+		display: none !important;
+	}
+	
+	.bann-ai img.hero_parallax.layer01, .bann-ai img.hero_parallax.layer05 {
+		display: block !important;
+	}
+	
+	
+	.bann-ai img.hero_parallax.layer05 {
+		bottom: 30px;
+		opacity: .4;
 	}
 }
 
