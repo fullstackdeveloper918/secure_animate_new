@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
 import { ChevronRight, Shield, Rocket } from "lucide-react";
 import Link from "next/link";
-import { Button } from "react-scroll";
 // import bannerobert from "../../../public/images/bannerobert.png";
 
 export default function HeroSection() {
@@ -207,19 +206,15 @@ export default function HeroSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.6 }}
           >
-            <Button
-              size="lg"
-              // className="BtnOne btnWrapper"
-              asChild
-            >
-        <Link
-  href="#mission"
-  className="BtnOne btnWrapper rounded-full bg-[#00acec] text-white px-6 py-3 flex items-center justify-center"
->
-  Start Your Mission <Rocket className="ml-2 h-5 w-5" />
-</Link>
+            <button className="BtnOne btnWrapper">
+              <Link
+                href="#mission"
+                className="BtnOne btnWrapper rounded-full bg-[#00acec] text-white px-6 py-3 flex items-center justify-center"
+              >
+                Start Your Mission <Rocket className="ml-2 h-5 w-5" />
+              </Link>
+            </button>
 
-            </Button>
             {/* <Button
               variant="outline"
               size="lg"
@@ -290,7 +285,12 @@ function Astronaut() {
           <div className="absolute top-[85%] right-[10%] w-[30%] h-[10%] bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg"></div>
           <div className="absolute top-[40%] right-[10%] w-[30%] h-[5%] bg-gradient-to-br from-gray-500 to-gray-700 rounded-lg"></div>
         </div> */}
-        <Image src={"/images/bannerobert.png"} alt=""  width={500} height={1000}/>
+        <Image
+          src={"/images/bannerobert.png"}
+          alt=""
+          width={500}
+          height={1000}
+        />
       </div>
     </div>
   );
