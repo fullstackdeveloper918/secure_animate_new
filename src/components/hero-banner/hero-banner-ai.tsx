@@ -16,7 +16,6 @@ const HeroBannerAi = () => {
   const yLayer05 = useTransform(scrollY, [0, 800], [0, -400]);
   const yLayer07 = useTransform(scrollY, [0, 800], [0, -600]);
 
-
   useEffect(() => {
     const handleScroll = () => {
       const section = document.getElementById("bannersection");
@@ -35,17 +34,20 @@ const HeroBannerAi = () => {
   }, []);
 
   return (
-    <div className="bannersection"
+    <div
+      className="bannersection"
       style={{
-        transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)`,
-        transition: 'transform 0.1s ease-out'
+        transform: `translate(${mousePosition.x * 0.5}px, ${
+          mousePosition.y * 0.5
+        }px)`,
+        transition: "transform 0.1s ease-out",
       }}
-      id="hero">
-      <div className="tp-hero-area main-slider banner-ai"  id="hero-styles" >
+      id="hero"
+    >
+      <div className="tp-hero-area main-slider banner-ai" id="hero-styles">
         <div className="container p-relative Zindex100">
           <div className="row justify-content-center">
             <div className="banner-data">
-  
               <div className="tp-hero-title-wrap mb-35 p-relative">
                 <div className="tp-hero-title-box text-center p-relative Zindex100">
                   <h1 className="space-title">
@@ -64,13 +66,16 @@ const HeroBannerAi = () => {
                           className="p-relative"
                         >
                           <div className="boldHeading">
-                            <b> —and the Next</b>
+                            <b> and the Next</b>
                           </div>
                         </motion.div>
                       </span>
                     </motion.div>
                   </h1>
-                  <h2>From Web Development to Cybersecurity: Chart Your Course with Secure365</h2>
+                  <h2>
+                    From Web Development to Cybersecurity: Chart Your Course
+                    with Secure365
+                  </h2>
                 </div>
               </div>
 
@@ -90,13 +95,11 @@ const HeroBannerAi = () => {
           </div>
         </div>
 
-
-        <div className="bann-imgs-wrap"    id="man-section">
+        <div className="bann-imgs-wrap" id="man-section">
           <div className="bann-ai">
             <motion.img
               src="/assets/img/home-01/hero/ai-bg.webp"
               className="hero_parallax layer01"
-           
               style={{ y: yLayer01 }}
             />
             <motion.img

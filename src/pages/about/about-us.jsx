@@ -41,29 +41,27 @@ const AboutUsMain = ({ aboutResponse, bannerResponse }) => {
 
   return (
     <Wrapper>
-      <div id="clapat-page-content">
-        {/* <AnimationHeader /> */}
-      </div>
+      <div id="clapat-page-content">{/* <AnimationHeader /> */}</div>
 
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main>
-            <AboutUsHero bannerResponse={bannerResponse} />
+      {/* <div id="smooth-wrapper">
+        <div id="smooth-content"> */}
+      <main>
+        <AboutUsHero bannerResponse={bannerResponse} />
 
-            <AboutUsArea aboutResponse={aboutResponse} />
-            <AboutFour aboutResponse={aboutResponse} />
-            <AboutThree aboutResponse={aboutResponse} />
+        <AboutUsArea aboutResponse={aboutResponse} />
+        <AboutFour aboutResponse={aboutResponse} />
+        <AboutThree aboutResponse={aboutResponse} />
 
-            <FunFactOne aboutResponse={aboutResponse} />
+        <FunFactOne aboutResponse={aboutResponse} />
 
-            <BrandFive />
-            <div className="ab-award-style pt-120 pb-120">
-              <AboutWork />
-            </div>
-          </main>
-          <FooterFour />
+        <BrandFive />
+        <div className="ab-award-style pt-120 pb-120">
+          <AboutWork />
         </div>
-      </div>
+      </main>
+      <FooterFour />
+      {/* </div>
+      </div> */}
     </Wrapper>
   );
 };

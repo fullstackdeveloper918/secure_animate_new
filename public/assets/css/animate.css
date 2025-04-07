@@ -482,6 +482,12 @@ footer .tp-footer-big-title {
   line-height: 78px;
   color: #000;
 }
+.BGBG{
+  background-color: #039ad4;
+}
+.BGBGB2{
+  background-color: #3392b6;
+}
 .bannerVideo .tp-hero-title .boldHeading {
   font-size: 6rem;
   line-height: 5rem;
@@ -558,7 +564,9 @@ h4.tp-team-title-sm {
   padding: 10px 20px;
   border: 1px solid;
   border-radius: 6px;
-  transition: .5s all;
+  transition: 0.5s all;
+  z-index: 1;
+  position: relative;
 }
 .btnWrapper span svg path , .btnWrapper span svg {
   fill: #000;
@@ -2144,12 +2152,12 @@ p.bigger.has-opacity{
   position: absolute;
   padding-block: 10px;
   padding-inline: 15px;
-  background: rgb(0, 0, 0);
+  background: #fff;
   top: 60px;
   z-index: 1;
 }
 .classic-menu .flexnav li .sub-menu a {
-	color: #fff !important;
+	color: #000 !important;
 }
 .header-link:hover .sub-menu{
   display: block;

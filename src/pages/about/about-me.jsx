@@ -45,33 +45,33 @@ const AboutMeMain = () => {
     <Wrapper>
       <HeaderEleven />
 
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main>
-            <AboutMeHero />
+      {/* <div id="smooth-wrapper">
+        <div id="smooth-content"> */}
+      <main>
+        <AboutMeHero />
 
-            <AboutMeArea />
+        <AboutMeArea />
 
-            <AboutPortfolio />
+        <AboutPortfolio />
 
-            <AboutWork />
+        <AboutWork />
 
-            <div className="tp-brand-4-area">
-              <div className="container">
-                <div className="row gx-0">
-                  <BrandItems />
-                </div>
-              </div>
+        <div className="tp-brand-4-area">
+          <div className="container">
+            <div className="row gx-0">
+              <BrandItems />
             </div>
-
-            <LineImgSlider />
-
-            {/* <BigText whyChooseData  cls="char-wrapper" /> */}
-          </main>
-
-          <FooterTwo topCls="" />
+          </div>
         </div>
-      </div>
+
+        <LineImgSlider />
+
+        {/* <BigText whyChooseData  cls="char-wrapper" /> */}
+      </main>
+
+      <FooterTwo topCls="" />
+      {/* </div>
+      </div> */}
     </Wrapper>
   );
 };

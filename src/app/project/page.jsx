@@ -1,29 +1,27 @@
-"use client"
+"use client";
 // import ClapatSlider from '@/components/sliderProject/sliderProject';
-import React, { useEffect } from 'react';
-import Justfor from "../../../public/images/just-for.png"
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useEffect } from "react";
+import Justfor from "../../../public/images/just-for.png";
+import Link from "next/link";
+import Image from "next/image";
 const page = () => {
   useEffect(() => {
     // Example DOM manipulation (ensure elements exist before accessing them)
-    const preloaderWrap = document.querySelector('.preloader-wrap');
+    const preloaderWrap = document.querySelector(".preloader-wrap");
     if (preloaderWrap) {
-      preloaderWrap.classList.add('loaded'); // Add a class to indicate loaded state
+      preloaderWrap.classList.add("loaded"); // Add a class to indicate loaded state
     }
   }, []);
 
   return (
     <>
-         <main>
+      <main>
         <div className="preloader-wrap" data-centerLine="Loading">
           <div id="text-container">
             <div className="word">Brewing some cool things</div>
             <div className="word">Hang tight, magic is happening</div>
             <div className="word">Loading your adventure</div>
           </div>
-
-         
         </div>
 
         <div className="cd-index cd-main-content">
@@ -228,77 +226,99 @@ const page = () => {
                   id="hero-image-wrapper"
                   className="change-header-color hero-pixels-cover parallax-scroll-image"
                 >
-                  <div id="hero-background-layer" className="parallax-scroll-image">
+                  <div
+                    id="hero-background-layer"
+                    className="parallax-scroll-image"
+                  >
                     <div
                       id="hero-bg-image"
-                      style={{ backgroundImage: "url('/images/iphone-15-pro.png')" }}
+                      style={{
+                        backgroundImage: "url('/images/iphone-15-pro.png')",
+                      }}
                     ></div>
                   </div>
                 </div>
 
-                <div id="main-content" >
+                <div id="main-content">
                   <div id="main-page-content">
                     <div className="bg-liner marginTBo width90">
+                      <div
+                        className="content-row small row_padding_top light-section"
+                        // data-bgcolor="#ebebeb"
+                      >
+                        <figure>
+                          <Link
+                            href="/images/just-for.png"
+                            className="image-link"
+                          >
+                            <img
+                              src={Justfor.src}
+                              alt="Image Title"
+                              width={100}
+                              height={100}
+                            />
+                          </Link>
+                          <figcaption>Caption</figcaption>
+                        </figure>
+                      </div>
+
+                      <div
+                        className="content-row small row_padding_bottom light-section text-align-center"
+                        // data-bgcolor="#ebebeb"
+                      >
+                        <hr />
+                        <hr className="destroy" />
+                        <p className="bigger has-opacity">
+                          Web PROJECT eskale Gear up for victory with our
+                          exclusive range of Brazil-inspired apparel.
+                        </p>
+                      </div>
+                    </div>
                     <div
-                      className="content-row small row_padding_top light-section"
-                      // data-bgcolor="#ebebeb"
+                      className="content-row full light-section disable-header-gradient change-header-color"
+                      data-bgcolor="#ebebeb"
                     >
-                      <figure>
-                        <Link href="/images/just-for.png" className="image-link">
-                          <img
-                            src={Justfor.src}
-                            alt="Image Title"
-                            width={100}
-                            height={100}
-                          />
-                        </Link>
-                        <figcaption>Caption</figcaption>
+                      <figure className="has-parallax">
+                        <Image
+                          src="/images/our-process.png"
+                          alt="Image Title"
+                          width={1920} // Adjust width based on your image
+                          height={750} // Adjust height based on your image
+                          className="parallax-image"
+                        />
                       </figure>
                     </div>
 
                     <div
-                      className="content-row small row_padding_bottom light-section text-align-center"
-                      // data-bgcolor="#ebebeb"
+                      className="content-row small row_padding_top row_padding_bottom light-section text-align-center"
+                      data-bgcolor="#ebebeb"
                     >
-                      <hr />
-                      <hr className="destroy" />
-                      <p className="bigger has-opacity">
-                        Web PROJECT eskale
-                        Gear up for victory with our exclusive range of Brazil-inspired apparel. 
-                      </p>
+                      <div className="pin-spacer">
+                        <div
+                          className="pinned-lists-wrapper scale-mode"
+                          data-duration="3x"
+                        >
+                          <p className="smaller">Characteristics</p>
+                          <ul className="pinned-lists">
+                            {[
+                              "Flavorful",
+                              "Aromatic",
+                              "Spicy",
+                              "Savory",
+                              "Delicious",
+                            ].map((item, index) => (
+                              <li key={index} className="pinned-item">
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    </div>
-                    <div className="content-row full light-section disable-header-gradient change-header-color" data-bgcolor="#ebebeb">
-          <figure className="has-parallax">
-            <Image 
-              src="/images/our-process.png" 
-              alt="Image Title" 
-              width={1920} // Adjust width based on your image
-              height={750} // Adjust height based on your image
-              className="parallax-image"
-            />
-          </figure>
-        </div>
 
-
-        <div className="content-row small row_padding_top row_padding_bottom light-section text-align-center" data-bgcolor="#ebebeb">
-      <div className="pin-spacer">
-        <div className="pinned-lists-wrapper scale-mode" data-duration="3x">
-          <p className="smaller">Characteristics</p>
-          <ul className="pinned-lists">
-            {["Flavorful", "Aromatic", "Spicy", "Savory", "Delicious"].map((item, index) => (
-              <li key={index} className="pinned-item">{item}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    {/* <ClapatSlider /> */}
+                    {/* <ClapatSlider /> */}
                   </div>
                 </div>
-
-                
               </div>
             </div>
           </div>

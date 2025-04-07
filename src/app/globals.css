@@ -1684,6 +1684,7 @@ i.arrow-icon-up::after {
   -webkit-transition: background 0.4s ease-in-out 0.3s;
   transition: background 0s ease-in-out 0s;
   background: #fff !important;
+  background: transparent !important;
 }
 
 #header-container {
@@ -1759,18 +1760,18 @@ i.arrow-icon-up::after {
 }
 
 #clapat-logo img.black-logo {
-  opacity:1 !important;
+  opacity:0 !important;
 }
 
-.light-content #clapat-logo img.black-logo {
+/* .light-content #clapat-logo img.black-logo {
   opacity:0;
-}
+} */
 
 #clapat-logo img.white-logo {
   position:absolute;
   top:0;
   left:0;
-  opacity:0 !important;
+  opacity:1 !important;
 }
 
 .light-content #clapat-logo img.white-logo {
@@ -1917,7 +1918,7 @@ i.arrow-icon-up::after {
     padding: 0;
     position:relative;
     border-left: medium none;
-    color: #000 !important;
+    color: #fff !important;
     line-height:46px;
     display:block;
     overflow:hidden;
@@ -2504,18 +2505,20 @@ i.arrow-icon-up::after {
   pointer-events:initial;
   background-color:transparent;
   display: block;
-    width: auto;
+  width: auto;
   height: 44px;
   line-height: 44px;
   border-radius: 44px;		
   position: relative;
   cursor:pointer;
-  color:#000 !important;
+  color:#fff !important;
   border:2px solid currentColor !important;
   box-sizing:border-box;
   box-shadow: inset 0 0 15px rgba(0,0,0,0.3) !important;
 }
-
+.colorblue{
+  color: #fff;
+}
 /* .light-content .button-icon-link {
   color:#fff;
   border:2px solid currentColor;
@@ -2603,7 +2606,7 @@ i.arrow-icon-up::after {
   overflow: hidden;
   width: auto;
   padding: 0 25px 0 25px;
-  color: currentColor;
+  color: #fff;
   -webkit-transition:padding .3s ease-out;
   transition: padding .3s ease-out;
 }
@@ -4756,3 +4759,82 @@ section.aboutsec {
   font-size: 2rem;
   color: white;
 }
+
+
+.smooth-wrapper{
+  top: 15% !important;
+}
+
+.clapat-header.classic-menu .clapat-nav-wrapper {
+  position: unset !important;
+  opacity: unset !important;
+  top: unset !important;
+  left: unset !important;
+  transform:unset !important;
+  height: auto !important;
+  width: auto !important;
+  display: flex !important;
+}
+
+.bg-space-gradient {
+  position: relative;
+  background: url(../../public/blue-print.d573005f.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-space-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(4 8 34 / 12%);
+  z-index: -1;
+}
+
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  float: left;
+  width: 100%;}
+  
+  .pre-load-main {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1200;
+    height: 100vh;
+    position: absolute;
+    background-color: black;
+    /* transform: translateY(100%);
+    transition: transform 1s ease-out;  */
+  }
+  
+  .pre-load-main.slide-up {
+    transform: translateY(0); /* Slide into view (top) */
+  }
+  
+
+ .pre-load-main  h1{
+    color: white !important;
+    position: relative;
+    float: left;
+  }
+  /*.pre-load-main h1::after {
+  content: '|';
+  animation: blink 0.7s infinite step-start;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+} */
