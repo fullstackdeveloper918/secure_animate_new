@@ -26,6 +26,7 @@ import bannerDiv from "../../public/assets/img/inner-faq/faq/InnerDiv.png";
 import SecureSection from "@/components/whysecure/SecureSection";
 import HeroBannerAi from "@/components/hero-banner/hero-banner-ai";
 import HeroSectionMain from "@/components/hero-banner/HeroSectionMain";
+import { AnimatedPinDemo } from "../components/ui/AnimatedPinDemo";
 
 const businessesData = [
   {
@@ -116,7 +117,8 @@ export default function Home() {
                     <PainSection />
 
                     {/* <!-- Row --> */}
-                    <div
+                    <AnimatedPinDemo />
+                    {/* <div
                       className="content-row full text-align-center dark-section d-mb-none"
                       data-bgcolor="#EBEBEB"
                     >
@@ -299,7 +301,7 @@ export default function Home() {
                           <li className="pixels-cover"></li>
                         </ul>
                       </div>
-                    </div>
+                    </div> */}
                     {/* <!--/Row --> */}
                   </div>
                 </div>
