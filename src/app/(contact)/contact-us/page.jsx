@@ -14,12 +14,12 @@ const ContactPage = async () => {
     });
 
     // Parse JSON response
-    const response = await data.json();
-    const contactData = response?.data;
+    let response = await data.json();
+    let contactData = response?.data;
 
     // Provide default values if contactData is missing
     if (!contactData) {
-      contactData = { message: "Contact data not available" }; // Default message or data
+      contactData = { message: "Contact data not available" }; // Default message
     }
 
     return <ContactMain contactData={contactData} />;

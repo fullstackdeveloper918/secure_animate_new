@@ -22,8 +22,8 @@ const AboutUsPage = async () => {
     );
 
     // Parse JSON responses
-    const aboutResponse = await data.json();
-    const bannerResponse = await bannerData.json();
+    let aboutResponse = await data.json();
+    let bannerResponse = await bannerData.json();
 
     // Provide default values if data is missing
     if (!aboutResponse) {

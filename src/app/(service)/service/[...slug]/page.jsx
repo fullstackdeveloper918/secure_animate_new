@@ -17,7 +17,7 @@ const ServiceDetailsPage = async ({ params }) => {
     );
 
     // Parse the response
-    const response = await bannerData.json();
+    let response = await bannerData.json();
     let serviceBannerData = response?.data;
 
     // Provide default values if serviceBannerData is missing
