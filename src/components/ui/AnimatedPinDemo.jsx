@@ -49,7 +49,7 @@ export function AnimatedPinDemo() {
           className="border border-slate-800 bg-slate-900 text-white rounded-2xl p-6 w-[30rem]"
         >
           <h2 className="text-lg font-semibold mb-2 text-white">
-            AI in Healthcare
+            AI in Healthcares
           </h2>
           <p className="text-sm text-slate-300">
             AI is transforming healthcare with predictive analytics and
@@ -105,7 +105,6 @@ export function AnimatedPinDemo() {
         </PinContainer>
       </div>
 
-      {/* Right Column */}
       <div className="flex flex-col gap-6 items-end">
         <motion.div
           custom={0}

@@ -38,7 +38,6 @@ export function AnimatedPinDemo() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Left Column */}
       <div className="flex flex-col gap-6">
         <motion.div
           custom={0}
@@ -103,7 +102,6 @@ export function AnimatedPinDemo() {
         </PinContainer>
       </div>
 
-      {/* Right Column */}
       <div className="flex flex-col gap-6 items-end">
         <motion.div
           custom={0}
