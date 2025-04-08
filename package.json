@@ -57,6 +57,7 @@
     "react-slick": "^0.30.3",
     "react-text-transition": "^3.1.0",
     "react-type-animation": "^3.2.0",
+    "react-typed": "^2.0.12",
     "react-typing-animation": "^1.6.2",
     "react-use": "^17.6.0",
     "sass": "^1.83.0",

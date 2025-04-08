@@ -1,5 +1,5 @@
 import React from "react";
-import Typing from "react-typing-animation";
+import ReactTyped from "react-typed";
 
 const TEXTS = [
   "Brewing some cool things",
@@ -32,9 +32,15 @@ const PreLoader = () => {
   return (
     <div className={`pre-load-main ${isLoadingComplete ? "slide-up" : ""}`}>
       <h1>
-        <Typing key={index} speed={100} eraseDelay={1000}>
-          {TEXTS[index]}
-        </Typing>
+        <ReactTyped
+          key={index}
+          strings={TEXTS}
+          typeSpeed={100} // Speed of typing
+          backSpeed={50} // Speed of erasing
+          backDelay={1000} // Delay before erasing starts
+          loop
+          showCursor
+        />
       </h1>
     </div>
   );
