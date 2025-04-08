@@ -1,5 +1,5 @@
 import React from "react";
-import ReactTyped from "react-typed"; // Ensure the correct import statement
+import Typing from "react-typing-animation";
 
 const TEXTS = [
   "Brewing some cool things",
@@ -32,15 +32,9 @@ const PreLoader = () => {
   return (
     <div className={`pre-load-main ${isLoadingComplete ? "slide-up" : ""}`}>
       <h1>
-        <ReactTyped
-          key={index} // This makes sure it re-renders every time index changes
-          strings={[TEXTS[index]]} // Display only the current string based on index
-          typeSpeed={100} // Speed of typing
-          backSpeed={50} // Speed of erasing
-          backDelay={1000} // Delay before erasing starts
-          loop
-          showCursor
-        />
+        <Typing key={index} speed={100} eraseDelay={1000}>
+          {TEXTS[index]}
+        </Typing>
       </h1>
     </div>
   );

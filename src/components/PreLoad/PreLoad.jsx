@@ -22,3 +22,5 @@ const PreLoad = () => {
     </h1>
   );
 };
+
+export default PreLoad();

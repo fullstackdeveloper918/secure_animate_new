@@ -43,6 +43,7 @@ const businessesData = [
 
 export default function Home() {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true); // add loading state
 
   useEffect(() => {
     const fetchData = async () => {
@@ -58,38 +59,29 @@ export default function Home() {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const data = await response.json();
+        const result = await response.json();
+
+        // Add a delay before updating the state
         setTimeout(() => {
-          setData(data);
-        }, [5000]);
+          setData(result);
+          setLoading(false); // stop loading after delay
+        }, 5000);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setLoading(false); // stop loading even if there is an error
       }
     };
 
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   // Add class to body only if it's the homepage
-  //   console.log(router , 'hence')
-  //   if (router.pathname === '/') {
-  //     document.body.classList.add('homepage-class');
-  //   } else {
-  //     document.body.classList.remove('homepage-class');
-  //   }
+  // ✅ Show PreLoader until loading is false
+  if (loading) {
+    return <PreLoader />;
+  }
 
-  //   // Clean up the class when the component unmounts or the route changes
-  //   return () => {
-  //     document.body.classList.remove('homepage-class');
-  //   };
-  // }, [router.pathname]);
-
-  console.log(data, "data check");
   return (
     <>
-      {data?.length < 1 && <PreLoader />}
-
       {/* <div className="cd-index cd-main-content homepage"> */}
       <div
         id="clapat-page-content"
