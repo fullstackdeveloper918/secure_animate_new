@@ -1,6 +1,6 @@
 "use client";
 import { gsap } from "gsap";
-import React from "react";
+import React, { useEffect } from "react";
 import useScrollSmooth from "@/hooks/use-scroll-smooth";
 import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
 import { useGSAP } from "@gsap/react";
@@ -21,14 +21,17 @@ import ContactLocationTwo from "@/components/contact/contact-location-2";
 
 const ContactMain = ({ contactData }) => {
   console.log(contactData, "contactData");
+
   useScrollSmooth();
 
-  useGSAP(() => {
+  // Use useEffect instead of useGSAP for triggering the animation
+  useEffect(() => {
     const timer = setTimeout(() => {
-      charAnimation();
+      charAnimation(); // Trigger the animation
     }, 100);
-    return () => clearTimeout(timer);
-  });
+
+    return () => clearTimeout(timer); // Cleanup timeout on component unmount
+  }, []);
 
   return (
     <Wrapper>
@@ -38,8 +41,6 @@ const ContactMain = ({ contactData }) => {
 
       {/* header area end */}
 
-      {/* <div id="smooth-wrapper">
-        <div id="smooth-content"> */}
       <div
         className="inner-bg"
         style={{
@@ -67,14 +68,10 @@ const ContactMain = ({ contactData }) => {
 
           <ContactTwo />
           <ContactLocationTwo contactData={contactData} />
-
-          {/* <ContactLocation contactData={contactData} /> */}
         </main>
 
         <FooterFour />
       </div>
-      {/* </div>
-      </div> */}
     </Wrapper>
   );
 };
