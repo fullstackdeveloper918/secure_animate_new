@@ -4,14 +4,14 @@ import {
   Big_Shoulders_Display,
   Marcellus,
   Onest,
-  Arvo
+  Arvo,
 } from "next/font/google";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import "./globals.scss";
 import "./globals.css";
 import Script from "next/script";
-import AnimationHeader from "../components/animation_header"
+import AnimationHeader from "../components/animation_header";
 
 const gellery = localFont({
   src: [
@@ -77,7 +77,7 @@ const onEst = Onest({
 });
 
 const arvo = Arvo({
-  weight: ["400", "700" ],
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--tp-ff-arvo",
 });
@@ -88,10 +88,12 @@ export const metadata = {
     "Secure 365 is a leading cybersecurity agency specializing in comprehensive digital protection solutions. Our portfolio showcases a diverse range of services designed to safeguard your digital assets and ensure robust security measures. Explore our work to see how we can help you achieve a secure digital environment.",
 };
 
-export default function RootLayout({  children,
-  uniquifier = 'default',
-  weight = 400, }) {
-    const className = `onest-${uniquifier}`;
+export default function RootLayout({
+  children,
+  uniquifier = "default",
+  weight = 400,
+}) {
+  const className = `onest-${uniquifier}`;
 
   return (
     <html
@@ -134,12 +136,30 @@ export default function RootLayout({  children,
         />
 
         <Script src="/js/jquery.min.js" defer></Script>
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></Script>
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></Script>
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js" defer></Script>
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></Script>
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" defer></Script>
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js" defer></Script>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+          defer
+        ></Script>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+          defer
+        ></Script>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"
+          defer
+        ></Script>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+          defer
+        ></Script>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"
+          defer
+        ></Script>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js"
+          defer
+        ></Script>
         <Script src="/js/clapat.js" defer></Script>
         <Script src="/js/plugins.js" defer></Script>
         <Script src="/js/pain.js" defer></Script>
@@ -154,10 +174,10 @@ export default function RootLayout({  children,
         className={`${gellery.variable} ${aladin.variable} ${syne_body.variable} ${syne_heading.variable} ${syne_p.variable} ${syne.variable} ${big_shoulders.variable} ${marcellus.variable} `}
       >
         <ThemeProvider defaultTheme="light">
-          <AnimationHeader/>
-          
+          <AnimationHeader />
+
           {children}
-          </ThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

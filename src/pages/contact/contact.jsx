@@ -19,9 +19,8 @@ import { charAnimation } from "@/utils/title-animation";
 import FooterFour from "@/layouts/footers/footer-four";
 import ContactLocationTwo from "@/components/contact/contact-location-2";
 
-const ContactMain = ({contactData}) => {
-
-  console.log(contactData, 'contactData')
+const ContactMain = ({ contactData }) => {
+  console.log(contactData, "contactData");
   useScrollSmooth();
 
   useGSAP(() => {
@@ -39,50 +38,43 @@ const ContactMain = ({contactData}) => {
 
       {/* header area end */}
 
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <div
-            className="inner-bg"
-            style={{
-              backgroundImage:
-                "url(/assets/img/home-01/team/team-details-bg.png)",
-            }}
-          >
+      {/* <div id="smooth-wrapper">
+        <div id="smooth-content"> */}
+      <div
+        className="inner-bg"
+        style={{
+          backgroundImage: "url(/assets/img/home-01/team/team-details-bg.png)",
+        }}
+      >
+        <main>
+          {/* hero area start */}
 
-        
-            <main>
-              {/* hero area start */}
-
-              
-              <div className="tm-hero-area tm-hero-ptb p-relative bann-p-block contact-banner">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-xl-12">
-                      <div className="tm-hero-content">
-                        <span className="tm-hero-subtitle">Secure 365</span>
-                        <h1 className="tp-char-animation sv-hero-title">
-                         {contactData?.reach_contact_section_heading}
-                        </h1>
-                        <p>
-                         {contactData?.reach_contact_section_paragraph}
-                        </p>
-                      </div>
-                    </div>
+          <div className="tm-hero-area tm-hero-ptb p-relative bann-p-block contact-banner">
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-12">
+                  <div className="tm-hero-content">
+                    <span className="tm-hero-subtitle">Secure 365</span>
+                    <h1 className="tp-char-animation sv-hero-title">
+                      {contactData?.reach_contact_section_heading}
+                    </h1>
+                    <p>{contactData?.reach_contact_section_paragraph}</p>
                   </div>
                 </div>
               </div>
-           
-
-              <ContactTwo />
-              <ContactLocationTwo contactData={contactData} />
-
-              {/* <ContactLocation contactData={contactData} /> */}
-            </main>
-
-            <FooterFour />
+            </div>
           </div>
-        </div>
+
+          <ContactTwo />
+          <ContactLocationTwo contactData={contactData} />
+
+          {/* <ContactLocation contactData={contactData} /> */}
+        </main>
+
+        <FooterFour />
       </div>
+      {/* </div>
+      </div> */}
     </Wrapper>
   );
 };

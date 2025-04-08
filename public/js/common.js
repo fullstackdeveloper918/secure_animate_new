@@ -418,7 +418,7 @@ jQuery(function ($) {
                 $('a.ajax-link, a.slide-link, a.next-ajax-link-page').on('click', function() {
                     // Restore the original image source when you leave the page
                     if ($(".clapat-header").hasClass("swapped-logo")) {
-                    
+                        
                         gsap.to($("#clapat-logo"), {duration: 0.2, opacity:0, onComplete: function() {
                             imgLogoWhite.src = originalSrcWhite;
                             imgLogoBlack.src = originalSrcBlack;

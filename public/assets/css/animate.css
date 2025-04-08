@@ -329,7 +329,7 @@ h1, h2, h4, h4, h5, h6 {
 }
 .tp-section-title span {
   color: #009dd6 !important;
-  font-family: '__Onest_492953' !important;
+  /* font-family: '__Onest_492953' !important; */
   font-weight: 600 !important;
 }
 .tp-blog-content span{
@@ -482,6 +482,12 @@ footer .tp-footer-big-title {
   line-height: 78px;
   color: #000;
 }
+.BGBG{
+  background-color: #039ad4;
+}
+.BGBGB2{
+  background-color: #3392b6;
+}
 .bannerVideo .tp-hero-title .boldHeading {
   font-size: 6rem;
   line-height: 5rem;
@@ -558,7 +564,9 @@ h4.tp-team-title-sm {
   padding: 10px 20px;
   border: 1px solid;
   border-radius: 6px;
-  transition: .5s all;
+  transition: 0.5s all;
+  z-index: 1;
+  position: relative;
 }
 .btnWrapper span svg path , .btnWrapper span svg {
   fill: #000;
@@ -568,7 +576,8 @@ h4.tp-team-title-sm {
   fill: #fff;
   color: #fff;
 }
-.BtnOne {
+
+.BtnOne, #btnTwo:hover {
   background: #03afef;
   border-color: #03afef;
   color: #fff;
@@ -1634,6 +1643,14 @@ img.rightImage {
 .awardsSec{
   background: #ebebeb;
 }
+@media (max-width:1440px){
+  .astronutImgcircle>div:first-child {
+    height: 30px;
+    width: 30px;
+    bottom: 0;
+    right: 0;
+}
+}
 @media (min-width:1280px){
   .mainCoantinersec {
     height: calc(170vh - 0vh);
@@ -1660,6 +1677,17 @@ img.rightImage {
 }
 
 @media (max-width:1440px){
+  .awardsSec.pt-10 {
+    padding-inline: 20px;
+}
+  .astronutImg {
+    align-items: end;
+    justify-content: end;
+}
+.astronutImg img {
+  width: 100%;
+  max-width: 300px;
+}
 
   .bannerVideo .tp-hero-content p {
     font-size: 16px;
@@ -1730,6 +1758,14 @@ footer .tp-footer-big-title {
 }
 
 @media (max-width:1280px){
+  .astronutImg {
+    align-items: end;
+    justify-content: end;
+}
+.astronutImg img {
+  width: 100%;
+  max-width: 200px;
+}
   .mainCoantinersec {
     height: 200vh;
     background-color: #000;
@@ -2144,12 +2180,12 @@ p.bigger.has-opacity{
   position: absolute;
   padding-block: 10px;
   padding-inline: 15px;
-  background: rgb(0, 0, 0);
+  background: #fff;
   top: 60px;
   z-index: 1;
 }
 .classic-menu .flexnav li .sub-menu a {
-	color: #fff !important;
+	color: #000 !important;
 }
 .header-link:hover .sub-menu{
   display: block;
