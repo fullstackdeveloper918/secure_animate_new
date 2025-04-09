@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useRef, useEffect } from "react";
-import Image from "next/image";
-import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
-import { ChevronRight, Shield, Rocket } from "lucide-react";
-import Link from "next/link";
+import { useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { motion, useScroll, useTransform, useAnimation } from 'framer-motion';
+import { ChevronRight, Shield, Rocket } from 'lucide-react';
+import Link from 'next/link';
 // import bannerobert from "../../../public/images/bannerobert.png";
 
 export default function HeroSection() {
@@ -15,7 +15,7 @@ export default function HeroSection() {
   // by reducing the number of transform calculations
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start start", "end start"],
+    offset: ['start start', 'end start'],
   });
 
   // Optimize parallax effects by using simpler transforms
@@ -31,8 +31,8 @@ export default function HeroSection() {
       transition: {
         duration: 6,
         repeat: Number.POSITIVE_INFINITY,
-        repeatType: "reverse",
-        ease: "easeInOut",
+        repeatType: 'reverse',
+        ease: 'easeInOut',
       },
     });
   }, [controls]);
@@ -43,16 +43,16 @@ export default function HeroSection() {
       className="relative min-h-screen overflow-hidden flex items-center bg-space-gradient "
       id="hero"
       style={{
-        willChange: "transform", // Hint to browser for optimization
-        contain: "layout paint size", // Improve rendering performance
+        willChange: 'transform', // Hint to browser for optimization
+        contain: 'layout paint size', // Improve rendering performance
       }}
     >
       {/* Stars background - using CSS background for better performance */}
       <div
         className="absolute inset-0 z-0 bg-stars"
         style={{
-          willChange: "transform",
-          backfaceVisibility: "hidden",
+          willChange: 'transform',
+          backfaceVisibility: 'hidden',
         }}
       />
 
@@ -61,8 +61,8 @@ export default function HeroSection() {
         className="absolute left-[10%] top-[20%] w-[300px] h-[300px]"
         style={{
           y: planetY,
-          willChange: "transform",
-          backfaceVisibility: "hidden",
+          willChange: 'transform',
+          backfaceVisibility: 'hidden',
         }}
       >
         <Image
@@ -85,12 +85,12 @@ export default function HeroSection() {
         transition={{
           duration: 8,
           repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-          ease: "easeInOut",
+          repeatType: 'reverse',
+          ease: 'easeInOut',
         }}
         style={{
-          willChange: "transform",
-          backfaceVisibility: "hidden",
+          willChange: 'transform',
+          backfaceVisibility: 'hidden',
         }}
       >
         <div className="w-full h-full rounded-full bg-gradient-to-br BGBGB2 BGBG shadow-[#0d6efd] opacity-20"></div>
@@ -104,12 +104,12 @@ export default function HeroSection() {
         transition={{
           duration: 7,
           repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-          ease: "easeInOut",
+          repeatType: 'reverse',
+          ease: 'easeInOut',
         }}
         style={{
-          willChange: "transform",
-          backfaceVisibility: "hidden",
+          willChange: 'transform',
+          backfaceVisibility: 'hidden',
         }}
       >
         <div className="w-full h-full rounded-full bg-gradient-to-br from-cyan-400 to-cyan-700 shadow-[0_0_30px_rgba(6,182,212,0.5)]"></div>
@@ -124,12 +124,12 @@ export default function HeroSection() {
         transition={{
           duration: 5,
           repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-          ease: "easeInOut",
+          repeatType: 'reverse',
+          ease: 'easeInOut',
         }}
         style={{
-          willChange: "transform",
-          backfaceVisibility: "hidden",
+          willChange: 'transform',
+          backfaceVisibility: 'hidden',
         }}
       >
         {/* <Image src={"/rocket.png"} alt="" style={{width:"100%"}} width={500} height={500}/> */}
@@ -145,8 +145,8 @@ export default function HeroSection() {
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.5 }}
         style={{
-          willChange: "transform",
-          backfaceVisibility: "hidden",
+          willChange: 'transform',
+          backfaceVisibility: 'hidden',
         }}
       >
         <Astronaut />
@@ -159,8 +159,8 @@ export default function HeroSection() {
           style={{
             y: textY,
             opacity: textOpacity,
-            willChange: "transform, opacity",
-            backfaceVisibility: "hidden",
+            willChange: 'transform, opacity',
+            backfaceVisibility: 'hidden',
           }}
         >
           <motion.div
@@ -185,9 +185,7 @@ export default function HeroSection() {
             <span className="text-white block">
               Secure in <span className="font-semibold">This Galaxy</span>
             </span>
-            <span className="bg-clip-text text-transparent colorblue">
-              and the Next
-            </span>
+            <span className="bg-clip-text text-transparent colorblue">and the Next</span>
           </motion.h1>
 
           <motion.p
@@ -197,8 +195,8 @@ export default function HeroSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            From Web Development to Cybersecurity: Chart Your Course with
-            Secure365 and become the hero of your digital universe.
+            From Web Development to Cybersecurity: Chart Your Course with Secure365 and become the
+            hero of your digital universe.
           </motion.p>
 
           <motion.div
@@ -252,11 +250,11 @@ function OptimizedParticles() {
           key={i}
           className="absolute rounded-full bg-white opacity-30"
           style={{
-            width: Math.random() * 3 + 1 + "px",
-            height: Math.random() * 3 + 1 + "px",
-            left: Math.random() * 100 + "%",
-            top: Math.random() * 100 + "%",
-            willChange: "transform",
+            width: Math.random() * 3 + 1 + 'px',
+            height: Math.random() * 3 + 1 + 'px',
+            left: Math.random() * 100 + '%',
+            top: Math.random() * 100 + '%',
+            willChange: 'transform',
           }}
           animate={{
             y: [0, Math.random() * 50 - 25],
@@ -265,7 +263,7 @@ function OptimizedParticles() {
           transition={{
             duration: Math.random() * 10 + 10,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "linear",
+            ease: 'linear',
           }}
         />
       ))}
@@ -288,12 +286,7 @@ function Astronaut() {
           <div className="absolute top-[85%] right-[10%] w-[30%] h-[10%] bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg"></div>
           <div className="absolute top-[40%] right-[10%] w-[30%] h-[5%] bg-gradient-to-br from-gray-500 to-gray-700 rounded-lg"></div>
         </div> */}
-        <Image
-          src={"/images/bannerobert.png"}
-          alt=""
-          width={500}
-          height={1000}
-        />
+        <Image src={'/images/bannerobert.png'} alt="" width={500} height={1000} />
       </div>
     </div>
   );

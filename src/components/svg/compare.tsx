@@ -1,14 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export default function Compare() {
   return (
-    <svg
-      width="14"
-      height="16"
-      viewBox="0 0 14 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1 3.16431H10.8622C12.0451 3.16431 12.9999 4.08839 12.9999 5.23315V7.52268"
         stroke="currentColor"

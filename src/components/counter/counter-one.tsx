@@ -2,7 +2,7 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import CounterItem from './counter-item';
 
-// images 
+// images
 import marque_1 from '@/assets/img/home-05/marque/marque-1.jpg';
 import marque_2 from '@/assets/img/home-05/marque/marque-2.jpg';
 import marque_3 from '@/assets/img/home-05/marque/marque-3.jpg';
@@ -13,8 +13,8 @@ import marque_7 from '@/assets/img/home-05/marque/marque-7.jpg';
 import marque_8 from '@/assets/img/home-05/marque/marque-8.jpg';
 import marque_9 from '@/assets/img/home-05/marque/marque-9.jpg';
 
-function MarqueImage({src}: {src: StaticImageData}) {
-  return <Image src={src} alt="marque-img" style={{height: 'auto'}} />
+function MarqueImage({ src }: { src: StaticImageData }) {
+  return <Image src={src} alt="marque-img" style={{ height: 'auto' }} />;
 }
 export default function CounterOne() {
   return (
@@ -86,13 +86,17 @@ export default function CounterOne() {
               </div>
               <div className="col-xl-4 col-lg-4 col-md-4 mb-30">
                 <div className="slide-funfact-item text-center">
-                  <h4><CounterItem min={0} max={12} />+</h4>
+                  <h4>
+                    <CounterItem min={0} max={12} />+
+                  </h4>
                   <span>Years of Experience</span>
                 </div>
               </div>
               <div className="col-xl-4 col-lg-4 col-md-4 mb-30">
                 <div className="slide-funfact-item text-center">
-                  <h4><CounterItem min={0} max={140} />+</h4>
+                  <h4>
+                    <CounterItem min={0} max={140} />+
+                  </h4>
                   <span>Clients Worldwide</span>
                 </div>
               </div>
@@ -101,5 +105,5 @@ export default function CounterOne() {
         </div>
       </div>
     </div>
-  )
+  );
 }

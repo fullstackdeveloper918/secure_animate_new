@@ -1,9 +1,9 @@
 'use client';
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Leaf } from "../svg";
-import hero_bg from "@/assets/img/home-02/hero/hero-bg-1.jpg";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Leaf } from '../svg';
+import hero_bg from '@/assets/img/home-02/hero/hero-bg-1.jpg';
 
 const HeroBannerTwo = () => {
   return (
@@ -18,22 +18,17 @@ const HeroBannerTwo = () => {
                 </div>
                 <div className="tp-hero-2-content-wrap p-relative">
                   <div className="tp-hero-2-title-box">
-                    <h2 className="tp-hero-2-title text-1 z-index-5">
-                      Fashion
-                    </h2>
+                    <h2 className="tp-hero-2-title text-1 z-index-5">Fashion</h2>
                     <h2 className="tp-hero-2-title text-2">
                       <span>& Branding</span>
                     </h2>
                   </div>
                   <div className="tp-hero-2-content">
                     <p>
-                      Bringing Your Fashion {"Brand's"} Unique Identity to Life
-                      Through Strategic Marketing and Advertising.
+                      Bringing Your Fashion {"Brand's"} Unique Identity to Life Through Strategic
+                      Marketing and Advertising.
                     </p>
-                    <Link
-                      className="tp-btn-white"
-                      href="/portfolio-grid-col-3-fullwidth"
-                    >
+                    <Link className="tp-btn-white" href="/portfolio-grid-col-3-fullwidth">
                       View More
                       <span>
                         <Leaf />

@@ -10,12 +10,12 @@ import CartOffcanvas from '@/components/offcanvas/cart-offcanvas';
 import MobileOffcanvas from '@/components/offcanvas/mobile-offcanvas';
 
 export default function HeaderSix() {
-  const {sticky,headerFullWidth} = useSticky();
+  const { sticky, headerFullWidth } = useSticky();
   const [openCartMini, setOpenCartMini] = React.useState(false);
   const [openOffCanvas, setOpenOffcanvas] = React.useState(false);
   useEffect(() => {
     headerFullWidth();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
@@ -44,28 +44,34 @@ export default function HeaderSix() {
                   <div className="tp-inner-header-2-search p-relative d-none d-lg-block">
                     <input type="text" placeholder="Search" />
                     <span>
-                      <Search/>
+                      <Search />
                     </span>
                   </div>
                   <button className="tp-shop-mob-search d-lg-none">
                     <span>
-                    <Search/>
+                      <Search />
                     </span>
                   </button>
                   <Link className="tp-inner-header-2-wishlist p-relative" href="/wishlist">
                     <i>o</i>
                     <span>
-                      <Wishlist/>
+                      <Wishlist />
                     </span>
                   </Link>
-                  <button onClick={()=> setOpenOffcanvas(true)} className="tp-inner-header-2-bar tp-offcanvas-open-btn">
+                  <button
+                    onClick={() => setOpenOffcanvas(true)}
+                    className="tp-inner-header-2-bar tp-offcanvas-open-btn"
+                  >
                     <span>
-                      <Menu/>
+                      <Menu />
                     </span>
                   </button>
-                  <button onClick={() => setOpenCartMini(true)} className="tp-inner-header-2-cart cartmini-open-btn">
+                  <button
+                    onClick={() => setOpenCartMini(true)}
+                    className="tp-inner-header-2-cart cartmini-open-btn"
+                  >
                     <span>
-                      <Zero/>
+                      <Zero />
                     </span>
                   </button>
                 </div>
@@ -73,7 +79,6 @@ export default function HeaderSix() {
             </div>
           </div>
         </div>
-
       </header>
 
       {/* cart mini */}
@@ -84,5 +89,5 @@ export default function HeaderSix() {
       <MobileOffcanvas openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffcanvas} />
       {/* off canvas */}
     </>
-  )
+  );
 }

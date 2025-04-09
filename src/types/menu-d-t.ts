@@ -48,6 +48,5 @@ export interface IMenuDT {
   dropdown_menus?: {
     title: string;
     link: string;
-  }[]
-
+  }[];
 }

@@ -1,4 +1,3 @@
-
 .secureSection {
   background-color: #ffffff;
   padding: 120px 20px;
@@ -13,7 +12,7 @@
   font-size: 5rem;
   font-weight: bold;
 }
-.secureSection h2 strong{
+.secureSection h2 strong {
   font-size: 2.5rem;
 }
 .secureSection p {
@@ -23,7 +22,9 @@
   line-height: 1.5;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transition:
+    opacity 1s ease-in-out,
+    transform 1s ease-in-out;
   font-weight: 400;
 }
 
@@ -48,18 +49,20 @@
   padding: 26px 28px;
   transform-style: inherit !important;
   position: absolute;
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transition:
+    opacity 1s ease-in-out,
+    transform 1s ease-in-out;
 }
-.statBox h3{
-margin: 0px;
-font-weight: 700;
+.statBox h3 {
+  margin: 0px;
+  font-weight: 700;
 }
-.statBox p{
-color: #111;
-margin: 0px;
-padding: 0px;
-opacity: 1;
-transform: unset;
+.statBox p {
+  color: #111;
+  margin: 0px;
+  padding: 0px;
+  opacity: 1;
+  transform: unset;
 }
 .statbox1 {
   left: 7rem;
@@ -72,7 +75,7 @@ transform: unset;
   right: 0;
   top: -2rem;
 }
-.addbgImages{
+.addbgImages {
   position: absolute;
   left: 0;
   right: 0;
@@ -103,12 +106,15 @@ transform: unset;
   text-align: left;
   box-shadow: 0px 0px 50px 0px #03afef63;
 }
-.yearImages{
+.yearImages {
   width: 100%;
   display: flex;
   justify-content: end;
 }
-.statbox3 h3, .statbox3 p, .statbox2 h3, .statbox2 p{
+.statbox3 h3,
+.statbox3 p,
+.statbox2 h3,
+.statbox2 p {
   color: #fff;
 }
 .statbox4 {
@@ -121,7 +127,8 @@ transform: unset;
   min-height: 200px;
   text-align: left;
 }
-.statbox4 h3, .statbox4 p{
+.statbox4 h3,
+.statbox4 p {
   position: relative;
   z-index: 1;
   color: #fff;
@@ -132,7 +139,9 @@ transform: unset;
   width: 180px;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transition:
+    opacity 1s ease-in-out,
+    transform 1s ease-in-out;
 }
 
 /* Fade-in effect on scroll */
@@ -140,18 +149,18 @@ transform: unset;
   opacity: 1 !important;
   /* transform: translateY(0) !important; */
 }
-.weblogo{
+.weblogo {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.weblogo img{
+.weblogo img {
   margin: 0px;
   width: 100%;
 }
 
 /* Responsive Styles */
-@media (max-width:1600px){
+@media (max-width: 1600px) {
   .secureSection p {
     font-size: 16px;
     line-height: 1.5;
@@ -166,8 +175,8 @@ transform: unset;
     font-size: 1.7rem;
   }
 }
-@media (max-width:1440px){
-  .statbox3{
+@media (max-width: 1440px) {
+  .statbox3 {
     max-width: 270px;
   }
   .statbox1 {
@@ -196,7 +205,7 @@ transform: unset;
     font-size: 1.6rem;
   }
 }
-@media (max-width:1366px){
+@media (max-width: 1366px) {
   .statsContainer {
     max-width: calc(100% - 40rem);
   }
@@ -220,7 +229,7 @@ transform: unset;
     top: -1rem;
     max-width: 70px;
   }
-  .statBox{
+  .statBox {
     padding: 20px;
     border-radius: 15px;
   }
@@ -233,10 +242,12 @@ transform: unset;
   .statsContainer {
     grid-template-columns: repeat(2, 1fr);
   }
-  .statbox1, .statbox2 {
+  .statbox1,
+  .statbox2 {
     top: 3rem;
   }
-  .statbox3, .statbox4 {
+  .statbox3,
+  .statbox4 {
     bottom: 3rem;
   }
   .statsContainer {
@@ -283,7 +294,7 @@ transform: unset;
     max-width: 130px;
     min-height: 109px;
   }
-  .statsContainer{
+  .statsContainer {
     padding: 3rem 0px 1rem;
   }
   .secureSection h2 {
@@ -291,7 +302,7 @@ transform: unset;
     font-size: 3rem;
   }
 }
-@media (max-width:400px){
+@media (max-width: 400px) {
   .statbox2 {
     right: 20px;
     max-width: 120px;
@@ -308,7 +319,8 @@ transform: unset;
   .changePosition {
     max-width: 40px;
   }
-  .statbox1, .statbox3 {
+  .statbox1,
+  .statbox3 {
     max-width: 110px;
   }
   .statsContainer {

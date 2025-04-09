@@ -1,14 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export function CloseTwo() {
   return (
-    <svg
-      width="37"
-      height="38"
-      viewBox="0 0 37 38"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M9.19141 9.80762L27.5762 28.1924"
         stroke="currentColor"
@@ -29,13 +23,7 @@ export function CloseTwo() {
 
 export function CloseThree() {
   return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect
         width="32.621"
         height="1.00918"
@@ -54,13 +42,7 @@ export function CloseThree() {
 
 export default function Close() {
   return (
-    <svg
-      width="10"
-      height="10"
-      viewBox="0 0 10 10"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

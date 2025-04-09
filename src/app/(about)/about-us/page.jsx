@@ -1,63 +1,41 @@
-import React from "react";
-import { config } from "../../../../config";
-import AboutUsMain from "@/pages/about/about-us";
+// components/AboutUsClient.jsx
+'use client';
 
-export const metadata = {
-  title: "Secure 365 - About us page",
-};
+import { useEffect, useState } from 'react';
+import AboutUsMain from '@/pages/about/about-us';
 
-const AboutUsPage = async () => {
-  try {
-    // Fetch the 'about' data
-    const data = await fetch(`${config.APP_URL}/secure-plugin/v1/about`, {
-      cache: "no-store",
-    });
+const AboutUsClient = () => {
+  const [aboutData, setAboutData] = useState(null);
+  const [bannerData, setBannerData] = useState(null);
+  const [error, setError] = useState(false);
 
-    // Fetch the banner data
-    const bannerData = await fetch(
-      `${config.APP_URL}/secure-plugin/v1/banner/about-us`,
-      {
-        cache: "no-store",
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [aboutRes, bannerRes] = await Promise.all([
+          fetch(`${process.env.NEXT_PUBLIC_APP_URL}/secure-plugin/v1/about`),
+          fetch(`${process.env.NEXT_PUBLIC_APP_URL}/secure-plugin/v1/banner/about-us`),
+        ]);
+        const aboutJson = await aboutRes.json();
+        const bannerJson = await bannerRes.json();
+        setAboutData(aboutJson);
+        setBannerData(bannerJson);
+      } catch (err) {
+        console.error('Error fetching data:', err);
+        setError(true);
       }
-    );
+    };
+    fetchData();
+  }, []);
 
-    // Parse JSON responses
-    let aboutResponse = await data.json();
-    let bannerResponse = await bannerData.json();
-
-    // Provide default values if data is missing
-    if (!aboutResponse) {
-      aboutResponse = { message: "About Us data not available" }; // Default message
-    }
-    if (!bannerResponse) {
-      bannerResponse = { message: "Banner data not available" }; // Default message
-    }
-
-    return (
-      <div className="about_usClass">
-        <AboutUsMain
-          aboutResponse={aboutResponse}
-          bannerResponse={bannerResponse}
-        />
-      </div>
-    );
-  } catch (error) {
-    // Handle any fetch errors or unexpected issues
-    console.error("Error fetching data:", error);
-
-    // Provide fallback data if there's an error
-    const fallbackAboutResponse = { message: "Error fetching About Us data" };
-    const fallbackBannerResponse = { message: "Error fetching Banner data" };
-
-    return (
-      <div className="about_usClass">
-        <AboutUsMain
-          aboutResponse={fallbackAboutResponse}
-          bannerResponse={fallbackBannerResponse}
-        />
-      </div>
-    );
-  }
+  return (
+    <div className="about_usClass">
+      <AboutUsMain
+        aboutResponse={error ? { message: 'Error fetching About Us data' } : aboutData}
+        bannerResponse={error ? { message: 'Error fetching Banner data' } : bannerData}
+      />
+    </div>
+  );
 };
 
-export default AboutUsPage;
+export default AboutUsClient;

@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 type CounterProps = {
   min: number;
   max: number;
-}
+};
 
 export default function CounterItem({ min, max }: CounterProps) {
   const [counted, setCounted] = useState<number>(min);
@@ -36,7 +36,7 @@ export default function CounterItem({ min, max }: CounterProps) {
     // Options for the Intersection Observer
     const options: IntersectionObserverInit = {
       root: null,
-      rootMargin: "0px", 
+      rootMargin: '0px',
       threshold: 0.5,
     };
 
@@ -52,7 +52,7 @@ export default function CounterItem({ min, max }: CounterProps) {
       setCounted(min);
       observer.disconnect(); // Disconnect the observer when component unmounts
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <i ref={targetElement}>{counted}</i>;

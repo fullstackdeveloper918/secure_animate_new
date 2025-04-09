@@ -2,7 +2,6 @@
 import React from 'react';
 
 const VideOne = ({}) => {
-  
   return (
     <div className="tp-hero-bottom-img-wrap">
       <div className="tp-hero-bottom-img">

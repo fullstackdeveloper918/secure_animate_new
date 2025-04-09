@@ -1,9 +1,7 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
-
-
-export default function BigText({cls="", whyChooseData}) {
+export default function BigText({ cls = '', whyChooseData }) {
   return (
     <div className={`sv-big-text-area pb-20 pt-20 ${cls}`}>
       <div className="container container-1530">

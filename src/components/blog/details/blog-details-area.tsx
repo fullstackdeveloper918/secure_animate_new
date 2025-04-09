@@ -1,14 +1,14 @@
-import React from "react";
-import Image from "next/image";
-import BlogSidebar from "../blog-sidebar";
-import { QuoteThree, Share, Tag } from "@/components/svg";
-import BlogDetailsAuthor from "./blog-details-author";
-import BlogDetailsNavigation from "./blog-details-navigation";
-import BlogDetailsComments from "./blog-details-comments";
-import BlogReplyForm from "@/components/form/blog-reply-form";
-import details_thumb_1 from "@/assets/img/inner-blog/blog-details/blog-details-2.jpg";
-import details_thumb_2 from "@/assets/img/inner-blog/blog-details/blog-details-3.jpg";
-import details_thumb_3 from "@/assets/img/inner-blog/blog-details/blog-details-4.jpg";
+import React from 'react';
+import Image from 'next/image';
+import BlogSidebar from '../blog-sidebar';
+import { QuoteThree, Share, Tag } from '@/components/svg';
+import BlogDetailsAuthor from './blog-details-author';
+import BlogDetailsNavigation from './blog-details-navigation';
+import BlogDetailsComments from './blog-details-comments';
+import BlogReplyForm from '@/components/form/blog-reply-form';
+import details_thumb_1 from '@/assets/img/inner-blog/blog-details/blog-details-2.jpg';
+import details_thumb_2 from '@/assets/img/inner-blog/blog-details/blog-details-3.jpg';
+import details_thumb_3 from '@/assets/img/inner-blog/blog-details/blog-details-4.jpg';
 
 export default function BlogDetailsArea() {
   return (
@@ -19,27 +19,23 @@ export default function BlogDetailsArea() {
             <div className="postbox__wrapper">
               <div className="blog-details-top-text">
                 <p>
-                  The metaverse can be viewed as an evolution of today’s
-                  internet, which in turn evolved from passive media that we
-                  simply consumed. In the age of radio and television, the
-                  consumer’s only job was to listen and decide if they wanted to
-                  buy.{" "}
+                  The metaverse can be viewed as an evolution of today’s internet, which in turn
+                  evolved from passive media that we simply consumed. In the age of radio and
+                  television, the consumer’s only job was to listen and decide if they wanted to
+                  buy.{' '}
                 </p>
               </div>
               <div className="blog-details-left-content">
-                <h4 className="blog-details-left-title">
-                  What is Lorem Ipsum?
-                </h4>
+                <h4 className="blog-details-left-title">What is Lorem Ipsum?</h4>
                 <p className="mb-20">
-                  <span>Lorem Ipsum</span> is simply dummy text of the printing
-                  and typesetting industry. Lorem Ipsum has been the industry
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  <span>Lorem Ipsum</span> is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry standard dummy text ever since the
+                  1500s, when an unknown printer took a galley of type and scrambled it to make a
+                  type specimen book.
                 </p>
                 <p>
-                  It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged
+                  It has survived not only five centuries, but also the leap into electronic
+                  typesetting, remaining essentially unchanged
                 </p>
               </div>
               <div className="blog-details-thumb-box">
@@ -50,7 +46,7 @@ export default function BlogDetailsArea() {
                         className="w-100 mb-20"
                         src={details_thumb_1}
                         alt="details-thumb"
-                        style={{ height: "auto" }}
+                        style={{ height: 'auto' }}
                       />
                     </div>
                   </div>
@@ -60,24 +56,20 @@ export default function BlogDetailsArea() {
                         className="w-100 mb-20"
                         src={details_thumb_2}
                         alt="details-thumb"
-                        style={{ height: "auto" }}
+                        style={{ height: 'auto' }}
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div className="blog-details-left-content">
-                <h4 className="blog-details-left-title">
-                  Relationship & Communication
-                </h4>
+                <h4 className="blog-details-left-title">Relationship & Communication</h4>
                 <p>
-                  But, like most politicians, he promised more than he could
-                  deliver. Why not indeed! Daylight and everything. And then the
-                  battle’s not so bad? Hello, little man. I will destroy you!
-                  No, I’m Santa Claus! Kif might! Man, I’m sore all over. I feel
-                  like I just went ten rounds with mighty Thor. I found what I
-                  need. And it’s not friends, it’s things. Then we’ll go with
-                  that data file!
+                  But, like most politicians, he promised more than he could deliver. Why not
+                  indeed! Daylight and everything. And then the battle’s not so bad? Hello, little
+                  man. I will destroy you! No, I’m Santa Claus! Kif might! Man, I’m sore all over. I
+                  feel like I just went ten rounds with mighty Thor. I found what I need. And it’s
+                  not friends, it’s things. Then we’ll go with that data file!
                 </p>
               </div>
               <div className="blog-details-blockquote">
@@ -91,41 +83,32 @@ export default function BlogDetailsArea() {
               </div>
               <div className="blog-details-left-content">
                 <p>
-                  With any accomplished project, great time management is an
-                  essential component. We business owners hire product
-                  designers, they expect them to not only perform well, but also
-                  on time. At Stan Vision, we provide you with an experienced
-                  design team, led by an expert PM who knows how to prioritise
-                  your platform and product.
+                  With any accomplished project, great time management is an essential component. We
+                  business owners hire product designers, they expect them to not only perform well,
+                  but also on time. At Stan Vision, we provide you with an experienced design team,
+                  led by an expert PM who knows how to prioritise your platform and product.
                 </p>
               </div>
               <div className="blog-details-thumb-box">
                 <div className="row">
                   <div className="col-xl-12">
                     <div className="blog-details-thumb">
-                      <Image
-                        src={details_thumb_3}
-                        alt="details-thumb"
-                        style={{ height: "auto" }}
-                      />
+                      <Image src={details_thumb_3} alt="details-thumb" style={{ height: 'auto' }} />
                     </div>
                   </div>
                 </div>
               </div>
               <div className="blog-details-left-content">
-                <h4 className="blog-details-left-title">
-                  What is Lorem Ipsum?
-                </h4>
+                <h4 className="blog-details-left-title">What is Lorem Ipsum?</h4>
                 <p>
-                  <span>Lorem Ipsum</span> is simply dummy text of the printing
-                  and typesetting industry. Lorem Ipsum has been the industry
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  <span>Lorem Ipsum</span> is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry standard dummy text ever since the
+                  1500s, when an unknown printer took a galley of type and scrambled it to make a
+                  type specimen book.
                 </p>
                 <p>
-                  It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged
+                  It has survived not only five centuries, but also the leap into electronic
+                  typesetting, remaining essentially unchanged
                 </p>
               </div>
               <div className="blog-details-share-wrap mb-40">
@@ -167,10 +150,7 @@ export default function BlogDetailsArea() {
 
               <div className="tp-postbox-details-form">
                 <h3 className="tp-postbox-details-form-title">Leave a Reply</h3>
-                <p>
-                  Your email address will not be published. Required fields are
-                  marked *
-                </p>
+                <p>Your email address will not be published. Required fields are marked *</p>
 
                 {/* blog reply form */}
                 <BlogReplyForm />

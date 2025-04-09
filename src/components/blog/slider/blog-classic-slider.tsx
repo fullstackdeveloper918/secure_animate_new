@@ -1,13 +1,13 @@
 'use client';
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { SwiperOptions } from "swiper/types";
-import { Navigation, Pagination } from "swiper/modules";
-import { ScrollDown } from "@/components/svg";
-import { blog_classic } from "@/data/blog-data";
-import { scroller } from "react-scroll";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperOptions } from 'swiper/types';
+import { Navigation, Pagination } from 'swiper/modules';
+import { ScrollDown } from '@/components/svg';
+import { blog_classic } from '@/data/blog-data';
+import { scroller } from 'react-scroll';
 
 // slider setting
 const slider_setting: SwiperOptions = {
@@ -17,12 +17,12 @@ const slider_setting: SwiperOptions = {
   spaceBetween: 0,
   speed: 1000,
   pagination: {
-    el: ".blog-sidebar-dot",
+    el: '.blog-sidebar-dot',
     clickable: true,
   },
   navigation: {
-    nextEl: ".blog-sidebar-prev",
-    prevEl: ".blog-sidebar-next",
+    nextEl: '.blog-sidebar-prev',
+    prevEl: '.blog-sidebar-next',
   },
 };
 
@@ -60,17 +60,16 @@ export default function BlogClassicSlider() {
             <SwiperSlide key={item.id}>
               <div
                 className="blog-sidebar-slider-bg blog-sidebar-slider-height d-flex align-items-center pt-170 pb-120"
-                style={{ backgroundImage: `url(/assets/img/inner-blog/blog-sidebar/blog-sidebar-bg.jpg)` }}
+                style={{
+                  backgroundImage: `url(/assets/img/inner-blog/blog-sidebar/blog-sidebar-bg.jpg)`,
+                }}
               >
                 <div className="container">
                   <div className="row">
                     <div className="col-xl-9">
                       <div className="blog-sidebar-content-box">
                         <div className="blog-sidebar-avatar-box d-flex align-items-center">
-                          <Image
-                            src={item.avatar!}
-                            alt="avatar"
-                          />
+                          <Image src={item.avatar!} alt="avatar" />
                           <span>{item.author}</span>
                         </div>
                         <div className="blog-sidebar-title-box">
@@ -80,7 +79,8 @@ export default function BlogClassicSlider() {
                           <h4 className="blog-sidebar-slider-title tp-char-animation">
                             {item.title}
                           </h4>
-                          <Link href={`/blog-details/${item.id}`}
+                          <Link
+                            href={`/blog-details/${item.id}`}
                             className="blog-sidebar-slider-link"
                           >
                             Read More

@@ -1,11 +1,11 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 // import logo_1 from "@/assets/img/logo/logo.png";
-import logo_1 from "@/assets/img/logo/logo.png";
-import logo_2 from "@/assets/img/logo/logo-white.png";
-import { CloseThree, CloseTwo } from "../svg";
-import Link from "next/link";
-import MobileMenusTwo from "./mobile-menus-2";
+import logo_1 from '@/assets/img/logo/logo.png';
+import logo_2 from '@/assets/img/logo/logo-white.png';
+import { CloseThree, CloseTwo } from '../svg';
+import Link from 'next/link';
+import MobileMenusTwo from './mobile-menus-2';
 
 // prop type
 type IProps = {
@@ -13,16 +13,9 @@ type IProps = {
   setOpenOffcanvas: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function MobileOffcanvasTwo({
-  openOffcanvas,
-  setOpenOffcanvas,
-}: IProps) {
+export default function MobileOffcanvasTwo({ openOffcanvas, setOpenOffcanvas }: IProps) {
   return (
-    <div
-      className={`tp-offcanvas-2-area p-relative ${
-        openOffcanvas ? "opened" : ""
-      }`}
-    >
+    <div className={`tp-offcanvas-2-area p-relative ${openOffcanvas ? 'opened' : ''}`}>
       <div className="tp-offcanvas-2-bg is-left left-box"></div>
       <div className="tp-offcanvas-2-bg is-right right-box d-none d-md-block"></div>
       <div className="tp-offcanvas-2-wrapper">
@@ -30,20 +23,10 @@ export default function MobileOffcanvasTwo({
           <div className="tp-offcanvas-2-left-wrap d-flex justify-content-between align-items-center ">
             <div className="tp-header-logo logoPng">
               <Link className="logo-1" href="/">
-                <Image
-                  src="/assets/img/logo/logo.png"
-                  alt="logo"
-                  width={180}
-                  height={180}
-                />
+                <Image src="/assets/img/logo/logo.png" alt="logo" width={180} height={180} />
               </Link>
               <Link className="logo-2" href="/">
-                <Image
-                  src="/assets/img/logo/logo-white.png"
-                  alt="logo"
-                  width={180}
-                  height={180}
-                />
+                <Image src="/assets/img/logo/logo-white.png" alt="logo" width={180} height={180} />
               </Link>
             </div>
             <div className="tp-offcanvas-2-close d-md-none text-end">
@@ -68,10 +51,7 @@ export default function MobileOffcanvasTwo({
         </div>
         <div className="tp-offcanvas-2-right right-box d-none d-md-block p-relative">
           <div className="tp-offcanvas-2-close text-end">
-            <button
-              onClick={() => setOpenOffcanvas(false)}
-              className="tp-offcanvas-2-close-btn"
-            >
+            <button onClick={() => setOpenOffcanvas(false)} className="tp-offcanvas-2-close-btn">
               <span className="text">
                 <span>close</span>
               </span>

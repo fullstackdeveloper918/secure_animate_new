@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function VideoThree() {
   return (
@@ -12,10 +12,7 @@ export default function VideoThree() {
           autoPlay={true}
           playsInline={true}
         >
-          <source
-            src="https://html.hixstudio.net/videos/liko/liko-3.mp4"
-            type="video/mp4"
-          />
+          <source src="https://html.hixstudio.net/videos/liko/liko-3.mp4" type="video/mp4" />
         </video>
       </div>
     </div>

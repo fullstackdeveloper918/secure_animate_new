@@ -1,14 +1,14 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 // images
-import sv_1 from "@/assets/img/inner-service/sercive-details/sv-details-1.jpg";
-import sv_2 from "@/assets/img/inner-service/sercive-details/sv-details-1.png";
-import sv_3 from "@/assets/img/inner-service/sercive-details/sv-details-2.png";
+import sv_1 from '@/assets/img/inner-service/sercive-details/sv-details-1.jpg';
+import sv_2 from '@/assets/img/inner-service/sercive-details/sv-details-1.png';
+import sv_3 from '@/assets/img/inner-service/sercive-details/sv-details-2.png';
 
 export default function ServiceDetailsArea({ serviceBannerData }) {
-  console.log(serviceBannerData, "serviceBannerData");
+  console.log(serviceBannerData, 'serviceBannerData');
   return (
     <div className="service-details__area service-details__space bann-p-block">
       <div className="container">
@@ -28,8 +28,7 @@ export default function ServiceDetailsArea({ serviceBannerData }) {
               <div className="service-details__banner-text mb-8">
                 <p className="mb-30 tp_title_anim">
                   Optimize your business’s operations
-                  <br /> with managed server solutions and secure <br /> cloud
-                  infrastructure.{" "}
+                  <br /> with managed server solutions and secure <br /> cloud infrastructure.{' '}
                 </p>
                 <p className="tp_title_anim">
                   Explore our achievements and let yourself be <br /> convinced!
@@ -44,12 +43,7 @@ export default function ServiceDetailsArea({ serviceBannerData }) {
           <div className="col-xl-12">
             <div className="service-details__tab-wrapper text-center mb-50">
               <div className="service-details__tab-thumb">
-                <Image
-                  data-speed="0.4"
-                  src={sv_1}
-                  alt="service-img"
-                  style={{ height: "auto" }}
-                />
+                <Image data-speed="0.4" src={sv_1} alt="service-img" style={{ height: 'auto' }} />
               </div>
             </div>
           </div>
@@ -60,12 +54,10 @@ export default function ServiceDetailsArea({ serviceBannerData }) {
           <div className="col-xl-7 col-lg-7">
             <div className="service-details__left-wrap">
               <div className="service-details__left-text pb-6">
-                <h2 className="tp_title_anim">
-                  Benefits of Choosing Secure365
-                </h2>
+                <h2 className="tp_title_anim">Benefits of Choosing Secure365</h2>
                 <p>
-                  Choosing Secure365 ensures your data remains protected, your
-                  systems stay resilient, and your peace of mind is guaranteed!
+                  Choosing Secure365 ensures your data remains protected, your systems stay
+                  resilient, and your peace of mind is guaranteed!
                 </p>
               </div>
               <div className="service-details__fea-list">
@@ -74,7 +66,7 @@ export default function ServiceDetailsArea({ serviceBannerData }) {
                     serviceBannerData?.service_inner_benefits_of_choosing_section_data?.map(
                       (item, index) => (
                         <React.Fragment key={index}>
-                          {console.log(item, "item")}
+                          {console.log(item, 'item')}
                           <li>
                             <h3 className="h5-title">{item?.heading}</h3>
                             <p>{item?.paragraph}</p>
@@ -88,20 +80,12 @@ export default function ServiceDetailsArea({ serviceBannerData }) {
                 <div className="row">
                   <div className="col-xl-6 col-lg-6 col-md-6">
                     <div className="service-details__sm-thumb">
-                      <Image
-                        src={sv_2}
-                        alt="service-img"
-                        style={{ height: "auto" }}
-                      />
+                      <Image src={sv_2} alt="service-img" style={{ height: 'auto' }} />
                     </div>
                   </div>
                   <div className="col-xl-6 col-lg-6 col-md-6">
                     <div className="service-details__sm-thumb">
-                      <Image
-                        src={sv_3}
-                        alt="service-img"
-                        style={{ height: "auto" }}
-                      />
+                      <Image src={sv_3} alt="service-img" style={{ height: 'auto' }} />
                     </div>
                   </div>
                 </div>
@@ -122,13 +106,13 @@ export default function ServiceDetailsArea({ serviceBannerData }) {
                 <span>{serviceBannerData?.full_list_of_services_heading}</span>
               </div>
               <div className="service-details__right-category">
-                {
-                  serviceBannerData?.management_full_list_right_section_services?.map((item,index) => (
+                {serviceBannerData?.management_full_list_right_section_services?.map(
+                  (item, index) => (
                     <React.Fragment key={index}>
                       <Link href="#">{item?.full_list_of_services_loop}</Link>
                     </React.Fragment>
-                  ))
-                }
+                  )
+                )}
                 {/* <a href="#">Server Configuration & Optimization</a>
                 <a href="#">Data Security & Backup Solutions</a>
                 <a href="#">Hybrid Cloud & On-Premises Solutions</a>

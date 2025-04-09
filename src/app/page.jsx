@@ -1,32 +1,32 @@
-"use client";
-import PreLoader from "../components/preLoader";
-import AnimationHeader from "../components/animation_header";
-import HeroSection from "../components/HeroSection";
-import AwardOne from "@/components/award/award-one";
-import ProjectTextLine from "@/components/project/project-text-line";
-import TeamOne from "@/components/team/team-one";
-import TestimonialOne from "@/components/testimonial/testimonial-one";
-import BlogOne from "@/components/blog/blog-one";
-import FooterFour from "@/layouts/footers/footer-four";
-import RealEstateSection from "@/components/about/about-six";
-import WebDevelopment from "@/components/about/about-seven";
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Libre_Franklin } from "next/font/google";
-import { config } from "../../config";
-import BrandOne from "@/components/brand/brand-one";
-import PainSection from "@/components/what-us-diff/whatusdiff";
-import ProjectOne from "@/components/project/project-one";
-import ProjectFour from "@/components/project/project-four";
-import ProjectFive from "@/components/project/project-five";
-import ProjectSix from "@/components/project/project-six";
+'use client';
+import PreLoader from '../components/preLoader';
+import AnimationHeader from '../components/animation_header';
+import HeroSection from '../components/HeroSection';
+import AwardOne from '@/components/award/award-one';
+import ProjectTextLine from '@/components/project/project-text-line';
+import TeamOne from '@/components/team/team-one';
+import TestimonialOne from '@/components/testimonial/testimonial-one';
+import BlogOne from '@/components/blog/blog-one';
+import FooterFour from '@/layouts/footers/footer-four';
+import RealEstateSection from '@/components/about/about-six';
+import WebDevelopment from '@/components/about/about-seven';
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Libre_Franklin } from 'next/font/google';
+import { config } from '../../config';
+import BrandOne from '@/components/brand/brand-one';
+import PainSection from '@/components/what-us-diff/whatusdiff';
+import ProjectOne from '@/components/project/project-one';
+import ProjectFour from '@/components/project/project-four';
+import ProjectFive from '@/components/project/project-five';
+import ProjectSix from '@/components/project/project-six';
 // import bannerDiv from "../../../public/assets/img/inner-faq/faq/InnerDiv.png";
-import bannerDiv from "../../public/assets/img/inner-faq/faq/InnerDiv.png";
-import SecureSection from "@/components/whysecure/SecureSection";
-import HeroBannerAi from "@/components/hero-banner/hero-banner-ai";
-import HeroSectionMain from "@/components/hero-banner/HeroSectionMain";
-import { AnimatedPinDemo } from "../components/ui/AnimatedPinDemo";
+import bannerDiv from '../../public/assets/img/inner-faq/faq/InnerDiv.png';
+import SecureSection from '@/components/whysecure/SecureSection';
+import HeroBannerAi from '@/components/hero-banner/hero-banner-ai';
+import HeroSectionMain from '@/components/hero-banner/HeroSectionMain';
+import { AnimatedPinDemo } from '../components/ui/AnimatedPinDemo';
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -35,12 +35,9 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `${config.APP_URL}/secure-plugin/v1/home`,
-          {
-            cache: "no-store",
-          }
-        );
+        const response = await fetch(`${config.APP_URL}/secure-plugin/v1/home`, {
+          cache: 'no-store',
+        });
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -54,7 +51,7 @@ export default function Home() {
           setLoading(false); // stop loading after delay
         }, 5000);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
         setLoading(false); // stop loading even if there is an error
       }
     };
@@ -69,11 +66,7 @@ export default function Home() {
   return (
     <>
       {/* <div className="cd-index cd-main-content homepage"> */}
-      <div
-        id="clapat-page-content"
-        className="dark-content"
-        data-bgcolor="#ebebeb"
-      >
+      <div id="clapat-page-content" className="dark-content" data-bgcolor="#ebebeb">
         {/* <AnimationHeader /> */}
         <div id="content-scroll">
           <div id="main">
@@ -88,10 +81,7 @@ export default function Home() {
             <div id="main-content">
               <div id="main-page-content">
                 <div id="itemsWrapperLinks">
-                  <div
-                    id="itemsWrapper"
-                    className="webgl-fitthumbs fx-one relative"
-                  >
+                  <div id="itemsWrapper" className="webgl-fitthumbs fx-one relative">
                     <PainSection />
 
                     {/* <!-- Row --> */}
@@ -306,12 +296,8 @@ export default function Home() {
 
               <div className="footer-middle">
                 <div className="copyright">
-                  2024 ©{" "}
-                  <Link
-                    className="link"
-                    target="_blank"
-                    href="https://www.clapat.com/"
-                  >
+                  2024 ©{' '}
+                  <Link className="link" target="_blank" href="https://www.clapat.com/">
                     ClaPat
                   </Link>
                   . All rights reserved.

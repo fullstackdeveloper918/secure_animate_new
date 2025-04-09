@@ -1,7 +1,7 @@
 'use client';
-import React from "react";
-import { ArrowBg, RightArrowTwo } from "../svg";
-import Link from "next/link";
+import React from 'react';
+import { ArrowBg, RightArrowTwo } from '../svg';
+import Link from 'next/link';
 
 export default function HeroBannerFour() {
   return (
@@ -14,7 +14,7 @@ export default function HeroBannerFour() {
                 <span></span>
               </div>
               <h4 className="tp-hero-3-title tp_reveal_anim">
-                <span className="tp-reveal-line">{"IT "}Service </span>
+                <span className="tp-reveal-line">{'IT '}Service </span>
                 <br></br>
                 <span className="tp-reveal-line">All in One Place</span>
               </h4>
@@ -22,7 +22,7 @@ export default function HeroBannerFour() {
                 ux/ui design / motion design / branding / development
               </span>
               <Link className="tp-btn-black-2" href="/contact">
-                Say Hello{" "}
+                Say Hello{' '}
                 <span className="p-relative">
                   <RightArrowTwo />
                   <ArrowBg />

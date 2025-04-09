@@ -1,14 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export default function Filter() {
   return (
-    <svg
-      width="16"
-      height="15"
-      viewBox="0 0 16 15"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M14.9998 3.45001H10.7998"
         stroke="currentColor"

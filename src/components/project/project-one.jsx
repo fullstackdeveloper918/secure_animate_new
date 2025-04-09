@@ -1,54 +1,52 @@
-"use client";
-import React from "react";
-import ProjectTextLine from "./project-text-line";
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+'use client';
+import React from 'react';
+import ProjectTextLine from './project-text-line';
+import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 // project images
-import p_1 from "@/assets/img/home-01/project/project-1-1.jpg";
-import p_2 from "@/assets/img/home-01/project/project-1-2.jpg";
-import p_3 from "@/assets/img/home-01/project/project-1-3.jpg";
-import p_4 from "@/assets/img/home-01/project/project-1-4.jpg";
-import p_5 from "@/assets/img/home-01/project/project-1-5.jpg";
-import p_6 from "@/assets/img/home-01/project/project-1-6.jpg";
+import p_1 from '@/assets/img/home-01/project/project-1-1.jpg';
+import p_2 from '@/assets/img/home-01/project/project-1-2.jpg';
+import p_3 from '@/assets/img/home-01/project/project-1-3.jpg';
+import p_4 from '@/assets/img/home-01/project/project-1-4.jpg';
+import p_5 from '@/assets/img/home-01/project/project-1-5.jpg';
+import p_6 from '@/assets/img/home-01/project/project-1-6.jpg';
 
-
-
-const project_data  = [
+const project_data = [
   {
     id: 1,
-    cls: "tp-project-mr",
-    cls_2: "height-1",
+    cls: 'tp-project-mr',
+    cls_2: 'height-1',
     img: p_1,
   },
   {
     id: 2,
-    cls: "text-end",
-    cls_2: "height-2 d-inline-flex justify-content-end",
+    cls: 'text-end',
+    cls_2: 'height-2 d-inline-flex justify-content-end',
     img: p_2,
   },
   {
     id: 3,
-    cls: "tp-project-mr",
-    cls_2: "height-3",
+    cls: 'tp-project-mr',
+    cls_2: 'height-3',
     img: p_3,
   },
   {
     id: 4,
-    cls: "",
-    cls_2: "height-4",
+    cls: '',
+    cls_2: 'height-4',
     img: p_4,
   },
   {
     id: 5,
-    cls: "tp-project-ml",
-    cls_2: "height-5",
+    cls: 'tp-project-ml',
+    cls_2: 'height-5',
     img: p_5,
   },
   {
     id: 6,
-    cls: "",
-    cls_2: "height-6",
+    cls: '',
+    cls_2: 'height-6',
     img: p_6,
   },
 ];
@@ -61,25 +59,17 @@ function ProjectItem({ item }) {
         data-cursor="View<br>Demo"
       >
         <Link className="cursor-hide" href="#">
-          <Image
-            data-speed=".8"
-            src={item.img}
-            alt="project-img"
-            style={{ height: "auto" }}
-          />
+          <Image data-speed=".8" src={item.img} alt="project-img" style={{ height: 'auto' }} />
         </Link>
       </div>
     </div>
   );
 }
 
-
 const ProjectOne = ({ style_2 = false }) => {
   return (
     <>
-      <div
-        className={`${style_2 ? "tp-project-area-2" : "tp-project-area"} fix`}
-      >
+      <div className={`${style_2 ? 'tp-project-area-2' : 'tp-project-area'} fix`}>
         {!style_2 && (
           <div className="container-fluid p-0">
             <div className="row g-0">
@@ -108,10 +98,7 @@ const ProjectOne = ({ style_2 = false }) => {
 
                     <div className="tp-project-btn tp-btn-trigger">
                       <div className="tp-btn-bounce">
-                        <Link
-                          className="tp-btn-border"
-                          href="#"
-                        >
+                        <Link className="tp-btn-border" href="#">
                           <span className="tp-btn-border-wrap">
                             <span className="text-1">View all projects</span>
                             <span className="text-2">View all projects</span>
@@ -133,8 +120,7 @@ const ProjectOne = ({ style_2 = false }) => {
                       className="tp-project-full-img"
                       data-speed="auto"
                       style={{
-                        backgroundImage:
-                          "url(/assets/img/inner-service/hero/hero-1-2.jpg)",
+                        backgroundImage: 'url(/assets/img/inner-service/hero/hero-1-2.jpg)',
                       }}
                     ></div>
                   </div>

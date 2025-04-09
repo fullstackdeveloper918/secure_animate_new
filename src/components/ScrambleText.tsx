@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
 interface ScrambleTextProps {
   text: string;
@@ -9,7 +9,7 @@ interface ScrambleTextProps {
 const ScrambleText: React.FC<ScrambleTextProps> = ({
   text,
   scrambleSpeed = 70,
-  characterSet = "abcdefgh",
+  characterSet = 'abcdefgh',
 }) => {
   const [displayText, setDisplayText] = useState(text);
   const intervalRef = useRef<number>();
@@ -24,13 +24,13 @@ const ScrambleText: React.FC<ScrambleTextProps> = ({
   const scramble = () => {
     const original = originalText.current;
     const scrambled = original
-      .split("")
+      .split('')
       .map((char, index) =>
         frameRef.current > index * 3
           ? char
           : characterSet[Math.floor(Math.random() * characterSet.length)]
       )
-      .join("");
+      .join('');
 
     setDisplayText(scrambled);
 
@@ -48,9 +48,9 @@ const ScrambleText: React.FC<ScrambleTextProps> = ({
 
     const element = spanRef.current;
     if (element) {
-      element.addEventListener("mouseenter", startScramble);
+      element.addEventListener('mouseenter', startScramble);
       return () => {
-        element.removeEventListener("mouseenter", startScramble);
+        element.removeEventListener('mouseenter', startScramble);
         if (intervalRef.current) {
           clearTimeout(intervalRef.current);
         }

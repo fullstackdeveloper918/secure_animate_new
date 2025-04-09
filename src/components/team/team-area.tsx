@@ -1,8 +1,8 @@
-import React from "react";
-import team_data from "@/data/team-data";
-import TeamItem from "./team-item";
-import { ITeamDT } from "@/types/team-d-t";
-import TeamModal from "../modal/team-modal";
+import React from 'react';
+import team_data from '@/data/team-data';
+import TeamItem from './team-item';
+import { ITeamDT } from '@/types/team-d-t';
+import TeamModal from '../modal/team-modal';
 
 export default function TeamArea() {
   const [showModal, setShowModal] = React.useState(false);
@@ -27,11 +27,7 @@ export default function TeamArea() {
 
       {/* team modal */}
       {teamItem && (
-        <TeamModal
-          setShowModal={setShowModal}
-          showModal={showModal}
-          teamItem={teamItem}
-        />
+        <TeamModal setShowModal={setShowModal} showModal={showModal} teamItem={teamItem} />
       )}
       {/* team modal */}
     </>

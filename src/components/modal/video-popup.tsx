@@ -1,5 +1,5 @@
-import React from "react";
-import ModalVideo from "react-modal-video";
+import React from 'react';
+import ModalVideo from 'react-modal-video';
 
 // prop type
 type IPropType = {
@@ -8,11 +8,7 @@ type IPropType = {
   videoId: string;
 };
 
-const VideoPopup = ({
-  isVideoOpen,
-  setIsVideoOpen,
-  videoId = "TYYf8zYjP5k",
-}: IPropType) => {
+const VideoPopup = ({ isVideoOpen, setIsVideoOpen, videoId = 'TYYf8zYjP5k' }: IPropType) => {
   return (
     <ModalVideo
       channel="youtube"

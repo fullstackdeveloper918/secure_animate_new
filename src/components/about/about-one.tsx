@@ -7,9 +7,8 @@ import ab_2 from '@/assets/img/home-02/about/ab-2.jpg';
 import ab_3 from '@/assets/img/home-02/about/ab-s.jpg';
 
 // img style
-const imgStyle:CSSProperties = {height: "auto"};
+const imgStyle: CSSProperties = { height: 'auto' };
 const AboutOne = () => {
-
   return (
     <div className="tp-about-2-area pt-125 pb-200">
       <div className="container container-1480">
@@ -17,8 +16,7 @@ const AboutOne = () => {
           <div className="col-xxl-8 col-xl-10">
             <div className="tp-about-2-title-box tp-btn-trigger tp-btn-bounce mb-70 text-start text-xl-center">
               <h2 className="tp-about-2-section-title">
-                Cooperation is possible within
-                various shapes and formats
+                Cooperation is possible within various shapes and formats
               </h2>
             </div>
           </div>
@@ -39,11 +37,13 @@ const AboutOne = () => {
             <div className="tp-about-2-content">
               <span>FOLLOW FOR THE BEST EYEWEAR INSPIRATION</span>
               <p className="mb-30">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip.
               </p>
               <p className="mb-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt .!
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt .!
               </p>
             </div>
           </div>

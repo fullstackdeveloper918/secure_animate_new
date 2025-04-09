@@ -1,16 +1,16 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+'use client';
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
-import { motion } from "framer-motion";
-import { useGSAP } from "@gsap/react";
-import { fadeAnimation } from "@/utils/title-animation";
-import Link from "next/link";
+import { motion } from 'framer-motion';
+import { useGSAP } from '@gsap/react';
+import { fadeAnimation } from '@/utils/title-animation';
+import Link from 'next/link';
 
 const HeroBannerOne = () => {
   useGSAP(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       setTimeout(() => {
         fadeAnimation();
       }, 7000);
@@ -24,7 +24,7 @@ const HeroBannerOne = () => {
       <div
         className="tp-hero-area main-slider bannerVideo "
         style={{
-          background: "url(../assets/img/home-01/hero/section-bg-1.jpg)",
+          background: 'url(../assets/img/home-01/hero/section-bg-1.jpg)',
         }}
       >
         <div className="container p-relative Zindex100">
@@ -51,8 +51,7 @@ const HeroBannerOne = () => {
                             className="p-relative "
                           >
                             <div className="boldHeading">
-                              <b> All in</b>{" "}
-                              <b className="textblue"> One Place</b>
+                              <b> All in</b> <b className="textblue"> One Place</b>
                             </div>
                           </motion.div>
                         </span>
@@ -81,19 +80,19 @@ const HeroBannerOne = () => {
                 className="tp-hero-content p-relative Zindex100"
               >
                 <p>
-                  Your Global Digital Partner, Empowering the Brands of Tomorrow
-                  with Security and Innovation.
+                  Your Global Digital Partner, Empowering the Brands of Tomorrow with Security and
+                  Innovation.
                 </p>
 
                 <div className="btn_sec flex gap-3 flex-wrap">
                   {/* <button className="BtnOne btnWrapper"> */}
-                    <Link href="/contact-us" className="BtnOne btnWrapper">
+                  <Link href="/contact-us" className="BtnOne btnWrapper">
                     Get started
-                    </Link>
-                    {/* </button> */}
+                  </Link>
+                  {/* </button> */}
                   {/* <button > */}
                   <Link href="/contact-us" className="BtnTwo btnWrapper">
-                  Let's Connect
+                    Let's Connect
                     <span>
                       <svg
                         width="12"
@@ -108,7 +107,7 @@ const HeroBannerOne = () => {
                         />
                       </svg>
                     </span>
-                    </Link>
+                  </Link>
                   {/* </button> */}
                 </div>
               </motion.div>
@@ -123,16 +122,16 @@ const HeroBannerOne = () => {
               </div> */}
               <div className="videoSec">
                 <video
-                      muted={true}
-                      autoPlay={true}
-                      playsInline={true}
-                      loop={true}
-                      width={700}
-                      height={700}
-                    >
-                      <source src="/assets/video/secure-bann.mp4" type="video/mp4" />
-                    </video>
-                    </div>
+                  muted={true}
+                  autoPlay={true}
+                  playsInline={true}
+                  loop={true}
+                  width={700}
+                  height={700}
+                >
+                  <source src="/assets/video/secure-bann.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
           </div>
           {/* <div className="row">
@@ -148,7 +147,7 @@ const HeroBannerOne = () => {
           </div> */}
         </div>
       </div>
-{/* 
+      {/* 
       <div className="flipelements">
         <div className="fleiptag">
           <div className="button-text sticky left">
@@ -174,7 +173,6 @@ const HeroBannerOne = () => {
 <span>Featured Projects</span>
         </div>
     </div> */}
-
     </div>
   );
 };

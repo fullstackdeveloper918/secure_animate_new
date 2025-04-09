@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import { ProjectShape, RightArrow } from "../svg";
+import React from 'react';
+import Image from 'next/image';
+import { ProjectShape, RightArrow } from '../svg';
 import cta from '@/assets/img/home-03/cta/cta-1.png';
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function ContactOne() {
   return (
@@ -15,8 +15,8 @@ export default function ContactOne() {
               <span>about it</span>
             </h4>
             <p className="tp_fade_bottom">
-              We will collaborate to find the right answer and bring progress to
-              your business and to the world.
+              We will collaborate to find the right answer and bring progress to your business and
+              to the world.
             </p>
             <div className="tp-cta-icon">
               <Image src={cta} alt="cta-img" />

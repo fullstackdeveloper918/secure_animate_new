@@ -1,29 +1,25 @@
-"use client"
+'use client';
 
-import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function AboutSection() {
-  const sectionRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"],
-  })
+    offset: ['start end', 'end start'],
+  });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-  const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [100, 0, 0, 100])
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [100, 0, 0, 100]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="min-h-screen text-white py-40 relative aboutsec"
-    >
+    <section ref={sectionRef} className="min-h-screen text-white py-40 relative aboutsec">
       <motion.div className="aboutsec" style={{ opacity, y }}>
-
         <span className="headingTag">Our mission</span>
-        
+
         <h2 className="">
-        Navigating Your Business Through the Stars… and <b>Safeguarding Every Step</b>
+          Navigating Your Business Through the Stars… and <b>Safeguarding Every Step</b>
         </h2>
 
         <div className="">
@@ -32,14 +28,15 @@ export default function AboutSection() {
           </h3> */}
 
           <p className="text-md xxl:text-lg mb-6 text-gray-300">
-            Think of Secure365 as your interstellar co-pilot, guiding you safely through the ever-expanding cosmos of
-            modern technology. We blend visionary web development with rock-solid IT services, cloud solutions, and
-            cybersecurity—ensuring that no matter which galaxy (or market) you're aiming for, you'll arrive unscathed.
+            Think of Secure365 as your interstellar co-pilot, guiding you safely through the
+            ever-expanding cosmos of modern technology. We blend visionary web development with
+            rock-solid IT services, cloud solutions, and cybersecurity—ensuring that no matter which
+            galaxy (or market) you're aiming for, you'll arrive unscathed.
           </p>
 
           <p className="text-lg text-gray-300">
-            Our mission? Simple: to help your brand thrive and remain secure, from initial launch to the far reaches of
-            tomorrow.
+            Our mission? Simple: to help your brand thrive and remain secure, from initial launch to
+            the far reaches of tomorrow.
           </p>
         </div>
 
@@ -57,9 +54,9 @@ export default function AboutSection() {
           transition={{
             duration: 20,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "linear",
+            ease: 'linear',
           }}
-          style={{ right: "20%", top: "30%" }}
+          style={{ right: '20%', top: '30%' }}
         >
           <div className="w-full h-full relative">
             <div className="absolute inset-0 bg-blue-400 rounded-sm transform rotate-45"></div>
@@ -68,6 +65,5 @@ export default function AboutSection() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }
-

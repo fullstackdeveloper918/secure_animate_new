@@ -1,11 +1,11 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 const firstData = [
-  "Computer vision",
-  "AI Drones",
-  "Machine Learning",
-  "Computers vision",
-  "Computerss vision",
+  'Computer vision',
+  'AI Drones',
+  'Machine Learning',
+  'Computers vision',
+  'Computerss vision',
 ];
 // const IndustriesData1 = [
 //   "Healthcare",
@@ -17,33 +17,33 @@ const firstData = [
 //   "Travel",
 // ];
 const Vision = [
-  "AI Fashion Tagging",
-  "AI Object Detection",
-  "AI Object Detection",
-  "AI Object Detection",
-  "AI Object Detection",
-  "AI Object Detection",
-  "AI Object Detection",
-  "AI Object Detection",
-  "AI Object Detection",
+  'AI Fashion Tagging',
+  'AI Object Detection',
+  'AI Object Detection',
+  'AI Object Detection',
+  'AI Object Detection',
+  'AI Object Detection',
+  'AI Object Detection',
+  'AI Object Detection',
+  'AI Object Detection',
 ];
 const BuiltModel = [
-  "Building Access Control",
-  "Building Access Control",
-  "Building Access Control",
-  "Building Access Control",
-  "Building Access Control",
-  "Building Access Control",
+  'Building Access Control',
+  'Building Access Control',
+  'Building Access Control',
+  'Building Access Control',
+  'Building Access Control',
+  'Building Access Control',
 ];
-const Predictive = ["Atm cash", "Fraud Detection solutions"];
+const Predictive = ['Atm cash', 'Fraud Detection solutions'];
 const AiDrones = [
-  "Solar Panel Inspection",
-  "LiveStock animation",
-  "LiveStock animation",
-  "LiveStock animation",
-  "LiveStock animation",
-  "LiveStock animation",
-  "LiveStock animation",
+  'Solar Panel Inspection',
+  'LiveStock animation',
+  'LiveStock animation',
+  'LiveStock animation',
+  'LiveStock animation',
+  'LiveStock animation',
+  'LiveStock animation',
 ];
 const SubMenu = ({ item }) => {
   return (

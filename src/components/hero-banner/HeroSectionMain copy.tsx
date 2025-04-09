@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useRef } from "react";
-import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from 'react';
+import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function HeroSectionMain() {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start start", "end start"],
+    offset: ['start start', 'end start'],
   });
 
   const planetScale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
@@ -21,7 +21,7 @@ export default function HeroSectionMain() {
     <section
       ref={sectionRef}
       className="relative min-h-screen flex items-start pt-20 bg-hero-main"
-      style={{ background: "/sky-stars.jpg" }}
+      style={{ background: '/sky-stars.jpg' }}
       id="hero"
     >
       <motion.div
@@ -29,7 +29,7 @@ export default function HeroSectionMain() {
         style={{
           y: planetY,
           scale: planetScale,
-          right: "-5%",
+          right: '-5%',
         }}
       >
         <Image
@@ -75,9 +75,7 @@ export default function HeroSectionMain() {
             text-transparent"></span> */}
             <span className="text-white">Secure in This Galaxy</span>
             <br />
-            <span className="text-foreground dark:text-white">
-              and the Next
-            </span>
+            <span className="text-foreground dark:text-white">and the Next</span>
           </motion.h1>
 
           <motion.p
@@ -86,8 +84,7 @@ export default function HeroSectionMain() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            From Web Development to Cybersecurity: Chart Your <br /> Course with
-            Secure365
+            From Web Development to Cybersecurity: Chart Your <br /> Course with Secure365
           </motion.p>
 
           <motion.div

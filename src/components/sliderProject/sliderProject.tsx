@@ -1,17 +1,13 @@
-"use client"; // Required for Next.js 14+
+'use client'; // Required for Next.js 14+
 
-import { useRef } from "react";
-import Image from "next/image";
-import { useState } from "react";
-import styles from "./slide.module.css";
-import Image1 from "../../../public/images/just-for.png"
-import Image2 from "../../../public/images/just-for.png"
-import Image3 from "../../../public/images/just-for.png"
-const images = [
-  Image1,
-  Image2,
-  Image3,
-];
+import { useRef } from 'react';
+import Image from 'next/image';
+import { useState } from 'react';
+import styles from './slide.module.css';
+import Image1 from '../../../public/images/just-for.png';
+import Image2 from '../../../public/images/just-for.png';
+import Image3 from '../../../public/images/just-for.png';
+const images = [Image1, Image2, Image3];
 
 const ClapatSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,9 +29,7 @@ const ClapatSlider = () => {
             {images.map((src, index) => (
               <div
                 key={index}
-                className={`clapat-slide ${
-                  index === currentIndex ? "clapat-slide-active" : ""
-                }`}
+                className={`clapat-slide ${index === currentIndex ? 'clapat-slide-active' : ''}`}
               >
                 <div className="slide-img">
                   <Image src={src} alt={`Slide ${index + 1}`} width={1280} height={720} />
@@ -61,7 +55,7 @@ const ClapatSlider = () => {
             <div
               key={index}
               className={`clapat-pagination-bullet ${
-                index === currentIndex ? "clapat-pagination-bullet-active" : ""
+                index === currentIndex ? 'clapat-pagination-bullet-active' : ''
               }`}
             ></div>
           ))}

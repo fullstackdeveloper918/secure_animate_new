@@ -13,7 +13,9 @@
 
 .painTitle {
   font-weight: bold;
-  transition: font-size 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition:
+    font-size 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
   white-space: nowrap;
 }
 
@@ -56,7 +58,9 @@
   padding: 4rem 2rem;
   max-width: 100%;
   text-align: left;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .card:hover {
@@ -84,68 +88,65 @@
 .blacksec h2 {
   font-size: 4vw;
 }
-.blacksec .sliderSec>div>div {
-text-align: left;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
+.blacksec .sliderSec > div > div {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .cardtitile {
-font-size: 1.3vw !important;
-text-align: left;
-line-height: 1.7vw !important;
-font-weight:500 !important;
+  font-size: 1.3vw !important;
+  text-align: left;
+  line-height: 1.7vw !important;
+  font-weight: 500 !important;
 }
 .cardDecription {
-font-size: 1.4vw;
-font-weight: 400;
+  font-size: 1.4vw;
+  font-weight: 400;
 }
-@media (max-width:1440px){
+@media (max-width: 1440px) {
   .card {
     padding: 2rem 1rem;
   }
   .cardDescription {
     font-size: 0.8rem;
     line-height: 1.4rem;
-}
-.cardTitle {
-  font-size: 1rem;
-  line-height: 1.6rem;
-}
-.cardIcon{
-width: 40px;
-height: 40px;
-}
-.blackSection {
-padding: 60px 0px;
+  }
+  .cardTitle {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  .cardIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .blackSection {
+    padding: 60px 0px;
+  }
 }
 
-}
-
-@media (max-width:991px){
+@media (max-width: 991px) {
   .cardContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-.blackTitle {
-  font-size: 30px;
-  line-height: 42px;
-  margin-bottom: 0px;
-  padding: 0px 15px;
+  }
+  .blackTitle {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 0px;
+    padding: 0px 15px;
+  }
 
+  .painTitle {
+    font-size: 30px !important;
+  }
 }
 
-.painTitle {
-font-size: 30px !important;
-}
-}
-
-
-@media (max-width:575px){
+@media (max-width: 575px) {
   .cardContainer {
     grid-template-columns: 1fr;
-}
-.painTitle {
-  font-size: 24px !important;
-}
+  }
+  .painTitle {
+    font-size: 24px !important;
+  }
 }

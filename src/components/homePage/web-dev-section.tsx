@@ -1,18 +1,18 @@
-"use client"
+'use client';
 
-import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import Image from "next/image"
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 
 export default function WebDevSection() {
-  const sectionRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"],
-  })
+    offset: ['start end', 'end start'],
+  });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-  const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [100, 0, 0, 100])
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [100, 0, 0, 100]);
 
   return (
     <section
@@ -21,52 +21,56 @@ export default function WebDevSection() {
     >
       <motion.div className="thirdwebContent" style={{ opacity, y }}>
         <h2>
-          One Small Step for Your Brand, <b className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600">
-            One Giant Leap for Your Online Presence</b>
+          One Small Step for Your Brand,{' '}
+          <b className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600">
+            One Giant Leap for Your Online Presence
+          </b>
         </h2>
 
         <div className="maniPara">
-
-
           <p className="text-md xxl:text-lg mb-6 text-gray-300">
-            Every expedition to new frontiers begins with a reliable launchpad—and your website is no exception. Our web
-            development team designs visually captivating, high-performing platforms that capture your audience's
-            imagination and hold strong, no matter how far you travel.
+            Every expedition to new frontiers begins with a reliable launchpad—and your website is
+            no exception. Our web development team designs visually captivating, high-performing
+            platforms that capture your audience's imagination and hold strong, no matter how far
+            you travel.
             <br></br>
             <br></br>
             Because when your ambition spans galaxies, your website needs to keep pace.
           </p>
-
-        
         </div>
       </motion.div>
 
-<div className="columnsec">
-  {["Cosmic Design Aesthetic", "Mobile-Responsive & Stellar Performance", "Search Visibility in Any Orbit", "Future-Ready Tech"].map((feature, featureIndex) => (
-    <div key={featureIndex} className="colusecmap">
-      <div className="starIcon">
-        <span className="text-white font-bold">  
-          <Image 
-            src="/images/columnsec.svg" 
-            alt="Astrologer" 
-            width={50} 
-            height={50} 
-          /></span>
+      <div className="columnsec">
+        {[
+          'Cosmic Design Aesthetic',
+          'Mobile-Responsive & Stellar Performance',
+          'Search Visibility in Any Orbit',
+          'Future-Ready Tech',
+        ].map((feature, featureIndex) => (
+          <div key={featureIndex} className="colusecmap">
+            <div className="starIcon">
+              <span className="text-white font-bold">
+                <Image src="/images/columnsec.svg" alt="Astrologer" width={50} height={50} />
+              </span>
 
-<div><h4 className="text-lg font-medium text-blue-200">{feature}</h4>
+              <div>
+                <h4 className="text-lg font-medium text-blue-200">{feature}</h4>
 
-<p>{[
-  "We fuse creativity with function to build unique, user-friendly interfaces.", 
-  "Your website looks and operates flawlessly on any device.", 
-  "Enjoy SEO-friendly architecture that helps your site shine among the stars.",
-  "Our code is built to evolve—so your site can boldly go wherever your business leads."
-][featureIndex]}</p>
-</div>
+                <p>
+                  {
+                    [
+                      'We fuse creativity with function to build unique, user-friendly interfaces.',
+                      'Your website looks and operates flawlessly on any device.',
+                      'Enjoy SEO-friendly architecture that helps your site shine among the stars.',
+                      'Our code is built to evolve—so your site can boldly go wherever your business leads.',
+                    ][featureIndex]
+                  }
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-      
-    </div>
-  ))}
-</div>
 
       {/* Constellation effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -108,6 +112,5 @@ export default function WebDevSection() {
         </svg>
       </div>
     </section>
-  )
+  );
 }
-

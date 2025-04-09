@@ -1,8 +1,8 @@
-import React from "react";
-import { CloseEye, OpenEye } from "../svg";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import React from 'react';
+import { CloseEye, OpenEye } from '../svg';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 // import ErrorMsg from "../error-msg";
 
 type FormData = {
@@ -11,30 +11,33 @@ type FormData = {
 };
 
 const schema = yup.object().shape({
-  email: yup.string().required().email().label("Email"),
-  password: yup.string().required().min(6).label("Password"),
+  email: yup.string().required().email().label('Email'),
+  password: yup.string().required().min(6).label('Password'),
 });
-
 
 export default function LoginForm() {
   const [showPass, setShowPass] = React.useState(false);
-  const {register,handleSubmit,reset,formState: { errors }} = useForm<FormData>({
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
   const onSubmit = handleSubmit((data) => {
-    alert(JSON.stringify(data))
-    reset()
+    alert(JSON.stringify(data));
+    reset();
   });
   return (
     <form onSubmit={onSubmit}>
       <div className="tp-login-input-wrapper">
-
         <div className="tp-login-input-box">
           <div className="tp-login-input-title">
             <label htmlFor="email">Your Email</label>
           </div>
           <div className="tp-login-input">
-            <input id="email" {...register("email")} type="email" placeholder="liko@mail.com" />
+            <input id="email" {...register('email')} type="email" placeholder="liko@mail.com" />
           </div>
           {/* <ErrorMsg msg={errors.email?.message!} /> */}
         </div>
@@ -46,9 +49,9 @@ export default function LoginForm() {
           <div className="tp-login-input p-relative">
             <input
               id="password"
-              type={showPass ? "text" : "password"}
+              type={showPass ? 'text' : 'password'}
               placeholder="Min. 6 character"
-              {...register("password")}
+              {...register('password')}
             />
             <div
               className="tp-login-input-eye"
@@ -69,7 +72,6 @@ export default function LoginForm() {
           </div>
           {/* <ErrorMsg msg={errors.password?.message!} /> */}
         </div>
-
       </div>
       <div className="tp-login-suggetions d-sm-flex align-items-center justify-content-between mb-20">
         <div className="tp-login-remeber">

@@ -1,17 +1,17 @@
-"use client";
-import { gsap } from "gsap";
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import useScrollSmooth from "@/hooks/use-scroll-smooth";
-import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
+'use client';
+import { gsap } from 'gsap';
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import useScrollSmooth from '@/hooks/use-scroll-smooth';
+import { ScrollSmoother, ScrollTrigger, SplitText } from '@/plugins';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
-import Wrapper from "@/layouts/wrapper";
-import HeaderEleven from "@/layouts/headers/header-eleven";
-import FooterTwo from "@/layouts/footers/footer-two";
-import error from "@/assets/img/error/error.png";
+import Wrapper from '@/layouts/wrapper';
+import HeaderEleven from '@/layouts/headers/header-eleven';
+import FooterTwo from '@/layouts/footers/footer-two';
+import error from '@/assets/img/error/error.png';
 
 const ErrorMain = () => {
   useScrollSmooth();
@@ -32,15 +32,9 @@ const ErrorMain = () => {
               <div className="col-xl-12">
                 <div className="tp-error-wrapper text-center">
                   <h1 className="tp-error-title">Oops!</h1>
-                  <Image
-                    src={error}
-                    alt="error-img"
-                    style={{ height: "auto" }}
-                  />
+                  <Image src={error} alt="error-img" style={{ height: 'auto' }} />
                   <div className="tp-error-content">
-                    <h2 className="tp-error-title-sm">
-                      Something went Wrong...
-                    </h2>
+                    <h2 className="tp-error-title-sm">Something went Wrong...</h2>
                     <p>Sorry, we {"couldn't"} find your page.</p>
                     <Link className="tp-btn-black-2" href="/">
                       Back to Home

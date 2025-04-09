@@ -1,14 +1,14 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { SwiperOptions } from "swiper/types";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperOptions } from 'swiper/types';
 
-import BlogSidebar from "./blog-sidebar";
-import { blog_classic } from "@/data/blog-data";
-import { Quote, QuoteTwo } from "../svg";
-import usePagination from "@/hooks/use-pagination";
+import BlogSidebar from './blog-sidebar';
+import { blog_classic } from '@/data/blog-data';
+import { Quote, QuoteTwo } from '../svg';
+import usePagination from '@/hooks/use-pagination';
 // import { IBlogDT } from "@/types/blog-d-t";
 // import PaginationCom from "../ui/pagination";
 
@@ -19,32 +19,27 @@ const slider_setting = {
   autoplay: false,
   spaceBetween: 0,
   speed: 1000,
-  effect: "fade",
+  effect: 'fade',
   pagination: {
-    el: ".blog-sidebar-dot",
+    el: '.blog-sidebar-dot',
     clickable: true,
   },
   navigation: {
-    prevEl: ".postbox-arrow-prev",
-    nextEl: ".postbox-arrow-next",
+    prevEl: '.postbox-arrow-prev',
+    nextEl: '.postbox-arrow-next',
   },
 };
 
-
-
-export default function BlogClassicArea({setIsVideoOpen,setVideoId}) {
+export default function BlogClassicArea({ setIsVideoOpen, setVideoId }) {
   const blog_items = [...blog_classic.filter((b) => !b.blogHeroSlider)];
-  const { currentItems, handlePageClick, pageCount } = usePagination(blog_items,4);
+  const { currentItems, handlePageClick, pageCount } = usePagination(blog_items, 4);
 
   function handleVideoModal(id) {
     setIsVideoOpen(true);
     setVideoId(id);
   }
   return (
-    <section
-      id="postbox"
-      className="postbox__area tp-blog-sidebar-sticky-area pt-120 pb-80"
-    >
+    <section id="postbox" className="postbox__area tp-blog-sidebar-sticky-area pt-120 pb-80">
       <div className="container">
         <div className="row">
           <div className="col-xxl-8 col-xl-8 col-lg-8">
@@ -108,9 +103,7 @@ export default function BlogClassicArea({setIsVideoOpen,setVideoId}) {
                         <p>{item.desc}</p>
                       </div>
                       <div className="postbox__read-more">
-                        <Link href={`/blog-details/${item.id}`}
-                          className="tp-btn-border-lg"
-                        >
+                        <Link href={`/blog-details/${item.id}`} className="tp-btn-border-lg">
                           read more
                         </Link>
                       </div>
@@ -122,8 +115,7 @@ export default function BlogClassicArea({setIsVideoOpen,setVideoId}) {
                         <Quote />
                       </span>
                       <p>
-                        MERGE DIFFERENT TO CREATE A PERFECT <br /> PLAYLIST FOR
-                        EACH.
+                        MERGE DIFFERENT TO CREATE A PERFECT <br /> PLAYLIST FOR EACH.
                       </p>
                     </div>
                   )}
@@ -133,10 +125,7 @@ export default function BlogClassicArea({setIsVideoOpen,setVideoId}) {
                         <span className="postbox__blockquote-icon">
                           <QuoteTwo />
                         </span>
-                        <p>
-                          Lorem ipsum dolor sit amet, consetetur sadipscing
-                          elitr,uyam erat.!
-                        </p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,uyam erat.!</p>
                         <span className="postbox__blockquote-info">
                           SEM SMITH, CREATIVE DIRECTOR
                         </span>

@@ -1,7 +1,7 @@
-import React from "react";
-import TextTransition, { presets } from "react-text-transition";
+import React from 'react';
+import TextTransition, { presets } from 'react-text-transition';
 
-const TEXTS = ["Forest", "Building", "Tree", "Color"];
+const TEXTS = ['Forest', 'Building', 'Tree', 'Color'];
 
 const PreLoad = () => {
   const [index, setIndex] = React.useState(0);
@@ -16,9 +16,7 @@ const PreLoad = () => {
 
   return (
     <h1>
-      <TextTransition springConfig={presets.wobbly}>
-        {TEXTS[index % TEXTS.length]}
-      </TextTransition>
+      <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
     </h1>
   );
 };

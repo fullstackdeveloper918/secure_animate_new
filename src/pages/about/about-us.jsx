@@ -1,29 +1,25 @@
-"use client";
-import { gsap } from "gsap";
-import React from "react";
-import { useGSAP } from "@gsap/react";
-import useScrollSmooth from "@/hooks/use-scroll-smooth";
-import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
+'use client';
+import { gsap } from 'gsap';
+import React from 'react';
+import { useGSAP } from '@gsap/react';
+import useScrollSmooth from '@/hooks/use-scroll-smooth';
+import { ScrollSmoother, ScrollTrigger, SplitText } from '@/plugins';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
-import Wrapper from "@/layouts/wrapper";
-import AboutUsHero from "@/components/about/about-us-hero";
-import AboutUsArea from "@/components/about/about-us-area";
-import FunFactOne from "@/components/fun-fact/fun-fact-one";
-import BrandFive from "@/components/brand/brand-five";
-import AnimationHeader from "@/components/animation_header";
+import Wrapper from '@/layouts/wrapper';
+import AboutUsHero from '@/components/about/about-us-hero';
+import AboutUsArea from '@/components/about/about-us-area';
+import FunFactOne from '@/components/fun-fact/fun-fact-one';
+import BrandFive from '@/components/brand/brand-five';
+import AnimationHeader from '@/components/animation_header';
 
-import {
-  charAnimation,
-  fadeAnimation,
-  titleAnimation,
-} from "@/utils/title-animation";
-import { hoverBtn } from "@/utils/hover-btn";
-import { teamMarqueAnim } from "@/utils/scroll-marque";
-import AboutThree from "@/components/about/about-three";
-import AboutFour from "@/components/about/about-four";
-import FooterFour from "@/layouts/footers/footer-four";
-import AboutWork from "@/components/work/about-work";
+import { charAnimation, fadeAnimation, titleAnimation } from '@/utils/title-animation';
+import { hoverBtn } from '@/utils/hover-btn';
+import { teamMarqueAnim } from '@/utils/scroll-marque';
+import AboutThree from '@/components/about/about-three';
+import AboutFour from '@/components/about/about-four';
+import FooterFour from '@/layouts/footers/footer-four';
+import AboutWork from '@/components/work/about-work';
 
 const AboutUsMain = ({ aboutResponse, bannerResponse }) => {
   useScrollSmooth();

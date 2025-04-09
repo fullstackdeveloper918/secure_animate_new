@@ -1,23 +1,23 @@
-import React from "react";
-import Image from "next/image";
-import { UpArrow } from "../svg";
+import React from 'react';
+import Image from 'next/image';
+import { UpArrow } from '../svg';
 
 // images
-import brand_1 from "@/assets/img/inner-brand/brand-1.jpg";
-import brand_2 from "@/assets/img/inner-brand/brand-2.jpg";
-import brand_3 from "@/assets/img/inner-brand/brand-3.jpg";
-import brand_4 from "@/assets/img/inner-brand/brand-4.jpg";
-import brand_5 from "@/assets/img/inner-brand/brand-5.jpg";
-import brand_6 from "@/assets/img/inner-brand/brand-6.jpg";
-import brand_7 from "@/assets/img/inner-brand/brand-7.jpg";
-import brand_8 from "@/assets/img/inner-brand/brand-8.jpg";
-import brand_9 from "@/assets/img/inner-brand/brand-9.jpg";
-import brand_10 from "@/assets/img/inner-brand/brand-10.jpg";
-import brand_11 from "@/assets/img/inner-brand/brand-11.jpg";
-import brand_12 from "@/assets/img/inner-brand/brand-12.jpg";
-import brand_13 from "@/assets/img/inner-brand/brand-13.jpg";
-import brand_14 from "@/assets/img/inner-brand/brand-14.jpg";
-import brand_15 from "@/assets/img/inner-brand/brand-15.jpg";
+import brand_1 from '@/assets/img/inner-brand/brand-1.jpg';
+import brand_2 from '@/assets/img/inner-brand/brand-2.jpg';
+import brand_3 from '@/assets/img/inner-brand/brand-3.jpg';
+import brand_4 from '@/assets/img/inner-brand/brand-4.jpg';
+import brand_5 from '@/assets/img/inner-brand/brand-5.jpg';
+import brand_6 from '@/assets/img/inner-brand/brand-6.jpg';
+import brand_7 from '@/assets/img/inner-brand/brand-7.jpg';
+import brand_8 from '@/assets/img/inner-brand/brand-8.jpg';
+import brand_9 from '@/assets/img/inner-brand/brand-9.jpg';
+import brand_10 from '@/assets/img/inner-brand/brand-10.jpg';
+import brand_11 from '@/assets/img/inner-brand/brand-11.jpg';
+import brand_12 from '@/assets/img/inner-brand/brand-12.jpg';
+import brand_13 from '@/assets/img/inner-brand/brand-13.jpg';
+import brand_14 from '@/assets/img/inner-brand/brand-14.jpg';
+import brand_15 from '@/assets/img/inner-brand/brand-15.jpg';
 
 // brand images
 const brand_images = [
@@ -46,7 +46,7 @@ export default function BrandMainArea() {
           {brand_images.map((b, i) => (
             <div className="col" key={i}>
               <div className="bd-brand-item mb-80">
-                <Image src={b} alt="brand-img" style={{ height: "auto" }} />
+                <Image src={b} alt="brand-img" style={{ height: 'auto' }} />
               </div>
             </div>
           ))}
@@ -54,10 +54,7 @@ export default function BrandMainArea() {
         <div className="row justify-content-center">
           <div className="bd-brand-btn-box mb-100 d-flex justify-content-center">
             <div className="tp-hover-btn-wrapper">
-              <a
-                className="tp-btn-circle style-2 tp-hover-btn-item tp-hover-btn"
-                href="#"
-              >
+              <a className="tp-btn-circle style-2 tp-hover-btn-item tp-hover-btn" href="#">
                 <span className="tp-btn-circle-text">
                   More <br /> Browser
                 </span>

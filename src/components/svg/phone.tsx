@@ -1,14 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export default function Phone() {
   return (
-    <svg
-      width="15"
-      height="18"
-      viewBox="0 0 15 18"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M13.9148 5V13C13.9148 16.2 13.1076 17 9.87892 17H5.03587C1.80717 17 1 16.2 1 13V5C1 1.8 1.80717 1 5.03587 1H9.87892C13.1076 1 13.9148 1.8 13.9148 5Z"
         stroke="currentColor"

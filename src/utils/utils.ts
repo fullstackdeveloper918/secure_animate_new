@@ -1,18 +1,15 @@
-import $ from 'jquery';
-import product_data from "@/data/product-data";
+import product_data from '@/data/product-data';
 
 // Get max price
 export function maxPrice(): number {
   const max_price = [...product_data].reduce((max, product) => {
     return product.price > max ? product.price : max;
   }, 0);
-  return max_price
-};
-
+  return max_price;
+}
 
 export function imageCompare() {
   document.addEventListener('DOMContentLoaded', () => {
-    // Check if there are elements with the class 'beforeAfter'
     const beforeAfterElements = document.querySelectorAll<HTMLElement>('.beforeAfter');
 
     if (beforeAfterElements.length > 0) {
@@ -24,13 +21,13 @@ export function imageCompare() {
           separatorColor: '#fafafa',
           bulletColor: '#fafafa',
           onMoveStart: (e: Event) => {
-            // your code here
+            console.log('Move started', e);
           },
           onMoving: () => {
-            // your code here
+            console.log('Moving');
           },
           onMoveEnd: () => {
-            // your code here
+            console.log('Move ended');
           },
         });
       });
@@ -48,10 +45,9 @@ export function imageCompare() {
     onMoveEnd: () => void;
   }
 
-  // Example beforeAfter function definition for illustration purposes
   function beforeAfter(element: HTMLElement, options: BeforeAfterOptions): void {
-    // Initialize your beforeAfter plugin on the element with the provided options
-    // This is where you would implement your beforeAfter functionality
+    console.log('Initializing beforeAfter for element:', element);
+    console.log('Options:', options);
+    // Placeholder: Here you would implement your actual before/after slider logic.
   }
-
 }

@@ -1,16 +1,16 @@
-import React from "react";
-import Image from "next/image";
-import { blog_modern } from "@/data/blog-data";
-import usePagination from "@/hooks/use-pagination";
+import React from 'react';
+import Image from 'next/image';
+import { blog_modern } from '@/data/blog-data';
+import usePagination from '@/hooks/use-pagination';
 // import Pagination from "../ui/pagination";
-import { IBlogDT } from "@/types/blog-d-t";
-import BlogItem from "./blog-item/blog-item";
+import { IBlogDT } from '@/types/blog-d-t';
+import BlogItem from './blog-item/blog-item';
 
 export default function BlogModern() {
   const blog_items = [...blog_modern];
   const first_blog = blog_items[0];
   const other_blogs = blog_items.filter((b) => b !== first_blog);
-  const { currentItems, handlePageClick, pageCount } = usePagination<IBlogDT>(other_blogs,6);
+  const { currentItems, handlePageClick, pageCount } = usePagination<IBlogDT>(other_blogs, 6);
   return (
     <>
       <div className="tp-blog-standard-area pt-170">
@@ -27,8 +27,7 @@ export default function BlogModern() {
                 </div>
                 <div className="tp-blog-standard-meta d-none d-sm-block">
                   <span>
-                    {first_blog.date.split(".")[1]} <br />{" "}
-                    {first_blog.date.split(".")[0]}
+                    {first_blog.date.split('.')[1]} <br /> {first_blog.date.split('.')[0]}
                   </span>
                 </div>
               </div>

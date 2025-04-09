@@ -1,22 +1,22 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
-import { ProjectShape, RightArrow } from "../svg";
+import { ProjectShape, RightArrow } from '../svg';
 // images
 // import port_1 from "@/assets/img/home-03/portfolio/port-1.jpg";
 // import port_2 from "@/assets/img/home-03/portfolio/port-2.jpg";
 // import port_3 from "@/assets/img/home-03/portfolio/port-3.jpg";
 // import port_4 from "@/assets/img/home-03/portfolio/port-4.jpg";
 
-import port_4 from "@/assets/img/home-03/portfolio/port-1.png";
-import port_3 from "@/assets/img/home-03/portfolio/port-2.png";
-import port_2 from "@/assets/img/home-03/portfolio/port-3.png";
-import port_1 from "@/assets/img/home-03/portfolio/port-4.png";
+import port_4 from '@/assets/img/home-03/portfolio/port-1.png';
+import port_3 from '@/assets/img/home-03/portfolio/port-2.png';
+import port_2 from '@/assets/img/home-03/portfolio/port-3.png';
+import port_1 from '@/assets/img/home-03/portfolio/port-4.png';
 // import port_5 from "@/assets/img/home-03/portfolio/port-5.jpg";
 // import port_6 from "@/assets/img/home-03/portfolio/port-6.jpg";
 // import port_7 from "@/assets/img/home-03/portfolio/port-7.jpg";
 // import port_8 from "@/assets/img/home-03/portfolio/port-8.jpg";
-import Link from "next/link";
+import Link from 'next/link';
 
 // portfolio data
 const project_data = [
@@ -24,15 +24,15 @@ const project_data = [
     id: 1,
     img_1: port_1,
     img_2: port_2,
-meta: "DEC 2024 . Cloud Solutions",
-title: "Cloud Learning",
+    meta: 'DEC 2024 . Cloud Solutions',
+    title: 'Cloud Learning',
   },
   {
     id: 2,
     img_1: port_3,
     img_2: port_4,
-    meta: "NOV 2024 . Gaming & Nft",
-    title: "Gaming & Nft",
+    meta: 'NOV 2024 . Gaming & Nft',
+    title: 'Gaming & Nft',
   },
   // {
   //   id: 3,
@@ -56,7 +56,7 @@ type IProps = {
 };
 export default function ProjectFour({ style_2 = false }: IProps) {
   return (
-    <div className={`tp-project-3-area ${style_2 ? "pt-60 pw-project-style" : "pt-130 black-bg"}`}>
+    <div className={`tp-project-3-area ${style_2 ? 'pt-60 pw-project-style' : 'pt-130 black-bg'}`}>
       <div className="container container-1720">
         {!style_2 && (
           <div className="row justify-content-center">
@@ -66,10 +66,7 @@ export default function ProjectFour({ style_2 = false }: IProps) {
                   Latest <span>Projects</span>
                 </h4>
                 <div className="tp-project-3-btn-box">
-                  <Link
-                    className="tp-btn-zikzak p-relative"
-                    href="#"
-                  >
+                  <Link className="tp-btn-zikzak p-relative" href="#">
                     <span className="zikzak-content">
                       See <br /> All Project
                       <RightArrow clr="#19191A" />
@@ -88,11 +85,7 @@ export default function ProjectFour({ style_2 = false }: IProps) {
                 <div className="row">
                   <div className="col-xl-4 col-lg-4 col-md-6">
                     <div className="tp-project-3-thumb pro-img-1">
-                      <Image
-                        src={item.img_1}
-                        alt="port-img"
-                        style={{ height: "auto" }}
-                      />
+                      <Image src={item.img_1} alt="port-img" style={{ height: 'auto' }} />
                     </div>
                   </div>
                   <div className="col-xl-4 col-lg-4 col-md-12 order-1 order-lg-0">
@@ -101,10 +94,7 @@ export default function ProjectFour({ style_2 = false }: IProps) {
                       <h4 className="tp-project-3-title-sm">
                         <Link href="#">{item.title}</Link>
                       </h4>
-                      <Link
-                        className="tp-btn-project-sm"
-                        href="#"
-                      >
+                      <Link className="tp-btn-project-sm" href="#">
                         See Project
                       </Link>
                     </div>
@@ -114,11 +104,7 @@ export default function ProjectFour({ style_2 = false }: IProps) {
                   </div>
                   <div className="col-xl-4 col-lg-4 col-md-6 order-0 order-lg-0">
                     <div className="tp-project-3-thumb pro-img-2">
-                      <Image
-                        src={item.img_2}
-                        alt="port-img"
-                        style={{ height: "auto" }}
-                      />
+                      <Image src={item.img_2} alt="port-img" style={{ height: 'auto' }} />
                     </div>
                   </div>
                 </div>

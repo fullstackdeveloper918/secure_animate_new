@@ -1,50 +1,50 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const project_data = [
   {
     id: 1,
-    img: "/assets/img/home-02/project/project-1.jpg",
-    subtitle: "Concept",
-    title: "High Lights",
+    img: '/assets/img/home-02/project/project-1.jpg',
+    subtitle: 'Concept',
+    title: 'High Lights',
   },
   {
     id: 2,
-    img: "/assets/img/home-02/project/project-2.jpg",
-    subtitle: "Branding",
-    title: "Fashion",
+    img: '/assets/img/home-02/project/project-2.jpg',
+    subtitle: 'Branding',
+    title: 'Fashion',
   },
   {
     id: 3,
-    img: "/assets/img/home-02/project/project-3.jpg",
-    subtitle: "Concept",
-    title: "Branding",
+    img: '/assets/img/home-02/project/project-3.jpg',
+    subtitle: 'Concept',
+    title: 'Branding',
   },
   {
     id: 4,
-    img: "/assets/img/home-02/project/project-4.jpg",
-    subtitle: "Concept",
-    title: "High Lights",
+    img: '/assets/img/home-02/project/project-4.jpg',
+    subtitle: 'Concept',
+    title: 'High Lights',
   },
   {
     id: 5,
-    img: "/assets/img/home-02/project/project-5.jpg",
-    subtitle: "Concept",
-    title: "High Lights",
+    img: '/assets/img/home-02/project/project-5.jpg',
+    subtitle: 'Concept',
+    title: 'High Lights',
   },
   {
     id: 6,
-    img: "/assets/img/home-02/project/project-6.jpg",
-    subtitle: "Branding",
-    title: "Fashion",
+    img: '/assets/img/home-02/project/project-6.jpg',
+    subtitle: 'Branding',
+    title: 'Fashion',
   },
   {
     id: 7,
-    img: "/assets/img/home-02/project/project-7.jpg",
-    subtitle: "Concept",
-    title: "Branding",
+    img: '/assets/img/home-02/project/project-7.jpg',
+    subtitle: 'Concept',
+    title: 'Branding',
   },
 ];
 

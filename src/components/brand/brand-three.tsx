@@ -14,5 +14,5 @@ export default function BrandThree() {
         </div>
       </div>
     </div>
-  )
+  );
 }

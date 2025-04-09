@@ -1,12 +1,6 @@
 export function UpArrowTwo() {
   return (
-    <svg
-      width="11"
-      height="11"
-      viewBox="0 0 11 11"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1 5.5H10"
         stroke="black"
@@ -24,15 +18,9 @@ export function UpArrowTwo() {
     </svg>
   );
 }
-export default function UpArrow({ clr = "currentColor" }: { clr?: string }) {
+export default function UpArrow({ clr = 'currentColor' }: { clr?: string }) {
   return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1 11L11 1"
         stroke={clr}
@@ -53,13 +41,7 @@ export default function UpArrow({ clr = "currentColor" }: { clr?: string }) {
 
 export function UpArrowThree() {
   return (
-    <svg
-      width="46"
-      height="46"
-      viewBox="0 0 46 46"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1.7868 23.0003H44.2132"
         stroke="currentcolor"
@@ -80,13 +62,7 @@ export function UpArrowThree() {
 
 export function UpArrowFour() {
   return (
-    <svg
-      width="10"
-      height="10"
-      viewBox="0 0 10 10"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1 9L9 1"
         stroke="currentcolor"

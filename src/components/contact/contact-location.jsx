@@ -1,24 +1,24 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 // images
-import location_1 from "../../../public/images/info-1.png";
-import location_2 from "@/assets/img/inner-contact/contact/info-2.jpg";
-import location_3 from "@/assets/img/inner-contact/contact/info-3.jpg";
-import expertGuide from "../../../public/images/expertGuide.svg";
-import Tailored from "../../../public/images/Tailored.svg";
-import Hassle from "../../../public/images/hassleFree.svg";
+import location_1 from '../../../public/images/info-1.png';
+import location_2 from '@/assets/img/inner-contact/contact/info-2.jpg';
+import location_3 from '@/assets/img/inner-contact/contact/info-3.jpg';
+import expertGuide from '../../../public/images/expertGuide.svg';
+import Tailored from '../../../public/images/Tailored.svg';
+import Hassle from '../../../public/images/hassleFree.svg';
 
 // data
 const location_data = [
   {
     id: 1,
     img: location_1,
-    country: "Our Location",
-    time: "While we proudly serve clients across the globe, our primary office is located in Arlington Heights, IL. We also offer remote consultations and services to ensure that wherever you are, Secure365 is there to support you",
-    location_title: "",
-    address: "1512 E Algonquin Rd Arlington Heights, IL 60005",
-    phone: "+(800) 311-5990",
-    email: "info@secure365.com",
+    country: 'Our Location',
+    time: 'While we proudly serve clients across the globe, our primary office is located in Arlington Heights, IL. We also offer remote consultations and services to ensure that wherever you are, Secure365 is there to support you',
+    location_title: '',
+    address: '1512 E Algonquin Rd Arlington Heights, IL 60005',
+    phone: '+(800) 311-5990',
+    email: 'info@secure365.com',
   },
 ];
 

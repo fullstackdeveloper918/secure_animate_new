@@ -1,11 +1,11 @@
-import React from "react";
-import { useTypewriter } from "react-simple-typewriter";
+import React from 'react';
+import { useTypewriter } from 'react-simple-typewriter';
 
 const TEXTS = [
-  "Brewing some cool things",
-  "Hang tight, magic is happening",
-  "Loading your adventure",
-  "Loading ... ",
+  'Brewing some cool things',
+  'Hang tight, magic is happening',
+  'Loading your adventure',
+  'Loading ... ',
 ];
 
 const PreLoader = () => {
@@ -36,7 +36,7 @@ const PreLoader = () => {
   }, []);
 
   return (
-    <div className={`pre-load-main ${isLoadingComplete ? "slide-up" : ""}`}>
+    <div className={`pre-load-main ${isLoadingComplete ? 'slide-up' : ''}`}>
       <h1>{text}</h1>
     </div>
   );

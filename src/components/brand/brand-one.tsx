@@ -1,4 +1,4 @@
-import BrandSlider from "./brand-slider";
+import BrandSlider from './brand-slider';
 
 const BrandOne = () => {
   return (
@@ -15,7 +15,7 @@ const BrandOne = () => {
               <div className="row align-items-center">
                 <div className="col-xl-12">
                   <div className="tp-brand-slider-wrapper">
-                    <BrandSlider/>
+                    <BrandSlider />
                   </div>
                 </div>
               </div>

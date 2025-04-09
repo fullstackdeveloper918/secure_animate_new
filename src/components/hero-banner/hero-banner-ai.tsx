@@ -1,7 +1,7 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+'use client';
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const HeroBannerAi = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,7 +18,7 @@ const HeroBannerAi = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const section = document.getElementById("bannersection");
+      const section = document.getElementById('bannersection');
       if (section) {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
@@ -29,18 +29,16 @@ const HeroBannerAi = () => {
     };
 
     handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div
       className="bannersection"
       style={{
-        transform: `translate(${mousePosition.x * 0.5}px, ${
-          mousePosition.y * 0.5
-        }px)`,
-        transition: "transform 0.1s ease-out",
+        transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)`,
+        transition: 'transform 0.1s ease-out',
       }}
       id="hero"
     >
@@ -55,7 +53,7 @@ const HeroBannerAi = () => {
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.7, delay: 0.5 }}
-                      className={`p-relative ${isVisible ? "fadeIn" : ""}`}
+                      className={`p-relative ${isVisible ? 'fadeIn' : ''}`}
                     >
                       <span className="boldHeading">
                         <b>Secure in This Galaxy </b>
@@ -72,10 +70,7 @@ const HeroBannerAi = () => {
                       </span>
                     </motion.div>
                   </h1>
-                  <h2>
-                    From Web Development to Cybersecurity: Chart Your Course
-                    with Secure365
-                  </h2>
+                  <h2>From Web Development to Cybersecurity: Chart Your Course with Secure365</h2>
                 </div>
               </div>
 

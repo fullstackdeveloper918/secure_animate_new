@@ -1,28 +1,28 @@
 'use client';
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination,Autoplay, EffectFade } from "swiper/modules";
-import { SwiperOptions } from "swiper/types";
-import Link from "next/link";
+import React, { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import { SwiperOptions } from 'swiper/types';
+import Link from 'next/link';
 
 const hero_data = [
   {
     id: 1,
-    bg: "/assets/img/inner-shop/home/slider-1.jpg",
-    subtitle: "YOU MAY NEED",
-    title: "Shoes <br/> Collection",
+    bg: '/assets/img/inner-shop/home/slider-1.jpg',
+    subtitle: 'YOU MAY NEED',
+    title: 'Shoes <br/> Collection',
   },
   {
     id: 2,
-    bg: "/assets/img/inner-shop/home/slider-2.jpg",
-    subtitle: "NEW ARRIVALS",
-    title: "Shoes <br/> Collection",
+    bg: '/assets/img/inner-shop/home/slider-2.jpg',
+    subtitle: 'NEW ARRIVALS',
+    title: 'Shoes <br/> Collection',
   },
   {
     id: 3,
-    bg: "/assets/img/inner-shop/home/slider-3.jpg",
-    subtitle: "NEW ARRIVALS",
-    title: "Shoes <br/> Collection",
+    bg: '/assets/img/inner-shop/home/slider-3.jpg',
+    subtitle: 'NEW ARRIVALS',
+    title: 'Shoes <br/> Collection',
   },
 ];
 
@@ -33,20 +33,20 @@ export default function HeroBannerSix() {
     loop: false,
     spaceBetween: 0,
     speed: 1000,
-    effect: "fade",
+    effect: 'fade',
     navigation: {
-      prevEl: ".tp-shop-prev",
-      nextEl: ".tp-shop-next",
+      prevEl: '.tp-shop-prev',
+      nextEl: '.tp-shop-next',
     },
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
     },
     pagination: {
-      el: "#paginations",
-      type: "custom",
+      el: '#paginations',
+      type: 'custom',
       renderCustom: function (swiper, current, total) {
-        const zero = total > 9 ? "" : "0";
+        const zero = total > 9 ? '' : '0';
         const index = zero + current;
         const all = zero + total;
         const html = `<div class="shop-slider-pagination">
@@ -62,10 +62,11 @@ export default function HeroBannerSix() {
       <div className="shop-slider-wrapper">
         <Swiper
           {...slider_setting}
-          modules={[Navigation, Pagination,Autoplay,EffectFade]}
+          modules={[Navigation, Pagination, Autoplay, EffectFade]}
           className="swiper-container tp-shop-slider-active"
           onAutoplayTimeLeft={(s, time, progress) => {
-            progressBar.current && (progressBar.current.style.transform = `scaleX(calc(1 - ${progress}))`);
+            progressBar.current &&
+              (progressBar.current.style.transform = `scaleX(calc(1 - ${progress}))`);
           }}
         >
           <div className="tp-shop-slider-arrow-box">
@@ -89,9 +90,7 @@ export default function HeroBannerSix() {
                     <div className="col-xl-8">
                       <div className="tp-shop-slider-content z-index">
                         <div className="tp-shop-slider-title-box">
-                          <span className="tp-shop-slider-subtitle">
-                            {item.subtitle}
-                          </span>
+                          <span className="tp-shop-slider-subtitle">{item.subtitle}</span>
                           <h2
                             className="tp-shop-slider-title"
                             dangerouslySetInnerHTML={{ __html: item.title }}

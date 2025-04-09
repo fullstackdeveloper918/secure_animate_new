@@ -3,15 +3,9 @@ type IProps = {
   clr?: string;
 };
 
-export default function Cart({ clr = "currentcolor" }: IProps) {
+export default function Cart({ clr = 'currentcolor' }: IProps) {
   return (
-    <svg
-      width="18"
-      height="20"
-      viewBox="0 0 18 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M4.85742 6.09765V5.22429C4.85742 3.19845 6.49996 1.20862 8.54179 1.01955C10.9738 0.785448 13.0247 2.68524 13.0247 5.05322V6.29573"
         stroke={clr}
@@ -48,13 +42,7 @@ export default function Cart({ clr = "currentcolor" }: IProps) {
 
 export function CartTwo() {
   return (
-    <svg
-      width="17"
-      height="17"
-      viewBox="0 0 17 17"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

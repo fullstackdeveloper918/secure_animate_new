@@ -1,5 +1,5 @@
-import React from "react";
-import { Email, LocationTwo, Phone, User } from "../svg";
+import React from 'react';
+import { Email, LocationTwo, Phone, User } from '../svg';
 // import NiceSelect from "../ui/nice-select";
 
 export default function PersonalInfoForm() {
@@ -10,11 +10,7 @@ export default function PersonalInfoForm() {
         <div className="col-xxl-6 col-md-6">
           <div className="profile__input-box">
             <div className="profile__input">
-              <input
-                type="text"
-                placeholder="Enter your username"
-                defaultValue="Farhan Firoz"
-              />
+              <input type="text" placeholder="Enter your username" defaultValue="Farhan Firoz" />
               <span>
                 <User />
               </span>
@@ -25,11 +21,7 @@ export default function PersonalInfoForm() {
         <div className="col-xxl-6 col-md-6">
           <div className="profile__input-box">
             <div className="profile__input">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                defaultValue="example@mail.com"
-              />
+              <input type="email" placeholder="Enter your email" defaultValue="example@mail.com" />
               <span>
                 <Email />
               </span>
@@ -39,11 +31,7 @@ export default function PersonalInfoForm() {
         <div className="col-xxl-6 col-md-6">
           <div className="profile__input-box">
             <div className="profile__input">
-              <input
-                type="text"
-                placeholder="Enter username"
-                defaultValue="farhanfiroz"
-              />
+              <input type="text" placeholder="Enter username" defaultValue="farhanfiroz" />
               <span>
                 <i className="fa-brands fa-facebook-f"></i>
               </span>
@@ -53,11 +41,7 @@ export default function PersonalInfoForm() {
         <div className="col-xxl-6 col-md-6">
           <div className="profile__input-box">
             <div className="profile__input">
-              <input
-                type="text"
-                placeholder="Enter username"
-                defaultValue="farhanfiroz"
-              />
+              <input type="text" placeholder="Enter username" defaultValue="farhanfiroz" />
               <span>
                 <i className="fa-brands fa-twitter"></i>
               </span>
@@ -67,11 +51,7 @@ export default function PersonalInfoForm() {
         <div className="col-xxl-6 col-md-6">
           <div className="profile__input-box">
             <div className="profile__input">
-              <input
-                type="text"
-                placeholder="Enter your number"
-                defaultValue="0123 456 7889"
-              />
+              <input type="text" placeholder="Enter your number" defaultValue="0123 456 7889" />
               <span>
                 <Phone />
               </span>

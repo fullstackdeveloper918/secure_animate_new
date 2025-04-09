@@ -1,14 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export default function StarSquare() {
   return (
-    <svg
-      width="70"
-      height="70"
-      viewBox="0 0 70 70"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

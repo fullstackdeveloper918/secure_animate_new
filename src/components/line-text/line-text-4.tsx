@@ -1,12 +1,12 @@
-import React from "react";
-import Marquee from "react-fast-marquee";
+import React from 'react';
+import Marquee from 'react-fast-marquee';
 
 // marquee text
 const marquee_text = [
-  "Have A Great Project ?",
-  "Have A Great Project ?",
-  "Have A Great Project ?",
-  "Have A Great Project ?",
+  'Have A Great Project ?',
+  'Have A Great Project ?',
+  'Have A Great Project ?',
+  'Have A Great Project ?',
 ];
 
 export default function LineTextFour() {

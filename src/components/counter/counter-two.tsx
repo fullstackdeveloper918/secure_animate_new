@@ -1,30 +1,30 @@
-import React from "react";
-import CounterItem from "./counter-item";
+import React from 'react';
+import CounterItem from './counter-item';
 
 const counter_data = [
   {
     id: 1,
-    title: "Experts",
+    title: 'Experts',
     count: 54,
   },
   {
     id: 2,
-    title: "Projects",
+    title: 'Projects',
     count: 21,
   },
   {
     id: 3,
-    title: "Years in business",
+    title: 'Years in business',
     count: 17,
   },
   {
     id: 4,
-    title: "Awards",
+    title: 'Awards',
     count: 86,
   },
   {
     id: 5,
-    title: "Offices",
+    title: 'Offices',
     count: 4,
   },
 ];

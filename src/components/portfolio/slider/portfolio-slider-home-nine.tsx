@@ -1,56 +1,56 @@
-import React from "react";
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 // images
-import port_1 from "@/assets/img/home-10/porfolio/port-1.jpg";
-import port_2 from "@/assets/img/home-10/porfolio/port-2.jpg";
-import port_3 from "@/assets/img/home-10/porfolio/port-3.jpg";
-import port_4 from "@/assets/img/home-10/porfolio/port-4.jpg";
-import port_5 from "@/assets/img/home-10/porfolio/port-5.jpg";
-import port_6 from "@/assets/img/home-10/porfolio/port-6.jpg";
-import port_7 from "@/assets/img/home-10/porfolio/port-7.jpg";
+import port_1 from '@/assets/img/home-10/porfolio/port-1.jpg';
+import port_2 from '@/assets/img/home-10/porfolio/port-2.jpg';
+import port_3 from '@/assets/img/home-10/porfolio/port-3.jpg';
+import port_4 from '@/assets/img/home-10/porfolio/port-4.jpg';
+import port_5 from '@/assets/img/home-10/porfolio/port-5.jpg';
+import port_6 from '@/assets/img/home-10/porfolio/port-6.jpg';
+import port_7 from '@/assets/img/home-10/porfolio/port-7.jpg';
 
 // portfolio titles
 const portfolio_titles = [
   {
     id: 1,
-    title: "Silkvision",
-    category: "Visual",
+    title: 'Silkvision',
+    category: 'Visual',
   },
   {
     id: 2,
-    title: "Disefio Gräfico",
-    category: "Creative",
+    title: 'Disefio Gräfico',
+    category: 'Creative',
   },
   {
     id: 3,
-    title: "PSD Mockup",
-    category: "Branding",
+    title: 'PSD Mockup',
+    category: 'Branding',
   },
   {
     id: 4,
-    title: "Fastwire",
-    category: "Branding",
+    title: 'Fastwire',
+    category: 'Branding',
   },
   {
     id: 5,
-    title: "Tesla",
-    category: "Mobile Application",
+    title: 'Tesla',
+    category: 'Mobile Application',
   },
   {
     id: 6,
-    title: "Ecommerce",
-    category: "Digital Design",
+    title: 'Ecommerce',
+    category: 'Digital Design',
   },
   {
     id: 7,
-    title: "Cosmetic",
-    category: "Visual",
+    title: 'Cosmetic',
+    category: 'Visual',
   },
   {
     id: 8,
-    title: "Waves",
-    category: "UI Design",
+    title: 'Waves',
+    category: 'UI Design',
   },
 ];
 
@@ -61,7 +61,7 @@ function BgImg({ imgSrc, id }: { imgSrc: StaticImageData; id: string }) {
       src={imgSrc}
       alt="bg-img"
       className={`tp-porfolio-10-bg-${id}`}
-      style={{ height: "auto" }}
+      style={{ height: 'auto' }}
     />
   );
 }
@@ -83,7 +83,7 @@ export default function PortfolioSliderHomeNine({ setWhiteCls }: IProps) {
   return (
     <div className="tp-porfolio-10-area tp-porfolio-10-height p-relative">
       <div className="tp-porfolio-10-bg-wrap">
-        <div id="tp-porfolio-10-bg-box" className={activeBg ? activeBg : ""}>
+        <div id="tp-porfolio-10-bg-box" className={activeBg ? activeBg : ''}>
           <BgImg imgSrc={port_1} id="1" />
           <BgImg imgSrc={port_2} id="2" />
           <BgImg imgSrc={port_3} id="3" />
@@ -105,19 +105,16 @@ export default function PortfolioSliderHomeNine({ setWhiteCls }: IProps) {
                     onMouseEnter={() => handleActiveBg(item.id)}
                     onMouseLeave={() => handleDeactiveBg()}
                     className={
-                      activeBg === `tp-porfolio-10-bg-${item.id}` ||
-                      activeBg === null
-                        ? "active"
-                        : ""
+                      activeBg === `tp-porfolio-10-bg-${item.id}` || activeBg === null
+                        ? 'active'
+                        : ''
                     }
                     rel={`tp-porfolio-10-bg-${item.id}`}
                   >
                     <Link href="/portfolio-details-3">
                       <div className="tp-porfolio-10-title-box d-flex align-items-end">
                         <h2 className="tp-porfolio-10-title">{item.title}</h2>
-                        <span className="tp-porfolio-10-category">
-                          / {item.category}
-                        </span>
+                        <span className="tp-porfolio-10-category">/ {item.category}</span>
                       </div>
                     </Link>
                   </li>

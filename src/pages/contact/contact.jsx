@@ -1,26 +1,26 @@
-"use client";
-import { gsap } from "gsap";
-import React from "react";
-import useScrollSmooth from "@/hooks/use-scroll-smooth";
-import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
-import { useGSAP } from "@gsap/react";
+'use client';
+import { gsap } from 'gsap';
+import React from 'react';
+import useScrollSmooth from '@/hooks/use-scroll-smooth';
+import { ScrollSmoother, ScrollTrigger, SplitText } from '@/plugins';
+import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
-import Wrapper from "@/layouts/wrapper";
-import HeaderEleven from "@/layouts/headers/header-eleven";
-import ContactTwo from "@/components/contact/contact-two";
-import ContactLocation from "@/components/contact/contact-location";
-import FooterTwo from "@/layouts/footers/footer-two";
-import AnimationHeader from "@/components/animation_header";
+import Wrapper from '@/layouts/wrapper';
+import HeaderEleven from '@/layouts/headers/header-eleven';
+import ContactTwo from '@/components/contact/contact-two';
+import ContactLocation from '@/components/contact/contact-location';
+import FooterTwo from '@/layouts/footers/footer-two';
+import AnimationHeader from '@/components/animation_header';
 
 // animation
-import { charAnimation } from "@/utils/title-animation";
-import FooterFour from "@/layouts/footers/footer-four";
-import ContactLocationTwo from "@/components/contact/contact-location-2";
+import { charAnimation } from '@/utils/title-animation';
+import FooterFour from '@/layouts/footers/footer-four';
+import ContactLocationTwo from '@/components/contact/contact-location-2';
 
 const ContactMain = ({ contactData }) => {
-  console.log(contactData, "contactData");
+  console.log(contactData, 'contactData');
   useScrollSmooth();
 
   useGSAP(() => {
@@ -43,7 +43,7 @@ const ContactMain = ({ contactData }) => {
       <div
         className="inner-bg"
         style={{
-          backgroundImage: "url(/assets/img/home-01/team/team-details-bg.png)",
+          backgroundImage: 'url(/assets/img/home-01/team/team-details-bg.png)',
         }}
       >
         <main>

@@ -1,14 +1,14 @@
-import React from "react";
-import Image from "next/image";
-import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
+import React from 'react';
+import Image from 'next/image';
+import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from '../svg';
 
 // images
-import logo from "@/assets/img/logo/logo.png";
-import gallery_1 from "@/assets/img/menu/offcanvas/offcanvas-1.jpg";
-import gallery_2 from "@/assets/img/menu/offcanvas/offcanvas-2.jpg";
-import gallery_3 from "@/assets/img/menu/offcanvas/offcanvas-3.jpg";
-import gallery_4 from "@/assets/img/menu/offcanvas/offcanvas-4.jpg";
-import MobileMenus from "./mobile-menus";
+import logo from '@/assets/img/logo/logo.png';
+import gallery_1 from '@/assets/img/menu/offcanvas/offcanvas-1.jpg';
+import gallery_2 from '@/assets/img/menu/offcanvas/offcanvas-2.jpg';
+import gallery_3 from '@/assets/img/menu/offcanvas/offcanvas-3.jpg';
+import gallery_4 from '@/assets/img/menu/offcanvas/offcanvas-4.jpg';
+import MobileMenus from './mobile-menus';
 
 const gallery_images = [gallery_1, gallery_2, gallery_3, gallery_4];
 
@@ -18,10 +18,10 @@ type IProps = {
   setOpenOffcanvas: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps) {
+export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IProps) {
   return (
     <>
-      <div className={`tp-offcanvas-area ${openOffcanvas ? "opened" : ""}`}>
+      <div className={`tp-offcanvas-area ${openOffcanvas ? 'opened' : ''}`}>
         <div className="tp-offcanvas-wrapper">
           <div className="tp-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="tp-offcanvas-logo">
@@ -30,10 +30,7 @@ export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps
               </a>
             </div>
             <div className="tp-offcanvas-close">
-              <button
-                className="tp-offcanvas-close-btn"
-                onClick={() => setOpenOffcanvas(false)}
-              >
+              <button className="tp-offcanvas-close-btn" onClick={() => setOpenOffcanvas(false)}>
                 <CloseTwo />
               </button>
             </div>
@@ -44,7 +41,7 @@ export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
             </div>
             <div className="tp-main-menu-mobile d-xl-none">
-              <MobileMenus/>
+              <MobileMenus />
             </div>
             <div className="tp-offcanvas-gallery">
               <div className="row gx-2">
@@ -78,16 +75,25 @@ export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps
               <h3 className="tp-offcanvas-title sm">Follow Us</h3>
               <ul>
                 <li>
-                  <a href="#"><InstagramTwo /></a>
+                  <a href="#">
+                    <InstagramTwo />
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><Dribble /></a>
+                  <a href="#">
+                    <Dribble />
+                  </a>
                 </li>
                 <li>
-                  <a href="#"> <Behance /></a>
+                  <a href="#">
+                    {' '}
+                    <Behance />
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><Youtube /></a>
+                  <a href="#">
+                    <Youtube />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -97,7 +103,7 @@ export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps
 
       <div
         onClick={() => setOpenOffcanvas(false)}
-        className={`body-overlay ${openOffcanvas ? "opened" : ""}`}
+        className={`body-overlay ${openOffcanvas ? 'opened' : ''}`}
       ></div>
     </>
   );

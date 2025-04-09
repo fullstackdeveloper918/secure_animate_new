@@ -1,10 +1,9 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function BlogItemTwo({ item }) {
-  
   return (
     <div className="tp-blog-item tp_fade_bottom w-full">
       <Link href={item.external_link}>
@@ -19,22 +18,20 @@ export default function BlogItemTwo({ item }) {
           <div className="tp-blog-meta">
             <span>
               {new Date(item.date)
-                .toLocaleDateString("en-GB", {
-                  day: "2-digit",
-                  month: "short", // "Feb"
-                  year: "numeric",
+                .toLocaleDateString('en-GB', {
+                  day: '2-digit',
+                  month: 'short', // "Feb"
+                  year: 'numeric',
                 })
-                .replace(" ", ".")
-                .replace(",", ".")}
+                .replace(' ', '.')
+                .replace(',', '.')}
             </span>
           </div>
         </div>
       </Link>
       <div className="tp-blog-content">
         <h6 className="">{item.title}</h6>
-        <p className="text-gray-700 mt-2 line-clamp-2 text-sm">
-          {item.content}
-        </p>
+        <p className="text-gray-700 mt-2 line-clamp-2 text-sm">{item.content}</p>
         <Link
           href={item.external_link}
           // target="_blank"

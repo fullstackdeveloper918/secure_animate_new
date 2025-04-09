@@ -1,12 +1,6 @@
 export default function PrevIcon() {
   return (
-    <svg
-      width="20"
-      height="17"
-      viewBox="0 0 20 17"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M19.3335 8.63672H1.3335"
         stroke="currentcolor"

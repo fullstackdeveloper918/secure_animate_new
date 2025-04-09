@@ -1,22 +1,22 @@
-"use client";
-import React, { useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+import React, { useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import logo from '@/assets/img/logo/logo-white.png';
-import { footerOneAnimation, footerTwoAnimation } from "@/utils/footer-anim";
+import { footerOneAnimation, footerTwoAnimation } from '@/utils/footer-anim';
 
 const footer_links = [
-  { link: "#", title: "Projects" },
-  { link: "#", title: "What we do" },
-  { link: "#", title: "About" },
-  { link: "#", title: "Blog" },
-  { link: "#", title: "Contact" },
+  { link: '#', title: 'Projects' },
+  { link: '#', title: 'What we do' },
+  { link: '#', title: 'About' },
+  { link: '#', title: 'Blog' },
+  { link: '#', title: 'Contact' },
 ];
 export default function FooterOne() {
   const [isActive, setIsActive] = React.useState(false);
   useEffect(() => {
     footerOneAnimation();
-  },[])
+  }, []);
   return (
     <footer>
       {/* footer area start */}
@@ -32,7 +32,7 @@ export default function FooterOne() {
                         key={i}
                         onMouseEnter={() => setIsActive(true)}
                         onMouseLeave={() => setIsActive(false)}
-                        className={isActive ? "" : "active"}
+                        className={isActive ? '' : 'active'}
                       >
                         <a href={item.link}>{item.title}</a>
                       </li>
@@ -48,14 +48,10 @@ export default function FooterOne() {
                   <div className="row">
                     <div className="col-xl-6 col-lg-6 col-md-6">
                       <div className="tp-footer-widget">
-                        <h4 className="tp-footer-title tp_fade_bottom">
-                          Say hello at:
-                        </h4>
+                        <h4 className="tp-footer-title tp_fade_bottom">Say hello at:</h4>
                         <div className="tp-footer-widget-info">
                           <div className="tp-footer-widget-info-mail tp_fade_bottom">
-                            <a href="mailto:contact@agency.com">
-                              secure@agency.com
-                            </a>
+                            <a href="mailto:contact@agency.com">secure@agency.com</a>
                           </div>
                           <div className="tp-footer-widget-info-location tp_fade_bottom">
                             <a
@@ -70,9 +66,7 @@ export default function FooterOne() {
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-6">
                       <div className="tp-footer-widget">
-                        <h4 className="tp-footer-title tp_fade_bottom">
-                          Stalk us
-                        </h4>
+                        <h4 className="tp-footer-title tp_fade_bottom">Stalk us</h4>
                         <ul className="tp-footer-widget-social">
                           <li className="tp_fade_bottom">
                             <a href="#">Facebook</a>
@@ -110,10 +104,7 @@ export default function FooterOne() {
               </div>
               <div className="col-xl-6 col-md-8">
                 <div className="tp-copyright-text text-center text-md-end">
-                  <p>
-                    Copyright © {new Date().getFullYear()} Secure 365. All rights
-                    reserved.
-                  </p>
+                  <p>Copyright © {new Date().getFullYear()} Secure 365. All rights reserved.</p>
                 </div>
               </div>
             </div>

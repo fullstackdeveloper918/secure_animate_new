@@ -1,10 +1,10 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Email, Location } from "@/components/svg";
-import logo from "@/assets/img/logo/logo-white.png";
-import payment from "@/assets/img/inner-shop/payment.png";
-import social_data from "@/data/social-data";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Email, Location } from '@/components/svg';
+import logo from '@/assets/img/logo/logo-white.png';
+import payment from '@/assets/img/inner-shop/payment.png';
+import social_data from '@/data/social-data';
 
 export default function FooterSix() {
   return (
@@ -59,12 +59,24 @@ export default function FooterSix() {
                   <h4 className="tp-footer-6-widget-title">Category</h4>
                   <div className="tp-footer-6-list">
                     <ul>
-                      <li><Link href="#">Our Story</Link></li>
-                      <li><Link href="#">Careers</Link></li>
-                      <li><Link href="#">Privacy Policy</Link></li>
-                      <li><Link href="#">Terms & Conditions</Link></li>
-                      <li><Link href="#">Latest News</Link></li>
-                      <li><Link href="#">Contact Us</Link></li>
+                      <li>
+                        <Link href="#">Our Story</Link>
+                      </li>
+                      <li>
+                        <Link href="#">Careers</Link>
+                      </li>
+                      <li>
+                        <Link href="#">Privacy Policy</Link>
+                      </li>
+                      <li>
+                        <Link href="#">Terms & Conditions</Link>
+                      </li>
+                      <li>
+                        <Link href="#">Latest News</Link>
+                      </li>
+                      <li>
+                        <Link href="#">Contact Us</Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -74,12 +86,24 @@ export default function FooterSix() {
                   <h4 className="tp-footer-6-widget-title">My Account</h4>
                   <div className="tp-footer-6-list">
                     <ul>
-                      <li><a href="#">Track Orders</a></li>
-                      <li><a href="#">Shipping</a></li>
-                      <li><a href="#">Wishlist</a></li>
-                      <li><a href="#">My Account</a></li>
-                      <li><a href="#">Order History</a></li>
-                      <li><a href="#">Returns</a></li>
+                      <li>
+                        <a href="#">Track Orders</a>
+                      </li>
+                      <li>
+                        <a href="#">Shipping</a>
+                      </li>
+                      <li>
+                        <a href="#">Wishlist</a>
+                      </li>
+                      <li>
+                        <a href="#">My Account</a>
+                      </li>
+                      <li>
+                        <a href="#">Order History</a>
+                      </li>
+                      <li>
+                        <a href="#">Returns</a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -101,7 +125,7 @@ export default function FooterSix() {
                   <div className="tp-footer-6-social-box">
                     <h4 className="tp-footer-6-social-title">Follow Us On</h4>
                     <div className="tp-footer-6-social">
-                      {social_data.map((item) => ( 
+                      {social_data.map((item) => (
                         <a key={item.id} href={item.link} target="_blank">
                           <i className={item.icon}></i>
                         </a>

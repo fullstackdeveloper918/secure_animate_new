@@ -1,7 +1,7 @@
-import { ITeamDT } from "@/types/team-d-t";
-import React from "react";
-import Modal from "react-bootstrap/Modal";
-import TeamDetailsArea from "../team/team-details-area";
+import { ITeamDT } from '@/types/team-d-t';
+import React from 'react';
+import Modal from 'react-bootstrap/Modal';
+import TeamDetailsArea from '../team/team-details-area';
 
 // prop type
 type IProps = {
@@ -10,7 +10,7 @@ type IProps = {
   teamItem: ITeamDT;
 };
 
-export default function TeamModal({showModal,setShowModal,teamItem}: IProps) {
+export default function TeamModal({ showModal, setShowModal, teamItem }: IProps) {
   const handleClose = () => setShowModal(false);
   return (
     <Modal

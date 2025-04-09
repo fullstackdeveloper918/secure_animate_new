@@ -1,13 +1,11 @@
-import React from 'react'
-import HeroBannerOne from './hero-banner/hero-banner-one'
+import React from 'react';
+import HeroBannerOne from './hero-banner/hero-banner-one';
 
-
-  
-const HeroSection = ({data}) => {
+const HeroSection = ({ data }) => {
   return (
     <div id="hero">
-    <div id="hero-styles">
-    <HeroBannerOne />
+      <div id="hero-styles">
+        <HeroBannerOne />
         {/* <div id="hero-footer" className="has-border">
           <div className="hero-footer-left">
               <div className="button-wrap left scroll-down">
@@ -23,11 +21,9 @@ const HeroSection = ({data}) => {
         <span>{data}</span>
             </div>
         </div>    */}
-
-                                                              
+      </div>
     </div>
-</div> 
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

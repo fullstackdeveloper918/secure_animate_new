@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function ReviewForm() {
   return (
@@ -7,11 +7,21 @@ export default function ReviewForm() {
         <p>Your Rating :</p>
         <div className="tp-product-details-review-form-rating-icon d-flex align-items-center">
           <span>
-          <span><i className="fa-solid fa-star"></i></span>
-          <span><i className="fa-solid fa-star"></i></span>
-          <span><i className="fa-solid fa-star"></i></span>
-          <span><i className="fa-solid fa-star"></i></span>
-          <span><i className="fa-solid fa-star"></i></span>
+            <span>
+              <i className="fa-solid fa-star"></i>
+            </span>
+            <span>
+              <i className="fa-solid fa-star"></i>
+            </span>
+            <span>
+              <i className="fa-solid fa-star"></i>
+            </span>
+            <span>
+              <i className="fa-solid fa-star"></i>
+            </span>
+            <span>
+              <i className="fa-solid fa-star"></i>
+            </span>
           </span>
         </div>
       </div>
@@ -21,11 +31,7 @@ export default function ReviewForm() {
             <label htmlFor="msg">Your Review *</label>
           </div>
           <div className="tp-product-details-review-input">
-            <textarea
-              id="msg"
-              name="msg"
-              placeholder="Write your review here..."
-            ></textarea>
+            <textarea id="msg" name="msg" placeholder="Write your review here..."></textarea>
           </div>
         </div>
         <div className="tp-product-details-review-input-box">
@@ -41,12 +47,7 @@ export default function ReviewForm() {
             <div className="tp-product-details-review-input-title">
               <label htmlFor="email">Email *</label>
             </div>
-            <input
-              name="email"
-              id="email"
-              type="email"
-              placeholder="liko@mail.com"
-            />
+            <input name="email" id="email" type="email" placeholder="liko@mail.com" />
           </div>
         </div>
       </div>
@@ -54,16 +55,12 @@ export default function ReviewForm() {
         <div className="tp-product-details-review-remeber">
           <input id="remeber" type="checkbox" />
           <label htmlFor="remeber">
-            Save my name, email, and website in this browser for the next time I
-            comment.
+            Save my name, email, and website in this browser for the next time I comment.
           </label>
         </div>
       </div>
       <div className="tp-product-details-review-btn-wrapper">
-        <button
-          type="submit"
-          className="tp-product-details-review-btn tp-btn-submit"
-        >
+        <button type="submit" className="tp-product-details-review-btn tp-btn-submit">
           Submit Review
         </button>
       </div>

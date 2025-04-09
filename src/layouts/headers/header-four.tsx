@@ -1,28 +1,31 @@
 'use client';
-import React, { useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import HeaderMenus from "./header-menus";
-import { Cart } from "@/components/svg";
+import React, { useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import HeaderMenus from './header-menus';
+import { Cart } from '@/components/svg';
 import logo_1 from '@/assets/img/logo/logo.png';
 import logo_2 from '@/assets/img/logo/logo-white.png';
-import useSticky from "@/hooks/use-sticky";
-import CartOffcanvas from "@/components/offcanvas/cart-offcanvas";
-import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
+import useSticky from '@/hooks/use-sticky';
+import CartOffcanvas from '@/components/offcanvas/cart-offcanvas';
+import MobileOffcanvas from '@/components/offcanvas/mobile-offcanvas';
 
 export default function HeaderFour() {
-  const {sticky,headerRef,headerFullWidth,adjustMenuBackground} = useSticky();
+  const { sticky, headerRef, headerFullWidth, adjustMenuBackground } = useSticky();
   const [openCartMini, setOpenCartMini] = React.useState(false);
   const [openOffCanvas, setOpenOffCanvas] = React.useState(false);
   useEffect(() => {
     headerFullWidth();
     adjustMenuBackground();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
       <header>
-        <div id="header-sticky" className={`tp-header-3-area mt-35 z-index-5 ${sticky?'header-sticky':''}`}>
+        <div
+          id="header-sticky"
+          className={`tp-header-3-area mt-35 z-index-5 ${sticky ? 'header-sticky' : ''}`}
+        >
           <span className="menu-bg"></span>
           <div className="container container-1740">
             <div className="row align-items-center">
@@ -70,7 +73,10 @@ export default function HeaderFour() {
                       <i className="fa-brands fa-instagram"></i>
                     </a>
                   </div>
-                  <button onClick={() => setOpenOffCanvas(true)} className="tp-header-3-bar tp-offcanvas-open-btn d-xl-none">
+                  <button
+                    onClick={() => setOpenOffCanvas(true)}
+                    className="tp-header-3-bar tp-offcanvas-open-btn d-xl-none"
+                  >
                     <i className="fa-solid fa-bars"></i>
                   </button>
                 </div>

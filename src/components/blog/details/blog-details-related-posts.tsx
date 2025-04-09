@@ -1,6 +1,6 @@
-import React from "react";
-import { blog_home_five } from "@/data/blog-data";
-import BlogItemTwo from "../blog-item/blog-item-2";
+import React from 'react';
+import { blog_home_five } from '@/data/blog-data';
+import BlogItemTwo from '../blog-item/blog-item-2';
 
 export default function BlogDetailsRelatedPosts() {
   const blog_items = [...blog_home_five].slice(0, 3);

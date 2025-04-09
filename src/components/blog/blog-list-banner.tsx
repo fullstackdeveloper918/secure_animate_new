@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
 
 export default function BlogListBanner() {
   return (
     <div className="tp-blog-list-banner">
       <div
         className="tp-blog-list-bg tp-blog-list-bg-overlay"
-        style={{backgroundImage:`url(/assets/img/inner-blog/blog-right-sidebar/blog-banner.jpg)`}}
+        style={{
+          backgroundImage: `url(/assets/img/inner-blog/blog-right-sidebar/blog-banner.jpg)`,
+        }}
       >
         <div className="container z-index">
           <div className="row align-items-end">

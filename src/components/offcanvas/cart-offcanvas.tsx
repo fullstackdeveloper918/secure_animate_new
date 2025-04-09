@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 // prop type
 type IProps = {
@@ -8,12 +8,10 @@ type IProps = {
   setOpenCartMini: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function CartOffcanvas({openCartMini,setOpenCartMini}:IProps) {
+export default function CartOffcanvas({ openCartMini, setOpenCartMini }: IProps) {
   return (
     <>
-      <div
-        className={`cartmini__area ${openCartMini ? "cartmini-opened" : ""}`}
-      >
+      <div className={`cartmini__area ${openCartMini ? 'cartmini-opened' : ''}`}>
         <div className="cartmini__wrapper d-flex justify-content-between flex-column">
           <div className="cartmini__top-wrapper">
             <div className="cartmini__top p-relative">
@@ -31,12 +29,15 @@ export default function CartOffcanvas({openCartMini,setOpenCartMini}:IProps) {
               </div>
             </div>
             <div className="cartmini__shipping">
-              <p> Free Shipping for all orders over <span>$50</span> </p>
+              <p>
+                {' '}
+                Free Shipping for all orders over <span>$50</span>{' '}
+              </p>
               <div className="progress">
                 <div
                   className="progress-bar progress-bar-striped progress-bar-animated"
                   role="progressbar"
-                  style={{width:"70%" }}
+                  style={{ width: '70%' }}
                   data-width="70%"
                   aria-valuenow={70}
                   aria-valuemin={0}
@@ -80,16 +81,10 @@ export default function CartOffcanvas({openCartMini,setOpenCartMini}:IProps) {
               <span>$113.00</span>
             </div>
             <div className="cartmini__checkout-btn">
-              <Link
-                href="/cart"
-                className="tp-btn-black-2 text-center mb-10 w-100"
-              >
+              <Link href="/cart" className="tp-btn-black-2 text-center mb-10 w-100">
                 view cart
               </Link>
-              <Link
-                href="/checkout"
-                className="tp-btn-black-2 text-center w-100"
-              >
+              <Link href="/checkout" className="tp-btn-black-2 text-center w-100">
                 checkout
               </Link>
             </div>
@@ -99,7 +94,7 @@ export default function CartOffcanvas({openCartMini,setOpenCartMini}:IProps) {
       {/* overlay */}
       <div
         onClick={() => setOpenCartMini(false)}
-        className={`body-overlay ${openCartMini ? "opened" : ""}`}
+        className={`body-overlay ${openCartMini ? 'opened' : ''}`}
       ></div>
     </>
   );

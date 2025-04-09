@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import overlay from "@/assets/img/inner-blog/blog-details/bg-shape/overly.png";
-import avatar from "@/assets/img/inner-blog/blog-details/avatar/avatar-2.jpg";
+import React from 'react';
+import Image from 'next/image';
+import overlay from '@/assets/img/inner-blog/blog-details/bg-shape/overly.png';
+import avatar from '@/assets/img/inner-blog/blog-details/avatar/avatar-2.jpg';
 
 export default function BlogDetailsBreadcrumb() {
   return (

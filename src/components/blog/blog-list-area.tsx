@@ -1,13 +1,13 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { blog_lists } from "@/data/blog-data";
-import usePagination from "@/hooks/use-pagination";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { blog_lists } from '@/data/blog-data';
+import usePagination from '@/hooks/use-pagination';
 // import Pagination from "../ui/pagination";
 
 export default function BlogListArea() {
   const blog_items = [...blog_lists];
-  const { currentItems, handlePageClick, pageCount } = usePagination(blog_items,4);
+  const { currentItems, handlePageClick, pageCount } = usePagination(blog_items, 4);
   return (
     <div className="tp-blog-list-area mb-30">
       <div className="container container-1480">
@@ -28,7 +28,7 @@ export default function BlogListArea() {
                           className="anim-zoomin"
                           src={item.img!}
                           alt="blog-img"
-                          style={{height: "auto"}}
+                          style={{ height: 'auto' }}
                         />
                       </Link>
                     </div>

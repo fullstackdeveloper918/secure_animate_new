@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import faq_data  from "./faq-area";
-import FaqItem from "./faq-item";
+import React from 'react';
+import Image from 'next/image';
+import faq_data from './faq-area';
+import FaqItem from './faq-item';
 import shape from '@/assets/img/home-02/service/sv-shape-1.png';
 
 export default function FaqAreaTwo() {
@@ -16,8 +16,7 @@ export default function FaqAreaTwo() {
                   Frequently Asked Question
                 </h4>
                 <p className="tp_title_anim">
-                  We believe in making life-long connections through great
-                  communication.
+                  We believe in making life-long connections through great communication.
                 </p>
               </div>
               <div className="tp-service-2-shape-img text-center text-lg-start">

@@ -1,12 +1,12 @@
-"use client"; // Client-side component
+'use client'; // Client-side component
 
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 // Typing Effect Component
 const TypingEffect = ({ text }) => {
-  const [displayedText, setDisplayedText] = useState("");
+  const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -41,22 +41,13 @@ const AnimationHeader = () => {
   };
 
   // Define the menu items
-  const menuItems = [
-    "Home",
-    "About Us",
-    "Service",
-    "Why Choose Us",
-    "Contact Us",
-  ];
+  const menuItems = ['Home', 'About Us', 'Service', 'Why Choose Us', 'Contact Us'];
 
   return (
     <>
       <div className="word"></div>
 
-      <header
-        className="clapat-header classic-menu invert-header"
-        data-menucolor="#0c0c0c"
-      >
+      <header className="clapat-header classic-menu invert-header" data-menucolor="#0c0c0c">
         <div className="header-gradient"></div>
 
         <div id="header-container">
@@ -85,7 +76,7 @@ const AnimationHeader = () => {
                 <li
                   key={idx}
                   className={`menu-timeline link header-link ${
-                    activeItem === item ? "active" : ""
+                    activeItem === item ? 'active' : ''
                   }`}
                   // onMouseEnter={() => handleMouseEnter(item)}
                   // onMouseLeave={handleMouseLeave}
@@ -93,11 +84,7 @@ const AnimationHeader = () => {
                 >
                   <Link
                     className="ajax-link"
-                    href={
-                      item === "Home"
-                        ? "/"
-                        : `/${item.toLowerCase().replace(/\s+/g, "-")}`
-                    }
+                    href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {hoveredText === item ? <TypingEffect text={item} /> : item}
                   </Link>

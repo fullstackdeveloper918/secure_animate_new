@@ -1,14 +1,14 @@
-"use client";
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { PinContainer } from "./LineAnim";
+'use client';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { PinContainer } from './LineAnim';
 
 const leftVariant = {
   hidden: { opacity: 0, x: -20 },
   visible: (i) => ({
     opacity: 1,
     x: 0,
-    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+    transition: { delay: i * 0.2, duration: 0.6, ease: 'easeOut' },
   }),
 };
 
@@ -17,7 +17,7 @@ const rightVariant = {
   visible: (i) => ({
     opacity: 1,
     x: 0,
-    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+    transition: { delay: i * 0.2, duration: 0.6, ease: 'easeOut' },
   }),
 };
 
@@ -25,12 +25,12 @@ export function AnimatedPinDemo() {
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseEnter = () => {
     setIsHovered(true);
-    console.log("Mouse entered");
+    console.log('Mouse entered');
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    console.log("Mouse left");
+    console.log('Mouse left');
   };
   return (
     <div
@@ -49,8 +49,7 @@ export function AnimatedPinDemo() {
         >
           <h2 className="text-lg font-semibold mb-2">AI in Healthcare</h2>
           <p className="text-sm text-slate-300">
-            AI is transforming healthcare with predictive analytics and
-            personalized treatments.
+            AI is transforming healthcare with predictive analytics and personalized treatments.
           </p>
         </motion.div>
 
@@ -64,8 +63,7 @@ export function AnimatedPinDemo() {
         >
           <h2 className="text-lg font-semibold mb-2">Robotics</h2>
           <p className="text-sm text-slate-300">
-            Smart robots automate tasks from manufacturing to home assistance
-            with precision.
+            Smart robots automate tasks from manufacturing to home assistance with precision.
           </p>
         </motion.div>
 
@@ -79,8 +77,7 @@ export function AnimatedPinDemo() {
         >
           <h2 className="text-lg font-semibold mb-2">Edge AI</h2>
           <p className="text-sm text-slate-300">
-            Bringing AI processing closer to data sources enables faster
-            decisions in real time.
+            Bringing AI processing closer to data sources enables faster decisions in real time.
           </p>
         </motion.div>
       </div>
@@ -113,8 +110,7 @@ export function AnimatedPinDemo() {
         >
           <h2 className="text-lg font-semibold mb-2">Neural Networks</h2>
           <p className="text-sm text-slate-300">
-            Mimicking the brain, neural nets power voice recognition, image
-            processing & more.
+            Mimicking the brain, neural nets power voice recognition, image processing & more.
           </p>
         </motion.div>
 
@@ -126,12 +122,9 @@ export function AnimatedPinDemo() {
           variants={rightVariant}
           className="border border-slate-800 bg-slate-900 text-white rounded-2xl p-6 w-[30rem]"
         >
-          <h2 className="text-lg font-semibold mb-2">
-            Natural Language Processing
-          </h2>
+          <h2 className="text-lg font-semibold mb-2">Natural Language Processing</h2>
           <p className="text-sm text-slate-300">
-            NLP helps machines understand human language — powering chatbots and
-            translators.
+            NLP helps machines understand human language — powering chatbots and translators.
           </p>
         </motion.div>
 
@@ -145,8 +138,7 @@ export function AnimatedPinDemo() {
         >
           <h2 className="text-lg font-semibold mb-2">Computer Vision</h2>
           <p className="text-sm text-slate-300">
-            Enables AI to see and interpret visual information like faces,
-            gestures, and scenes.
+            Enables AI to see and interpret visual information like faces, gestures, and scenes.
           </p>
         </motion.div>
       </div>

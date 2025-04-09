@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function BlogReplyForm() {
   return (
@@ -8,10 +8,7 @@ export default function BlogReplyForm() {
           <div className="col-xl-12">
             <div className="tp-postbox-details-input-box">
               <div className="tp-postbox-details-input">
-                <textarea
-                  id="msg"
-                  placeholder="Write your message here..."
-                ></textarea>
+                <textarea id="msg" placeholder="Write your message here..."></textarea>
               </div>
             </div>
           </div>
@@ -42,8 +39,7 @@ export default function BlogReplyForm() {
         <div className="tp-postbox-details-remeber d-flex align-items-start">
           <input id="remeber" type="checkbox" />
           <label htmlFor="remeber">
-            Save my name, email, and website in this browser for the next time I
-            comment.
+            Save my name, email, and website in this browser for the next time I comment.
           </label>
         </div>
       </div>

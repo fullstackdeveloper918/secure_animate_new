@@ -1,12 +1,6 @@
 export default function Location() {
   return (
-    <svg
-      width="17"
-      height="20"
-      viewBox="0 0 17 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M8.50086 10.9417C9.99963 10.9417 11.2146 9.72668 11.2146 8.22791C11.2146 6.72915 9.99963 5.51416 8.50086 5.51416C7.0021 5.51416 5.78711 6.72915 5.78711 8.22791C5.78711 9.72668 7.0021 10.9417 8.50086 10.9417Z"
         stroke="white"
@@ -23,13 +17,7 @@ export default function Location() {
 
 export function LocationTwo() {
   return (
-    <svg
-      width="16"
-      height="18"
-      viewBox="0 0 16 18"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M7.99377 10.1461C9.39262 10.1461 10.5266 9.0283 10.5266 7.64946C10.5266 6.27061 9.39262 5.15283 7.99377 5.15283C6.59493 5.15283 5.46094 6.27061 5.46094 7.64946C5.46094 9.0283 6.59493 10.1461 7.99377 10.1461Z"
         stroke="currentColor"

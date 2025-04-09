@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
-import styles from "./RealEstateSection.module.css"; // We will use CSS Modules for styling
+import { useEffect, useState } from 'react';
+import styles from './RealEstateSection.module.css'; // We will use CSS Modules for styling
 
 const RealEstateSection = () => {
   useEffect(() => {
-    const section = document.querySelector("#real-estate-section");
-    const rocket = document.querySelector(".rocket");
+    const section = document.querySelector('#real-estate-section');
+    const rocket = document.querySelector('.rocket');
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            rocket.style.animationPlayState = "running"; // Start animation when in view
+            rocket.style.animationPlayState = 'running'; // Start animation when in view
           }
         });
       },
@@ -27,11 +27,11 @@ const RealEstateSection = () => {
       setScrollY(window.scrollY); // Update scroll position
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     // Cleanup event listener on component unmount
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -41,18 +41,14 @@ const RealEstateSection = () => {
   return (
     <section id="real-estate-section" className={styles.realEstateSection}>
       <div className={styles.content}>
-        <h2>
-          Navigating Your Business Through the Stars… and Safeguarding Every
-          Step
-        </h2>
+        <h2>Navigating Your Business Through the Stars… and Safeguarding Every Step</h2>
         <p>
-          Think of Secure365 as your interstellar co-pilot, guiding you safely
-          through the ever-expanding cosmos of modern technology. We blend
-          visionary web development with rock-solid IT services, cloud
-          solutions, and cybersecurity—ensuring that no matter which galaxy (or
-          market) you’re aiming for, you’ll arrive unscathed. Our mission?
-          Simple: to help your brand thrive and remain secure, from initial
-          launch to the far reaches of tomorrow.
+          Think of Secure365 as your interstellar co-pilot, guiding you safely through the
+          ever-expanding cosmos of modern technology. We blend visionary web development with
+          rock-solid IT services, cloud solutions, and cybersecurity—ensuring that no matter which
+          galaxy (or market) you’re aiming for, you’ll arrive unscathed. Our mission? Simple: to
+          help your brand thrive and remain secure, from initial launch to the far reaches of
+          tomorrow.
         </p>
       </div>
       <div className={styles.rocketContainer}>
@@ -63,7 +59,7 @@ const RealEstateSection = () => {
             opacity: Math.max(1 - rocketPosition / 400, 0), // Optional: fade out effect as it moves up
           }}
         >
-          {" "}
+          {' '}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="980"
@@ -79,7 +75,7 @@ const RealEstateSection = () => {
                 x="0"
                 y="0"
                 maskUnits="userSpaceOnUse"
-                style={{ maskType: "luminance" }}
+                style={{ maskType: 'luminance' }}
               >
                 <path fill="#fff" d="M980 0H0v1988h980z"></path>
               </mask>
@@ -109,7 +105,7 @@ const RealEstateSection = () => {
                 <path
                   fill="url(#paint5_linear_1390_111)"
                   d="m594.25 332.95-12.51-20.61-9 14.55 3.66 6c5.88 9.66 9 20.79 9 32.1V758.5h17.7V365.05c.06-11.31-3-22.41-8.85-32.1"
-                  style={{ mixBlendMode: "multiply" }}
+                  style={{ mixBlendMode: 'multiply' }}
                 ></path>
                 <path
                   fill="url(#paint6_linear_1390_111)"
@@ -118,7 +114,7 @@ const RealEstateSection = () => {
                 <path
                   fill="url(#paint7_linear_1390_111)"
                   d="m409.57 332.95-12.54-20.61-8.82 14.55 3.66 6c5.88 9.66 9 20.79 9 32.1V758.5h17.7V365.05c0-11.31-3.12-22.44-9-32.1"
-                  style={{ mixBlendMode: "multiply" }}
+                  style={{ mixBlendMode: 'multiply' }}
                 ></path>
                 <path
                   fill="url(#paint8_linear_1390_111)"
@@ -228,11 +224,7 @@ const RealEstateSection = () => {
                 <stop stopColor="#7EC4EF"></stop>
                 <stop offset="0.11" stopColor="#BEE1F7"></stop>
                 <stop offset="0.22" stopColor="#fff"></stop>
-                <stop
-                  offset="0.61"
-                  stopColor="#8B99A8"
-                  stopOpacity="0.5"
-                ></stop>
+                <stop offset="0.61" stopColor="#8B99A8" stopOpacity="0.5"></stop>
                 <stop offset="1" stopColor="#173351" stopOpacity="0"></stop>
               </linearGradient>
               <linearGradient
@@ -530,11 +522,7 @@ const RealEstateSection = () => {
                 <stop stopColor="#7EC4EF"></stop>
                 <stop offset="0.11" stopColor="#BEE1F7"></stop>
                 <stop offset="0.22" stopColor="#fff"></stop>
-                <stop
-                  offset="0.61"
-                  stopColor="#8B99A8"
-                  stopOpacity="0.5"
-                ></stop>
+                <stop offset="0.61" stopColor="#8B99A8" stopOpacity="0.5"></stop>
                 <stop offset="1" stopColor="#173351" stopOpacity="0"></stop>
               </linearGradient>
               <linearGradient
@@ -548,11 +536,7 @@ const RealEstateSection = () => {
                 <stop stopColor="#7EC4EF"></stop>
                 <stop offset="0.11" stopColor="#BEE1F7"></stop>
                 <stop offset="0.22" stopColor="#fff"></stop>
-                <stop
-                  offset="0.61"
-                  stopColor="#8B99A8"
-                  stopOpacity="0.5"
-                ></stop>
+                <stop offset="0.61" stopColor="#8B99A8" stopOpacity="0.5"></stop>
                 <stop offset="1" stopColor="#173351" stopOpacity="0"></stop>
               </linearGradient>
               <linearGradient
@@ -566,11 +550,7 @@ const RealEstateSection = () => {
                 <stop stopColor="#7EC4EF"></stop>
                 <stop offset="0.11" stopColor="#BEE1F7"></stop>
                 <stop offset="0.22" stopColor="#fff"></stop>
-                <stop
-                  offset="0.61"
-                  stopColor="#8BA2B9"
-                  stopOpacity="0.5"
-                ></stop>
+                <stop offset="0.61" stopColor="#8BA2B9" stopOpacity="0.5"></stop>
                 <stop offset="1" stopColor="#174672" stopOpacity="0"></stop>
               </linearGradient>
               <clipPath id="clip0_1390_111">
@@ -586,11 +566,7 @@ const RealEstateSection = () => {
                 filterUnits="userSpaceOnUse"
               >
                 <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
-                <feBlend
-                  in="SourceGraphic"
-                  in2="BackgroundImageFix"
-                  result="shape"
-                ></feBlend>
+                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
                 <feGaussianBlur
                   result="effect1_foregroundBlur_1390_111"
                   stdDeviation="100.8"

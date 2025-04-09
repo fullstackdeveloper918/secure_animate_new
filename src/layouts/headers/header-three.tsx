@@ -1,28 +1,28 @@
 'use client';
-import React, { useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import HeaderMenus from "./header-menus";
-import { Cart } from "@/components/svg";
-import useSticky from "@/hooks/use-sticky";
+import React, { useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import HeaderMenus from './header-menus';
+import { Cart } from '@/components/svg';
+import useSticky from '@/hooks/use-sticky';
 import logo from '@/assets/img/logo/logo-white.png';
-import CartOffcanvas from "@/components/offcanvas/cart-offcanvas";
-import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
+import CartOffcanvas from '@/components/offcanvas/cart-offcanvas';
+import MobileOffcanvas from '@/components/offcanvas/mobile-offcanvas';
 
 export default function HeaderThree() {
-  const {sticky,headerRef,headerFullWidth} = useSticky();
+  const { sticky, headerRef, headerFullWidth } = useSticky();
   const [openCartMini, setOpenCartMini] = React.useState(false);
   const [openOffCanvas, setOpenOffCanvas] = React.useState(false);
   useEffect(() => {
     headerFullWidth();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
       <header className="tp-header-height">
         <div
           id="header-sticky"
-          className={`tp-header-4-area tp-header-4-mob-space tp-transparent z-index-5 ${sticky?'header-sticky':''}`}
+          className={`tp-header-4-area tp-header-4-mob-space tp-transparent z-index-5 ${sticky ? 'header-sticky' : ''}`}
         >
           <div className="container container-1770">
             <div className="row align-items-center">
@@ -53,13 +53,13 @@ export default function HeaderThree() {
                     </button>
                   </div>
                   <div className="tp-header-4-btn d-flex align-items-center ml-30">
-                    <Link
-                      className="tp-btn-border-sm d-none d-sm-block"
-                      href="/contact"
-                    >
+                    <Link className="tp-btn-border-sm d-none d-sm-block" href="/contact">
                       Get in touch
                     </Link>
-                    <button onClick={() => setOpenOffCanvas(true)} className="ml-20 d-xl-none tp-header-4-bar tp-offcanvas-open-btn">
+                    <button
+                      onClick={() => setOpenOffCanvas(true)}
+                      className="ml-20 d-xl-none tp-header-4-bar tp-offcanvas-open-btn"
+                    >
                       <i className="fa-solid fa-bars"></i>
                     </button>
                   </div>

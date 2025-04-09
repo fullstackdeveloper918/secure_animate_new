@@ -1,22 +1,22 @@
 'use client';
-import React, { useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Cart, MenuThree } from "@/components/svg";
-import HeaderMenus from "./header-menus";
-import useSticky from "@/hooks/use-sticky";
-import logo from "@/assets/img/logo/logo.png";
-import logo_2 from "@/assets/img/logo/logo-white.png";
-import CartOffcanvas from "@/components/offcanvas/cart-offcanvas";
-import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
-import MobileOffcanvasTwo from "@/components/offcanvas/mobile-offcanvas-2";
+import React, { useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Cart, MenuThree } from '@/components/svg';
+import HeaderMenus from './header-menus';
+import useSticky from '@/hooks/use-sticky';
+import logo from '@/assets/img/logo/logo.png';
+import logo_2 from '@/assets/img/logo/logo-white.png';
+import CartOffcanvas from '@/components/offcanvas/cart-offcanvas';
+import MobileOffcanvas from '@/components/offcanvas/mobile-offcanvas';
+import MobileOffcanvasTwo from '@/components/offcanvas/mobile-offcanvas-2';
 
-// prop type 
+// prop type
 type IProps = {
   transparent?: boolean;
   cls?: string;
-}
-export default function HeaderEleven({transparent=false,cls=''}: IProps) {
+};
+export default function HeaderEleven({ transparent = false, cls = '' }: IProps) {
   const { sticky, headerRef, headerFullWidth } = useSticky();
   const [openCartMini, setOpenCartMini] = React.useState(false);
   const [openOffCanvas, setOpenOffCanvas] = React.useState(false);
@@ -26,20 +26,20 @@ export default function HeaderEleven({transparent=false,cls=''}: IProps) {
   }, []);
   return (
     <>
-      <header className="tp-header-height z-index-5" ref={headerRef}>  
+      <header className="tp-header-height z-index-5" ref={headerRef}>
         <div
           id="header-sticky"
-          className={`tp-inner-header-area ${cls} ${transparent?'transparent':'tp-inner-header-style-2'} tp-inner-header-mob-space ${sticky ? "header-sticky" : ""}`}
+          className={`tp-inner-header-area ${cls} ${transparent ? 'transparent' : 'tp-inner-header-style-2'} tp-inner-header-mob-space ${sticky ? 'header-sticky' : ''}`}
         >
           <div className="container container-1800">
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-6 col-md-6 col-6">
                 <div className="tp-inner-header-logo tp-header-logo">
-                  <Link className={`${transparent?'ab-logo-1':'logo-1'}`} href="/">
-                    <Image src={transparent?logo_2:logo} alt="logo" />
+                  <Link className={`${transparent ? 'ab-logo-1' : 'logo-1'}`} href="/">
+                    <Image src={transparent ? logo_2 : logo} alt="logo" />
                   </Link>
-                  <Link className={`${transparent?'ab-logo-2':'logo-2'}`} href="/">
-                    <Image src={transparent?logo:logo_2} alt="logo" />
+                  <Link className={`${transparent ? 'ab-logo-2' : 'logo-2'}`} href="/">
+                    <Image src={transparent ? logo : logo_2} alt="logo" />
                   </Link>
                 </div>
               </div>
@@ -72,7 +72,10 @@ export default function HeaderEleven({transparent=false,cls=''}: IProps) {
                     </li>
                     <li>
                       <div className="tp-inner-bar tp-header-bar">
-                        <button onClick={()=> setOpenOffCanvas(true)} className="tp-offcanvas-open-btn">
+                        <button
+                          onClick={() => setOpenOffCanvas(true)}
+                          className="tp-offcanvas-open-btn"
+                        >
                           <span></span>
                           <span></span>
                         </button>
@@ -90,12 +93,12 @@ export default function HeaderEleven({transparent=false,cls=''}: IProps) {
       <CartOffcanvas openCartMini={openCartMini} setOpenCartMini={setOpenCartMini} />
       {/* cart mini */}
 
-       {/* off canvas */}
-            {/* off canvas */}
-                 <MobileOffcanvasTwo openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffCanvas} />
-                {/* off canvas */}
-            {/* <MobileOffcanvas openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffCanvas} /> */}
-            {/* off canvas */}
+      {/* off canvas */}
+      {/* off canvas */}
+      <MobileOffcanvasTwo openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffCanvas} />
+      {/* off canvas */}
+      {/* <MobileOffcanvas openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffCanvas} /> */}
+      {/* off canvas */}
       {/* off canvas */}
       {/* <MobileOffcanvas openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffCanvas} /> */}
       {/* off canvas */}

@@ -1,18 +1,14 @@
-import React from "react";
-import { RightArrow, ShapeTwo } from "../svg";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import { RightArrow, ShapeTwo } from '../svg';
+import Link from 'next/link';
+import Image from 'next/image';
 
-
-
-export default function ServiceSix({serviceData}) {
+export default function ServiceSix({ serviceData }) {
   return (
     <div className="sv-service-area project-panel-area-2">
       <div className="container-fluid p-0">
-        {serviceData?.data?.service_page_all_services_image_data?.map((item,index) => (
-          <div key={index} 
-          className="sv-service-item project-panel-2"
-          >
+        {serviceData?.data?.service_page_all_services_image_data?.map((item, index) => (
+          <div key={index} className="sv-service-item project-panel-2">
             <div className="row g-0">
               <div className="col-xl-6 col-lg-6">
                 <div className="sv-service-thumb">
@@ -21,7 +17,7 @@ export default function ServiceSix({serviceData}) {
                     width={2000}
                     height={2000}
                     alt="service-img"
-                    style={{ height: "100%" }}
+                    style={{ height: '100%' }}
                   />
                 </div>
               </div>
@@ -30,7 +26,7 @@ export default function ServiceSix({serviceData}) {
                   <div className="sv-service-content">
                     <div className="sv-service-title-box">
                       <span className="sv-service-subtitle">
-                        <i>{index < 9 ? "0" + (index+1) : index+1}</i>
+                        <i>{index < 9 ? '0' + (index + 1) : index + 1}</i>
                         {item?.service_page_all_sub_heading}
                       </span>
                       <h2 className="sv-service-title">{item?.service_page_all_heading}</h2>
@@ -39,16 +35,12 @@ export default function ServiceSix({serviceData}) {
                       <div className="sv-service-text">
                         <p>{item?.service_page_all_paragraph}</p>
                       </div>
-                      <div 
-                      className="sv-service-list"
-                      >
+                      <div className="sv-service-list">
                         <ul>
-                         
-                            <li>{item?.service_page_servive_name_first}</li>
-                            <li>{item?.service_page_servive_name_second}</li>
-                            <li>{item?.service_page_servive_name_third}</li>
-                            <li>{item?.service_page_servive_name_fourth}</li>
-                          
+                          <li>{item?.service_page_servive_name_first}</li>
+                          <li>{item?.service_page_servive_name_second}</li>
+                          <li>{item?.service_page_servive_name_third}</li>
+                          <li>{item?.service_page_servive_name_fourth}</li>
                         </ul>
                       </div>
                       <div className="sv-service-btn">

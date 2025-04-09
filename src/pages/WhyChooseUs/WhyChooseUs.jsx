@@ -1,26 +1,26 @@
-"use client";
-import { gsap } from "gsap";
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import useScrollSmooth from "@/hooks/use-scroll-smooth";
-import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
+'use client';
+import { gsap } from 'gsap';
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { useGSAP } from '@gsap/react';
+import useScrollSmooth from '@/hooks/use-scroll-smooth';
+import { ScrollSmoother, ScrollTrigger, SplitText } from '@/plugins';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
-import Wrapper from "@/layouts/wrapper";
+import Wrapper from '@/layouts/wrapper';
 
-import BigText from "@/components/big-text";
-import { charAnimation, titleAnimation } from "@/utils/title-animation";
-import FaqArea from "@/components/faq/faq-area";
-import ContactForm from "@/components/contact-form/contact-form";
-import AnimationHeader from "@/components/animation_header";
-import bannerDiv from "../../../public/assets/img/inner-faq/faq/InnerDiv.png";
-import bannerDiv2 from "../../../public/assets/img/inner-faq/faq/InnerDiv_1.png";
+import BigText from '@/components/big-text';
+import { charAnimation, titleAnimation } from '@/utils/title-animation';
+import FaqArea from '@/components/faq/faq-area';
+import ContactForm from '@/components/contact-form/contact-form';
+import AnimationHeader from '@/components/animation_header';
+import bannerDiv from '../../../public/assets/img/inner-faq/faq/InnerDiv.png';
+import bannerDiv2 from '../../../public/assets/img/inner-faq/faq/InnerDiv_1.png';
 
-import ServiceFour from "@/components/service/service-four";
-import FooterFour from "@/layouts/footers/footer-four";
+import ServiceFour from '@/components/service/service-four';
+import FooterFour from '@/layouts/footers/footer-four';
 
 const FaqMain = ({ whyChooseData }) => {
   useScrollSmooth();
@@ -53,7 +53,7 @@ const FaqMain = ({ whyChooseData }) => {
                 <div className="tm-hero-content">
                   <span className="tm-hero-subtitle">Secure 365</span>
                   <h2 className="tm-hero-title sv-hero-title tp-char-animation">
-                    {whyChooseData?.title}{" "}
+                    {whyChooseData?.title}{' '}
                     <span className="blueColor">
                       {whyChooseData?.why_choose_right_partner_heading_secure}?
                     </span>
@@ -61,9 +61,8 @@ const FaqMain = ({ whyChooseData }) => {
                 </div>
                 <div className="tm-hero-text tp_title_anim">
                   <p>
-                    Expertise, reliability, and a commitment to your
-                    success—discover why businesses choose Secure365 for all
-                    their IT and security needs
+                    Expertise, reliability, and a commitment to your success—discover why businesses
+                    choose Secure365 for all their IT and security needs
                     <br />
                   </p>
                 </div>
@@ -78,23 +77,21 @@ const FaqMain = ({ whyChooseData }) => {
               <div className="col-xl-6 col-md-6 col-sm-12  max-w-full md:max-w-2xl">
                 <div className="tm-hero-content">
                   <h2 className="tm-herointro-title tp-char-animation">
-                    {whyChooseData?.why_choose_right_partner_heading}{" "}
+                    {whyChooseData?.why_choose_right_partner_heading}{' '}
                     <span className="blueColor">
                       {whyChooseData?.why_choose_right_partner_heading_secure}
-                    </span>{" "}
+                    </span>{' '}
                     {whyChooseData?.why_choose_right_partner_business}
                   </h2>
                 </div>
                 <div className="instropara tp_title_anim">
                   <p>
-                    When it comes to choosing an IT partner, you need more than
-                    just someone to set up your systems or install a
-                    firewall—you need a trusted advisor who understands your
-                    business, anticipates your needs, and has the expertise to
-                    solve complex challenges. At Secure365, we bring together
-                    years of experience in cybersecurity, IT management, and
-                    digital strategy to deliver solutions that are tailored,
-                    proactive, and focused on driving results.
+                    When it comes to choosing an IT partner, you need more than just someone to set
+                    up your systems or install a firewall—you need a trusted advisor who understands
+                    your business, anticipates your needs, and has the expertise to solve complex
+                    challenges. At Secure365, we bring together years of experience in
+                    cybersecurity, IT management, and digital strategy to deliver solutions that are
+                    tailored, proactive, and focused on driving results.
                   </p>
                 </div>
 
@@ -152,9 +149,7 @@ const FaqMain = ({ whyChooseData }) => {
                 <div className="instropara tp_title_anim">
                   <p>{whyChooseData?.our_commitment_section_paragraph}</p>
                   <br />
-                  <p>
-                    {whyChooseData?.our_commitment_section_paragraph_second}
-                  </p>
+                  <p>{whyChooseData?.our_commitment_section_paragraph_second}</p>
                 </div>
                 <div className="btn_sec flex gap-3 flex-wrap">
                   <Link href="/contact-us" className="BtnTwo btnWrapper">

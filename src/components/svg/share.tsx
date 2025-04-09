@@ -1,12 +1,6 @@
 export default function Share() {
   return (
-    <svg
-      width="14"
-      height="15"
-      viewBox="0 0 14 15"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M10.7547 4.90002C11.8317 4.90002 12.7047 4.02697 12.7047 2.95001C12.7047 1.87305 11.8317 1 10.7547 1C9.67774 1 8.80469 1.87305 8.80469 2.95001C8.80469 4.02697 9.67774 4.90002 10.7547 4.90002Z"
         stroke="currentcolor"
@@ -48,13 +42,7 @@ export default function Share() {
 
 export function ShareTwo() {
   return (
-    <svg
-      width="17"
-      height="18"
-      viewBox="0 0 17 18"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M12.8516 5.80003C14.1611 5.80003 15.2227 4.7255 15.2227 3.40001C15.2227 2.07452 14.1611 1 12.8516 1C11.542 1 10.4805 2.07452 10.4805 3.40001C10.4805 4.7255 11.542 5.80003 12.8516 5.80003Z"
         stroke="black"

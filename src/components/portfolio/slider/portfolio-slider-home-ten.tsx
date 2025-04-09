@@ -1,54 +1,54 @@
-import React, { useRef, useState } from "react";
-import Image from "next/image";
-import Slider from "react-slick";
-import Link from "next/link";
-import "slick-carousel/slick/slick.css";
-import { DownArrow } from "../../svg";
+import React, { useRef, useState } from 'react';
+import Image from 'next/image';
+import Slider from 'react-slick';
+import Link from 'next/link';
+import 'slick-carousel/slick/slick.css';
+import { DownArrow } from '../../svg';
 
 // images
-import port_sm_1 from "@/assets/img/home-11/port-sm-1.jpg";
-import port_sm_2 from "@/assets/img/home-11/port-sm-2.jpg";
-import port_sm_3 from "@/assets/img/home-11/port-sm-3.jpg";
-import port_sm_4 from "@/assets/img/home-11/port-sm-4.jpg";
-import port_sm_5 from "@/assets/img/home-11/port-sm-5.jpg";
+import port_sm_1 from '@/assets/img/home-11/port-sm-1.jpg';
+import port_sm_2 from '@/assets/img/home-11/port-sm-2.jpg';
+import port_sm_3 from '@/assets/img/home-11/port-sm-3.jpg';
+import port_sm_4 from '@/assets/img/home-11/port-sm-4.jpg';
+import port_sm_5 from '@/assets/img/home-11/port-sm-5.jpg';
 // import { SlickNextArrow, SlickPrevArrow } from "../../slick-arrow";
 
 // slider data
 const slider_data = [
   {
     id: 1,
-    bg: "/assets/img/home-11/port-1.jpg",
-    subtitle: "Digital Design",
-    year: "2024",
-    title: "Fashion <br> Sentence",
+    bg: '/assets/img/home-11/port-1.jpg',
+    subtitle: 'Digital Design',
+    year: '2024',
+    title: 'Fashion <br> Sentence',
   },
   {
     id: 2,
-    bg: "/assets/img/home-11/port-2.jpg",
-    subtitle: "Digital Design",
-    year: "2022",
-    title: "Chania <br> Tourism",
+    bg: '/assets/img/home-11/port-2.jpg',
+    subtitle: 'Digital Design',
+    year: '2022',
+    title: 'Chania <br> Tourism',
   },
   {
     id: 3,
-    bg: "/assets/img/home-11/port-3.jpg",
-    subtitle: "Digital Design",
-    year: "2021",
-    title: "Kiteboard <br> action",
+    bg: '/assets/img/home-11/port-3.jpg',
+    subtitle: 'Digital Design',
+    year: '2021',
+    title: 'Kiteboard <br> action',
   },
   {
     id: 4,
-    bg: "/assets/img/home-11/port-4.jpg",
-    subtitle: "Digital Design",
-    year: "2021",
-    title: "Headphones <br> Cheap",
+    bg: '/assets/img/home-11/port-4.jpg',
+    subtitle: 'Digital Design',
+    year: '2021',
+    title: 'Headphones <br> Cheap',
   },
   {
     id: 5,
-    bg: "/assets/img/home-11/port-5.jpg",
-    subtitle: "Digital Design",
-    year: "2021",
-    title: "Zon <br> Robinson",
+    bg: '/assets/img/home-11/port-5.jpg',
+    subtitle: 'Digital Design',
+    year: '2021',
+    title: 'Zon <br> Robinson',
   },
 ];
 // slider thumbs
@@ -56,37 +56,37 @@ const slider_thumbs = [
   {
     id: 1,
     img: port_sm_1,
-    subtitle: "Digital Design",
-    year: "2024",
-    title: "Fashion Sentence",
+    subtitle: 'Digital Design',
+    year: '2024',
+    title: 'Fashion Sentence',
   },
   {
     id: 2,
     img: port_sm_2,
-    subtitle: "Digital Design",
-    year: "2022",
-    title: "Chania Tourism",
+    subtitle: 'Digital Design',
+    year: '2022',
+    title: 'Chania Tourism',
   },
   {
     id: 3,
     img: port_sm_3,
-    subtitle: "Digital Design",
-    year: "2021",
-    title: "Kiteboard action",
+    subtitle: 'Digital Design',
+    year: '2021',
+    title: 'Kiteboard action',
   },
   {
     id: 4,
     img: port_sm_4,
-    subtitle: "Digital Design",
-    year: "2021",
-    title: "Headphones Cheap",
+    subtitle: 'Digital Design',
+    year: '2021',
+    title: 'Headphones Cheap',
   },
   {
     id: 5,
     img: port_sm_5,
-    subtitle: "Digital Design",
-    year: "2021",
-    title: "Zon Robinson",
+    subtitle: 'Digital Design',
+    year: '2021',
+    title: 'Zon Robinson',
   },
 ];
 
@@ -106,9 +106,9 @@ const slider_setting_two = {
   slidesToShow: 4,
   slidesToScroll: 1,
   dots: false,
-  arrow:false,
+  arrow: false,
   focusOnSelect: true,
-  centerPadding: "0",
+  centerPadding: '0',
   speed: 600,
   // nextArrow: "",
   // prevArrow: "",
@@ -164,7 +164,6 @@ const slider_setting_two = {
   ],
 };
 
-
 export default function PortfolioSliderHomeTen() {
   const [slider1, setSlider1] = useState<Slider | null>(null);
   const [slider2, setSlider2] = useState<Slider | null>(null);
@@ -215,7 +214,7 @@ export default function PortfolioSliderHomeTen() {
         <div className="tp-portfolio-11-slider-nav-wrap z-index-5">
           <div
             className="slides-numbers d-none d-lg-flex d-flex align-items-center"
-            style={{ display: "inline-block" }}
+            style={{ display: 'inline-block' }}
           >
             <div className="slider-line"></div>
             <span className="active">{sliderIndex < 9 ? `0${sliderIndex}` : sliderIndex}</span>
@@ -224,20 +223,13 @@ export default function PortfolioSliderHomeTen() {
             {...slider_setting_two}
             asNavFor={slider1 as Slider}
             ref={(slider) => setSlider2(slider)}
-            afterChange={(index:any) => setSliderIndex(index + 1)}
+            afterChange={(index: any) => setSliderIndex(index + 1)}
             className="tp-portfolio-11-slider-nav-active d-none d-lg-block"
           >
             {slider_thumbs.map((item) => (
-              <div
-                key={item.id}
-                className="tp-portfolio-11-slider-nav-item p-relative"
-              >
+              <div key={item.id} className="tp-portfolio-11-slider-nav-item p-relative">
                 <div className="tp-portfolio-11-slider-nav-thumb">
-                  <Image
-                    src={item.img}
-                    alt="thumb-img"
-                    style={{ height: "auto" }}
-                  />
+                  <Image src={item.img} alt="thumb-img" style={{ height: 'auto' }} />
                 </div>
                 <div className="tp-portfolio-11-slider-nav-content-wrap">
                   <div className="tp-portfolio-11-slider-nav-content d-flex flex-column justify-content-between">
@@ -245,9 +237,7 @@ export default function PortfolioSliderHomeTen() {
                       <span>{item.year}</span>
                     </div>
                     <div className="tp-portfolio-11-slider-nav-tittle-box">
-                      <span className="tp-portfolio-11-slider-nav-subtittle">
-                        {item.subtitle}
-                      </span>
+                      <span className="tp-portfolio-11-slider-nav-subtittle">{item.subtitle}</span>
                       <h4 className="tp-portfolio-11-slider-nav-tittle">
                         <Link href="/portfolio-details-video">{item.title}</Link>
                       </h4>

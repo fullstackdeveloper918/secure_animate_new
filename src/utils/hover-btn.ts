@@ -1,30 +1,29 @@
-import $ from "jquery";
-import { gsap, Power2 } from "gsap";
+import $ from 'jquery';
+import { gsap, Power2 } from 'gsap';
 function hoverBtn() {
-
   $('.tp-hover-btn').on('mouseenter', function (e: any) {
-    let x = e.pageX - $(this).offset()!.left;
-    let y = e.pageY - $(this).offset()!.top;
+    const x = e.pageX - $(this).offset()!.left;
+    const y = e.pageY - $(this).offset()!.top;
 
     $(this).find('.tp-btn-circle-dot').css({
       top: y,
-      left: x
+      left: x,
     });
   });
 
   $('.tp-hover-btn').on('mouseout', function (e: any) {
-    let x = e.pageX - $(this).offset()!.left;
-    let y = e.pageY - $(this).offset()!.top;
+    const x = e.pageX - $(this).offset()!.left;
+    const y = e.pageY - $(this).offset()!.top;
 
     $(this).find('.tp-btn-circle-dot').css({
       top: y,
-      left: x
+      left: x,
     });
   });
 
-  const hoverBtns = gsap.utils.toArray(".tp-hover-btn-wrapper");
+  const hoverBtns = gsap.utils.toArray('.tp-hover-btn-wrapper');
 
-  const hoverBtnItem: any = gsap.utils.toArray(".tp-hover-btn-item");
+  const hoverBtnItem: any = gsap.utils.toArray('.tp-hover-btn-item');
   hoverBtns.forEach((btn: any, i) => {
     $(btn).mousemove(function (e) {
       callParallax(e);
@@ -52,9 +51,6 @@ function hoverBtn() {
       });
     });
   });
-};
-
-
-export {
-  hoverBtn,
 }
+
+export { hoverBtn };

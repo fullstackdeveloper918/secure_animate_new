@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Menu, Search, Wishlist, Zero } from "@/components/svg";
-import useSticky from "@/hooks/use-sticky";
-import HeaderMenus from "./header-menus";
-import logo_1 from "@/assets/img/logo/logo.png";   
-import logo_2 from "@/assets/img/logo/logo-white.png"; 
-import CartOffcanvas from "@/components/offcanvas/cart-offcanvas";
-import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
+import React, { useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Menu, Search, Wishlist, Zero } from '@/components/svg';
+import useSticky from '@/hooks/use-sticky';
+import HeaderMenus from './header-menus';
+import logo_1 from '@/assets/img/logo/logo.png';
+import logo_2 from '@/assets/img/logo/logo-white.png';
+import CartOffcanvas from '@/components/offcanvas/cart-offcanvas';
+import MobileOffcanvas from '@/components/offcanvas/mobile-offcanvas';
 
 export default function HeaderTwelve() {
-  const {headerFullWidth } = useSticky();
+  const { headerFullWidth } = useSticky();
   const [openCartMini, setOpenCartMini] = React.useState(false);
   const [openOffCanvas, setOpenOffCanvas] = React.useState(false);
   useEffect(() => {
@@ -55,21 +55,24 @@ export default function HeaderTwelve() {
                       <Search />
                     </span>
                   </button>
-                  <Link
-                    className="tp-inner-header-2-wishlist p-relative"
-                    href="/wishlist"
-                  >
+                  <Link className="tp-inner-header-2-wishlist p-relative" href="/wishlist">
                     <i>o</i>
                     <span>
                       <Wishlist />
                     </span>
                   </Link>
-                  <button onClick={() => setOpenOffCanvas(true)} className="tp-inner-header-2-bar tp-offcanvas-open-btn">
+                  <button
+                    onClick={() => setOpenOffCanvas(true)}
+                    className="tp-inner-header-2-bar tp-offcanvas-open-btn"
+                  >
                     <span>
                       <Menu />
                     </span>
                   </button>
-                  <button onClick={() => setOpenCartMini(true)} className="tp-inner-header-2-cart cartmini-open-btn">
+                  <button
+                    onClick={() => setOpenCartMini(true)}
+                    className="tp-inner-header-2-cart cartmini-open-btn"
+                  >
                     <span>
                       <Zero />
                     </span>

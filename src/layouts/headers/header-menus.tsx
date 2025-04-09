@@ -1,9 +1,9 @@
-import React, { CSSProperties } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import menu_data from "@/data/menu-data";
+import React, { CSSProperties } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import menu_data from '@/data/menu-data';
 
-const imgStyle:CSSProperties = { width: "100%", height: "auto", objectFit: "cover" };
+const imgStyle: CSSProperties = { width: '100%', height: 'auto', objectFit: 'cover' };
 const HeaderMenus = () => {
   return (
     <ul>
@@ -187,15 +187,15 @@ const HeaderMenus = () => {
               </div> */}
             </div>
           ) : menu.dropdown_menus ? (
-            ""
-            // <ul className="tp-submenu submenu">
-            //   {menu.dropdown_menus.map((mm, i) => (
-            //     <li key={i}>
-            //       <Link href={mm.link}>{mm.title}</Link>
-            //     </li>
-            //   ))}
-            // </ul>
-          ) : null}
+            ''
+          ) : // <ul className="tp-submenu submenu">
+          //   {menu.dropdown_menus.map((mm, i) => (
+          //     <li key={i}>
+          //       <Link href={mm.link}>{mm.title}</Link>
+          //     </li>
+          //   ))}
+          // </ul>
+          null}
         </li>
       ))}
     </ul>

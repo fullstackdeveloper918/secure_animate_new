@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import google from "@/assets/img/login/google.svg";
-import facebook from "@/assets/img/login/facebook.svg";
-import apple from "@/assets/img/login/apple.svg";
+import React from 'react';
+import Image from 'next/image';
+import google from '@/assets/img/login/google.svg';
+import facebook from '@/assets/img/login/facebook.svg';
+import apple from '@/assets/img/login/apple.svg';
 
 export default function SocialLogin() {
   return (

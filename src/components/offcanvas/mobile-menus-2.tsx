@@ -1,14 +1,14 @@
-import React from "react";
-import Link from "next/link";
-import { mobile_menu_data } from "@/data/menu-data";
+import React from 'react';
+import Link from 'next/link';
+import { mobile_menu_data } from '@/data/menu-data';
 
 export default function MobileMenusTwo() {
-  const [navTitle, setNavTitle] = React.useState<string>("");
+  const [navTitle, setNavTitle] = React.useState<string>('');
 
   //openMobileMenu
   const openMobileMenu = (menu: string) => {
     if (navTitle === menu) {
-      setNavTitle("");
+      setNavTitle('');
     } else {
       setNavTitle(menu);
     }

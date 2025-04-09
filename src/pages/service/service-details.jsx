@@ -1,25 +1,21 @@
-"use client";
-import { gsap } from "gsap";
-import React from "react";
-import { useGSAP } from "@gsap/react";
-import useScrollSmooth from "@/hooks/use-scroll-smooth";
-import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
+'use client';
+import { gsap } from 'gsap';
+import React from 'react';
+import { useGSAP } from '@gsap/react';
+import useScrollSmooth from '@/hooks/use-scroll-smooth';
+import { ScrollSmoother, ScrollTrigger, SplitText } from '@/plugins';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
-import Wrapper from "@/layouts/wrapper";
-import ServiceDetailsArea from "@/components/service/service-details-area";
+import Wrapper from '@/layouts/wrapper';
+import ServiceDetailsArea from '@/components/service/service-details-area';
 
 // animation
-import {
-  charAnimation,
-  fadeAnimation,
-  titleAnimation,
-} from "@/utils/title-animation";
-import AnimationHeader from "@/components/animation_header";
-import ServiceThree from "@/components/service/service-three";
-import FooterFour from "@/layouts/footers/footer-four";
-import { servicePanel } from "@/utils/panel-animation";
+import { charAnimation, fadeAnimation, titleAnimation } from '@/utils/title-animation';
+import AnimationHeader from '@/components/animation_header';
+import ServiceThree from '@/components/service/service-three';
+import FooterFour from '@/layouts/footers/footer-four';
+import { servicePanel } from '@/utils/panel-animation';
 
 const ServiceDetailsMain = ({ serviceBannerData }) => {
   useScrollSmooth();

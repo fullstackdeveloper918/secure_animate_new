@@ -36,11 +36,11 @@ export function parallaxSlider() {
   }
 
   function animateImages() {
-    let ratio = current / imageWidth;
+    const ratio = current / imageWidth;
     let intersectionRatioValue: number;
 
     images.forEach((image, idx) => {
-      intersectionRatioValue = ratio - (idx * 0.7);
+      intersectionRatioValue = ratio - idx * 0.7;
       setTransform(image, `translateX(${intersectionRatioValue * 100}px)`);
     });
   }

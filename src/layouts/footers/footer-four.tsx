@@ -17,12 +17,24 @@ export default function FooterFour() {
                   <h2 className="tp-footer-3-title">Website map</h2>
                   <div className="tp-footer-3-menu">
                     <ul>
-                      <li><Link href="#">Home</Link></li>
-                      <li><Link href="/about-us">About</Link></li>
-                      <li><Link href="/service">Service</Link></li>
-                      <li><Link href="/Why-Choose-Us">Why Choose Us</Link></li>
-                      <li><Link href="#">Blog</Link></li>
-                      <li><Link href="/contact">Contact</Link></li>
+                      <li>
+                        <Link href="#">Home</Link>
+                      </li>
+                      <li>
+                        <Link href="/about-us">About</Link>
+                      </li>
+                      <li>
+                        <Link href="/service">Service</Link>
+                      </li>
+                      <li>
+                        <Link href="/Why-Choose-Us">Why Choose Us</Link>
+                      </li>
+                      <li>
+                        <Link href="#">Blog</Link>
+                      </li>
+                      <li>
+                        <Link href="/contact">Contact</Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -32,10 +44,10 @@ export default function FooterFour() {
                     <input type="text" placeholder="Enter Address..." />
                     <button className="tp-footer-3-btn p-relative">
                       <span className="icon-1">
-                        <RightArrow clr='#19191A' />
+                        <RightArrow clr="#19191A" />
                       </span>
                       <span className="icon-2">
-                        <SvgBgSm/>
+                        <SvgBgSm />
                       </span>
                     </button>
                   </div>
@@ -64,22 +76,38 @@ export default function FooterFour() {
                   <h2 className="tp-footer-3-title">Contact</h2>
                   <div className="tp-footer-2-contact-item">
                     <span>
-                      <Link href="https://www.google.com/maps/@23.8223596,90.3656686,15z?entry=ttu"
-                      target="_blank">740 NEW SOUTH HEAD RD, TRIPLE BAY SWFW 3108, NEW YORK</Link>
-                      </span>
+                      <Link
+                        href="https://www.google.com/maps/@23.8223596,90.3656686,15z?entry=ttu"
+                        target="_blank"
+                      >
+                        740 NEW SOUTH HEAD RD, TRIPLE BAY SWFW 3108, NEW YORK
+                      </Link>
+                    </span>
                   </div>
                   <div className="tp-footer-2-contact-item">
-                    <span>P: <Link href="tel:+725214456">+6 314 678 886</Link></span>
-                    <span>E: <Link href="mailto:contact@liko.com">secure@gmail.com</Link></span>
+                    <span>
+                      P: <Link href="tel:+725214456">+6 314 678 886</Link>
+                    </span>
+                    <span>
+                      E: <Link href="mailto:contact@liko.com">secure@gmail.com</Link>
+                    </span>
                   </div>
                 </div>
                 <div className="tp-footer-3-widget">
                   <h2 className="tp-footer-3-title">Follow</h2>
                   <div className="tp-footer-3-social">
-                    <Link href="#"><i className="fa-brands fa-twitter"></i></Link>
-                    <Link href="#"><i className="fa-brands fa-facebook-f"></i></Link>
-                    <Link href="#"><i className="fa-brands fa-instagram"></i></Link>
-                    <Link href="#"><i className="fa-brands fa-linkedin-in"></i></Link>
+                    <Link href="#">
+                      <i className="fa-brands fa-twitter"></i>
+                    </Link>
+                    <Link href="#">
+                      <i className="fa-brands fa-facebook-f"></i>
+                    </Link>
+                    <Link href="#">
+                      <i className="fa-brands fa-instagram"></i>
+                    </Link>
+                    <Link href="#">
+                      <i className="fa-brands fa-linkedin-in"></i>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -87,7 +115,6 @@ export default function FooterFour() {
           </div>
         </div>
       </div>
-
     </footer>
-  )
+  );
 }

@@ -1,14 +1,12 @@
 'use client';
-import React from "react";
-
+import React from 'react';
 
 const VideoTwo = () => {
-  
   return (
     <div className="tp-video-area">
       <div className="container container-1870">
         <div className="row">
-          <div className="col-xl-12" >
+          <div className="col-xl-12">
             <div className="tp-video-wrap p-relative">
               <video
                 className="play-video"
@@ -17,10 +15,7 @@ const VideoTwo = () => {
                 autoPlay={true}
                 playsInline={true}
               >
-                <source
-                  src="https://html.hixstudio.net/videos/liko/liko-4.mp4"
-                  type="video/mp4"
-                />
+                <source src="https://html.hixstudio.net/videos/liko/liko-4.mp4" type="video/mp4" />
               </video>
               <div className="tp-video-content text-center">
                 <span className="tp-video-subtitle">

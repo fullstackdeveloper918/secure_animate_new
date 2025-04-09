@@ -101,8 +101,12 @@
 .services_content {
   z-index: 2;
   background-color: var(--main-background);
-  background-image: radial-gradient(circle at 50% 0, #621e984d, #0f021b 85%), url(https://cdn.prod.website-files.com/65c35ac6dc098b186197b173/668527c13db5b491d5785d35_Grid.webp);
-  background-position: 0 0, 0 0;
+  background-image:
+    radial-gradient(circle at 50% 0, #621e984d, #0f021b 85%),
+    url(https://cdn.prod.website-files.com/65c35ac6dc098b186197b173/668527c13db5b491d5785d35_Grid.webp);
+  background-position:
+    0 0,
+    0 0;
   background-size: auto, auto;
   border-radius: 2rem;
   justify-content: center;
@@ -111,7 +115,9 @@
   display: grid;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 -.25rem .5rem #ffffff0d, inset 0 .25rem .5rem #ffffff24;
+  box-shadow:
+    inset 0 -0.25rem 0.5rem #ffffff0d,
+    inset 0 0.25rem 0.5rem #ffffff24;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   color: #fff;
@@ -171,7 +177,7 @@
     width: 100%;
     height: 100%;
     max-width: 270px;
-}
+  }
   .content h2 {
     font-size: 32px;
     max-width: 800px;
