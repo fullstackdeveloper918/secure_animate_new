@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ContactMain from '@/pages/contact/contact';
 import { config } from '../../../../config';
 
@@ -7,31 +7,45 @@ export const metadata = {
 };
 
 const ContactPage = async () => {
-  try {
-    // Fetch the contact data
-    const data = await fetch(`${config.APP_URL}/secure-plugin/v1/contact`, {
-      cache: 'no-store',
-    });
+  const [contactData, setContactData] = useState(null);
+  const [error, setError] = useState(null);
 
-    // Parse JSON response
-    let response = await data.json();
-    let contactData = response?.data;
+  useEffect(() => {
+    const fetchContactData = async () => {
+      try {
+        // Fetch the contact data
+        const response = await fetch(`${config.APP_URL}/secure-plugin/v1/contact`, {
+          cache: 'no-store',
+        });
 
-    // Provide default values if contactData is missing
-    if (!contactData) {
-      contactData = { message: 'Contact data not available' }; // Default message
-    }
+        // Check if the response is OK
+        if (!response.ok) {
+          throw new Error('Failed to fetch contact data');
+        }
 
-    return <ContactMain contactData={contactData} />;
-  } catch (error) {
-    // Handle any fetch errors or unexpected issues
-    console.error('Error fetching contact data:', error);
+        // Parse JSON response
+        const data = await response.json();
+        setContactData(data?.data || null);
+      } catch (error) {
+        console.error('Error fetching contact data:', error);
+        setError('Failed to load contact data');
+      }
+    };
 
-    // Provide fallback data if there's an error
-    const fallbackContactData = { message: 'Error fetching Contact data' };
+    fetchContactData();
+  }, []);
 
-    return <ContactMain contactData={fallbackContactData} />;
+  // If there's an error, show a fallback message
+  if (error) {
+    return <div>{error}</div>;
   }
+
+  // If contactData is not loaded yet, show a loading state
+  if (!contactData) {
+    return <div>Loading...</div>;
+  }
+
+  return <ContactMain contactData={contactData} />;
 };
 
 export default ContactPage;

@@ -50,11 +50,11 @@ const ContactLocationTwo = ({ contactData }) => {
     <div className="cn-contact-2-info-area pb-90 pt-90">
       <div className="container contact-container">
         <div className="row">
-          {contactData &&
+          {contactData && contactData?.contact_secure_loop?.length > 0 ? (
             contactData?.contact_secure_loop.map((item, index) => (
               <div key={index} className="col-xl-4 col-lg-6 col-md-6 contact-col">
                 <div
-                  className={`cn-contact-2-content ${index + 1 == 2 ? 'mt-20' : ''} text-center`}
+                  className={`cn-contact-2-content ${index + 1 === 2 ? 'mt-20' : ''} text-center`}
                 >
                   <div className="cn-contact-2-thumb d-flex justify-content-center">
                     <Image
@@ -71,7 +71,10 @@ const ContactLocationTwo = ({ contactData }) => {
                   </div>
                 </div>
               </div>
-            ))}
+            ))
+          ) : (
+            <p>No contact information available</p> // Optional fallback message when data is missing
+          )}
         </div>
       </div>
     </div>
