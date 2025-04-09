@@ -1,3 +1,6 @@
+// Add "use client" to mark this as a Client Component
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import ContactMain from '@/pages/contact/contact';
 import { config } from '../../../../config';
@@ -6,7 +9,7 @@ export const metadata = {
   title: 'Secure 365 - Contact page',
 };
 
-const ContactPage = async () => {
+const ContactPage = () => {
   const [contactData, setContactData] = useState(null);
   const [error, setError] = useState(null);
 
