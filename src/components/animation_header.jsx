@@ -87,9 +87,9 @@ const AnimationHeader = () => {
                   className={`menu-timeline link header-link ${
                     activeItem === item ? "active" : ""
                   }`}
-                  onMouseEnter={() => handleMouseEnter(item)}
-                  onMouseLeave={handleMouseLeave}
-                  onClick={() => handleClick(item)} // Set active on click
+                  // onMouseEnter={() => handleMouseEnter(item)}
+                  // onMouseLeave={handleMouseLeave}
+                  // onClick={() => handleClick(item)} // Set active on click
                 >
                   <Link
                     className="ajax-link"
