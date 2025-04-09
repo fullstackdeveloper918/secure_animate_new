@@ -1,54 +1,24 @@
-// Add "use client" to mark this as a Client Component
-'use client';
-
-import React, { useEffect, useState } from 'react';
-import ContactMain from '@/pages/contact/contact';
-import { config } from '../../../../config';
-
+// src/app/(contact)/contact-us/page.js (Server-side)
 export const metadata = {
   title: 'Secure 365 - Contact page',
 };
 
-const ContactPage = () => {
-  const [contactData, setContactData] = useState(null);
-  const [error, setError] = useState(null);
+import React from 'react';
+import ContactMain from '@/pages/contact/contact';
+import { config } from '../../../../config';
 
-  useEffect(() => {
-    const fetchContactData = async () => {
-      try {
-        // Fetch the contact data
-        const response = await fetch(`${config.APP_URL}/secure-plugin/v1/contact`, {
-          cache: 'no-store',
-        });
+const ContactPage = async () => {
+  try {
+    // Fetch contact data here...
+    const data = await fetch(`${config.APP_URL}/secure-plugin/v1/contact`);
+    const response = await data.json();
+    const contactData = response?.data || { message: 'Contact data not available' };
 
-        // Check if the response is OK
-        if (!response.ok) {
-          throw new Error('Failed to fetch contact data');
-        }
-
-        // Parse JSON response
-        const data = await response.json();
-        setContactData(data?.data || null);
-      } catch (error) {
-        console.error('Error fetching contact data:', error);
-        setError('Failed to load contact data');
-      }
-    };
-
-    fetchContactData();
-  }, []);
-
-  // If there's an error, show a fallback message
-  if (error) {
-    return <div>{error}</div>;
+    return <ContactMain contactData={contactData} />;
+  } catch (error) {
+    // Handle error
+    return <ContactMain contactData={{ message: 'Error fetching contact data' }} />;
   }
-
-  // If contactData is not loaded yet, show a loading state
-  if (!contactData) {
-    return <div>Loading...</div>;
-  }
-
-  return <ContactMain contactData={contactData} />;
 };
 
 export default ContactPage;
