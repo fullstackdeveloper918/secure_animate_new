@@ -8,7 +8,7 @@ interface ScrambleTextProps {
 
 const ScrambleText: React.FC<ScrambleTextProps> = ({
   text,
-  scrambleSpeed = 70,
+  scrambleSpeed = 20,
   characterSet = 'abcdefgh',
 }) => {
   const [displayText, setDisplayText] = useState(text);

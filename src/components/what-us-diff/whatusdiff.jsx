@@ -7,6 +7,7 @@ import whatusImage3 from '../../../public/images/1.svg';
 import Image from 'next/image';
 import whatusImage4 from '../../../public/images/4.svg';
 import whatusImage5 from '../../../public/images/5.svg';
+import CardSpotlightDemo from '@/components/ui/cardSpotlight/CardSpotlightDemo.jsx';
 
 function PainSection() {
   const firstSectionRef = useRef(null);
@@ -101,33 +102,26 @@ function PainSection() {
             What Makes Us Different?
           </motion.h2>
           <div className="w-full sliderSec">
-            <motion.div
-              className="flex space-x-8 w-max"
-              animate={{ x: ['0%', '-50%'] }} // Moves left continuously
-              transition={{
-                ease: 'linear',
-                duration: 50,
-                repeat: Infinity,
-              }}
-
-              // style={{ marginTop: gapSpacing }}
-            >
-              {duplicatedCards.map((card, index) => (
-                <motion.div
-                  key={index}
-                  className="flex-shrink-0 w-[400px] h-96 bg-black border border-white/20 backdrop-blur-sm rounded-2xl p-8 transition-colors duration-300 slidecol"
-                  // whileHover={{ scale: 1.05 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <div className="flex items-center mb-6">
-                    {/* <card.icon className="w-16 h-16 text-white" /> */}
-                    <Image src={card.icon} width={60} height={60} />
-                  </div>
-                  <h3 className="text-white md:mb-4  mb-2 cardtitile">{card.title}</h3>
-                  <p className="text-gray-400 cardDecription">{card.description}</p>
-                </motion.div>
-              ))}
-            </motion.div>
+            {/* // style={{ marginTop: gapSpacing }}> */}
+            {/* {duplicatedCards.map((card, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex-shrink-0 w-[400px] h-96 bg-black border border-white/20 backdrop-blur-sm rounded-2xl p-8 transition-colors duration-300 slidecol"
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <div className="flex items-center mb-6">
+                      <Image src={card.icon} width={60} height={60} />
+                    </div>
+                    <h3 className="text-white md:mb-4  mb-2 cardtitile">
+                      {card.title}
+                    </h3>
+                    <p className="text-gray-400 cardDecription">
+                      {card.description}
+                    </p>
+                  </motion.div>
+                ))} */}
+            <CardSpotlightDemo />
+            {/* </motion.div> */}
           </div>
         </motion.section>
       )}

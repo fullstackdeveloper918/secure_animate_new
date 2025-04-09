@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import ScrambleText from './ScrambleText';
 
 // Typing Effect Component
 const TypingEffect = ({ text }) => {
@@ -69,7 +70,6 @@ const AnimationHeader = () => {
               />
             </Link>
           </div>
-
           <nav className="clapat-nav-wrapper">
             <ul data-breakpoint="1025" className="flexnav">
               {menuItems.map((item, idx) => (
@@ -78,15 +78,18 @@ const AnimationHeader = () => {
                   className={`menu-timeline link header-link ${
                     activeItem === item ? 'active' : ''
                   }`}
-                  // onMouseEnter={() => handleMouseEnter(item)}
-                  // onMouseLeave={handleMouseLeave}
-                  // onClick={() => handleClick(item)} // Set active on click
                 >
                   <Link
                     className="ajax-link"
-                    href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={
+                      item === 'Home'
+                        ? '/'
+                        : item === 'Why Choose Us'
+                          ? '/why-choose'
+                          : `/${item.toLowerCase().replace(/\s+/g, '-')}`
+                    }
                   >
-                    {hoveredText === item ? <TypingEffect text={item} /> : item}
+                    <ScrambleText text={item} />
                   </Link>
                 </li>
               ))}
