@@ -28,19 +28,6 @@ import HeroBannerAi from "@/components/hero-banner/hero-banner-ai";
 import HeroSectionMain from "@/components/hero-banner/HeroSectionMain";
 import { AnimatedPinDemo } from "../components/ui/AnimatedPinDemo";
 
-const businessesData = [
-  {
-    text: "We help businesses",
-    image:
-      "https://sellmac.cybersify.tech/secure365/wp-content/uploads/2025/01/client-01-1.png",
-  },
-  {
-    text: "to innovate and",
-    image:
-      "https://sellmac.cybersify.tech/secure365/wp-content/uploads/2025/01/client-01-1.png",
-  },
-];
-
 export default function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true); // add loading state
