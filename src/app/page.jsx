@@ -75,10 +75,9 @@ export default function Home() {
     fetchData();
   }, []);
 
-  // ✅ Show PreLoader until loading is false
-  if (loading) {
-    return <PreLoader />;
-  }
+  // if (loading) {
+  //   return <PreLoader />;
+  // }
 
   return (
     <>

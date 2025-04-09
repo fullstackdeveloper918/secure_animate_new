@@ -93,7 +93,11 @@ const AnimationHeader = () => {
                 >
                   <Link
                     className="ajax-link"
-                    href={`/${item.toLowerCase().replace(" ", "-")}`}
+                    href={
+                      item === "Home"
+                        ? "/"
+                        : `/${item.toLowerCase().replace(/\s+/g, "-")}`
+                    }
                   >
                     {hoveredText === item ? <TypingEffect text={item} /> : item}
                   </Link>

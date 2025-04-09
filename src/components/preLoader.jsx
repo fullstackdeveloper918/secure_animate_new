@@ -1,5 +1,5 @@
 import React from "react";
-import Typing from "react-typing-animation";
+import { useTypewriter } from "react-simple-typewriter";
 
 const TEXTS = [
   "Brewing some cool things",
@@ -12,17 +12,23 @@ const PreLoader = () => {
   const [index, setIndex] = React.useState(0);
   const [isLoadingComplete, setIsLoadingComplete] = React.useState(false);
 
+  const [text] = useTypewriter({
+    words: [TEXTS[index]],
+    loop: false,
+    delaySpeed: 1000,
+    typeSpeed: 100,
+    deleteSpeed: 50,
+  });
+
   React.useEffect(() => {
     const intervalId = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % TEXTS.length); // Ensure index loops back
-    }, 2000); // Change text every 2 seconds
+      setIndex((prevIndex) => (prevIndex + 1) % TEXTS.length);
+    }, 2000);
 
-    // Simulate the loading completion after 8 seconds
     const timeoutId = setTimeout(() => {
       setIsLoadingComplete(true);
-    }, 8000); // Change to your desired loading time
+    }, 8000);
 
-    // Cleanup on component unmount
     return () => {
       clearInterval(intervalId);
       clearTimeout(timeoutId);
@@ -31,11 +37,7 @@ const PreLoader = () => {
 
   return (
     <div className={`pre-load-main ${isLoadingComplete ? "slide-up" : ""}`}>
-      <h1>
-        <Typing key={index} speed={100} eraseDelay={1000}>
-          {TEXTS[index]}
-        </Typing>
-      </h1>
+      <h1>{text}</h1>
     </div>
   );
 };
