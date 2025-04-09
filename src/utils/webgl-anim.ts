@@ -1,27 +1,6 @@
 import gsap from 'gsap';
 import $ from 'jquery';
 
-// Define a proper type for webGL instead of 'any'
-interface WebGLContext {
-  isRunning: boolean;
-  material: {
-    uniforms: {
-      nextImage: {
-        value: any;
-        needsUpdate: boolean;
-      };
-      currentImage: {
-        value: any;
-        needsUpdate: boolean;
-      };
-      dispFactor: {
-        value: number;
-      };
-    };
-  };
-  textures: any[]; // Replace 'any' with the actual texture type if known
-}
-
 export function slidePrevTransitionStart() {
   $('.tp-slider-dot')
     .find('.swiper-pagination-bullet')
@@ -78,47 +57,51 @@ export function verTextFragment() {
   const vertex =
     'varying vec2 vUv; void main() {  vUv = uv;  gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );	}';
   const fragment = `
-    varying vec2 vUv;
-
-    uniform sampler2D currentImage;
-    uniform sampler2D nextImage;
-    uniform sampler2D disp;
-    uniform float dispFactor;
-    uniform float effectFactor;
-    uniform vec4 resolution;
-
-    void main() {
-      vec2 uv = (vUv - vec2(0.5))*resolution.zw + vec2(0.5);
-      vec4 disp = texture2D(disp, uv);
-      vec2 distortedPosition = vec2(uv.x + dispFactor * (disp.r*effectFactor), uv.y);
-      vec2 distortedPosition2 = vec2(uv.x - (1.0 - dispFactor) * (disp.r*effectFactor), uv.y);
-      vec4 _currentImage = texture2D(currentImage, distortedPosition);
-      vec4 _nextImage = texture2D(nextImage, distortedPosition2);
-      vec4 finalTexture = mix(_currentImage, _nextImage, dispFactor);
-      gl_FragColor = finalTexture;
-    }
-  `;
+		varying vec2 vUv;
+	
+		uniform sampler2D currentImage;
+		uniform sampler2D nextImage;
+		uniform sampler2D disp;
+		uniform float dispFactor;
+		uniform float effectFactor;
+		uniform vec4 resolution;
+	
+		void main() {
+	
+			vec2 uv = (vUv - vec2(0.5))*resolution.zw + vec2(0.5);
+	
+			vec4 disp = texture2D(disp, uv);
+			vec2 distortedPosition = vec2(uv.x + dispFactor * (disp.r*effectFactor), uv.y);
+			vec2 distortedPosition2 = vec2(uv.x - (1.0 - dispFactor) * (disp.r*effectFactor), uv.y);
+			vec4 _currentImage = texture2D(currentImage, distortedPosition);
+			vec4 _nextImage = texture2D(nextImage, distortedPosition2);
+			vec4 finalTexture = mix(_currentImage, _nextImage, dispFactor);
+	
+			gl_FragColor = finalTexture; }
+	
+		`;
 
   return { vertex, fragment };
 }
 
-export function addEvents(webGL: WebGLContext) {
-  const triggerSlide: HTMLElement[] = Array.from(
+export function addEvents(webGL: any) {
+  let triggerSlide: HTMLElement[] = Array.from(
     document.getElementById('trigger-slides')!.querySelectorAll('.slide-wrap')
   );
   webGL.isRunning = false;
 
   triggerSlide.forEach((el: HTMLElement) => {
+    // Explicit type annotation for 'el'
     el.addEventListener('click', () => {
+      // Arrow function to preserve lexical scope
       if (!webGL.isRunning) {
         webGL.isRunning = true;
 
-        const activeEl = document.getElementById('trigger-slides')!.querySelector('.active');
-        if (activeEl) activeEl.className = '';
+        document.getElementById('trigger-slides')!.querySelectorAll('.active')[0].className = '';
+        el.className = 'active'; // Use 'el' instead of 'this'
 
-        el.className = 'active';
+        const slideId = parseInt(el.dataset.slide || '0', 10); // Use 'el' instead of 'this' and handle potential null/undefined with '|| "0"'
 
-        const slideId = parseInt(el.dataset.slide || '0', 10);
         webGL.material.uniforms.nextImage.value = webGL.textures[slideId];
         webGL.material.uniforms.nextImage.needsUpdate = true;
 
@@ -127,6 +110,7 @@ export function addEvents(webGL: WebGLContext) {
           value: 1,
           ease: 'Sine.easeInOut',
           onComplete: () => {
+            // Arrow function to preserve lexical scope
             webGL.material.uniforms.currentImage.value = webGL.textures[slideId];
             webGL.material.uniforms.currentImage.needsUpdate = true;
             webGL.material.uniforms.dispFactor.value = 0.0;

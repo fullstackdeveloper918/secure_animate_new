@@ -1,12 +1,13 @@
 import { gsap } from 'gsap';
 import $ from 'jquery';
+import { ScrollTrigger } from '@/plugins';
 
 function videoAnimOne() {
   if ($('.tp-hero-bottom-img-wrap').length > 0) {
-    const ms = gsap.matchMedia(); // changed to const
+    let ms = gsap.matchMedia();
     ms.add('(min-width: 768px)', () => {
       // Home 8
-      const tp_hero = gsap.timeline({ 
+      let tp_hero = gsap.timeline({
         scrollTrigger: {
           trigger: '.tp-hero-bottom-img-wrap',
           start: 'top 70',
@@ -29,7 +30,7 @@ function videoAnimTwo() {
     const mm = gsap.matchMedia();
     mm.add('(min-width: 1400px)', () => {
       console.log('min-width: 1400px');
-      const tp_hero_2 = gsap.timeline({
+      let tp_hero_2 = gsap.timeline({
         scrollTrigger: {
           trigger: '.tp-video-area',
           start: 'top 170',
