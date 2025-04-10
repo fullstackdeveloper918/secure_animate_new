@@ -379,7 +379,7 @@
 .showcase-portfolio {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   width: calc(100% - 80px);
   margin: 0 auto;
   padding-top: 20px;

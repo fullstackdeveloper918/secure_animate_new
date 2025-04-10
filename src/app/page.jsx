@@ -69,11 +69,11 @@ export default function Home() {
 
     fetchData();
   }, []);
-
+  if (loading) {
+    return <PreLoader />;
+  }
   return (
     <>
-      {loading && <PreLoader />}
-
       {/* <div className="cd-index cd-main-content homepage"> */}
       <div id="clapat-page-content" className="dark-content" data-bgcolor="#ebebeb">
         {/* <AnimationHeader /> */}
