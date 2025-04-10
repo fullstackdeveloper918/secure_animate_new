@@ -33,7 +33,7 @@ function SpotlightCard({ icon: Icon, title, description }) {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative overflow-hidden rounded-xl border border-gray-800 bg-black px-8 py-8 shadow-lg transition-all duration-500 hover:shadow-2xl ${
+      className={`relative overflow-hidden rounded-xl border border-gray-800 bg-black px-8 py-8 shadow-lg transition-all duration-500 minheight400 ${
         isFocused ? "scale-[1.02]" : ""
       }`}
     >
@@ -44,12 +44,12 @@ function SpotlightCard({ icon: Icon, title, description }) {
           background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(231, 228, 228, 0.15), transparent 40%)`,
         }}
       />
-      <Icon className="h-10 w-10 text-purple-400" />
+      <Icon className="h-10 w-10 text-white" />
       <h3 className="mt-4 text-xl font-medium text-white">{title}</h3>
       <p className="mt-2 text-gray-400">{description}</p>
-      <button className="mt-4 flex items-center text-purple-400 hover:text-purple-300">
+      {/* <button className="mt-4 flex items-center text-white ">
         Learn more <ArrowRight className="ml-2 h-4 w-4" />
-      </button>
+      </button> */}
     </div>
   );
 }
@@ -84,7 +84,7 @@ function CardSpotlightDemo() {
   const duplicatedCards = [...cards, ...cards];
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden py-8">
       <motion.div
         className="flex gap-8 w-max"
         animate={{ x: ["0%", "-50%"] }}
@@ -95,7 +95,7 @@ function CardSpotlightDemo() {
         }}
       >
         {duplicatedCards.map((card, index) => (
-          <div key={index} className="flex-shrink-0 w-[400px]">
+          <div key={index} className="flex-shrink-0 w-[400px] ">
             <SpotlightCard {...card} />
           </div>
         ))}

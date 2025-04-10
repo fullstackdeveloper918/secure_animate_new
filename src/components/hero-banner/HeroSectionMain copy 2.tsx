@@ -176,7 +176,7 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.h1
-            className="text-3xl lg:text-6xl xxl:text-8xl mb-6 text-center"
+            className="text-3xl lg:text-6xl text-[80px] mb-6 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -185,7 +185,7 @@ export default function HeroSection() {
             <span className="text-white block">
               Secure in <span className="font-semibold">This Galaxy</span>
             </span>
-            <span className="bg-clip-text text-transparent colorblue">and the Next</span>
+            <span className="bg-clip-text text-transparent colorblue">and the Nexteeee</span>
           </motion.h1>
 
           <motion.p

@@ -1960,6 +1960,7 @@ img.rightImage {
   div#header-container ul li,
   div#header-container ul li a {
     background: transparent;
+    height: fit-content;
   }
   nav.clapat-nav-wrapper ul li a span {
     color: #fff;
@@ -1970,6 +1971,11 @@ img.rightImage {
   .tp-team-area .swiper-wrapper .swiper-slide .tp-team-area .tp-hover-btn-item,
   .tp-team-area .swiper-slide .tp-hover-btn-item img {
     height: 370px !important;
+  }
+  .awardsSec .tp-award-area,
+  .awardsSec .tp-blog-area {
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .homepage div#header-container .dark-content-header #clapat-logo img.white-logo {
     opacity: 1 !important;
@@ -1987,6 +1993,9 @@ img.rightImage {
 } */
   header .clapat-nav-wrapper.open {
     background: #101010 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (max-width: 991px) {
@@ -2257,9 +2266,9 @@ p.bigger.has-opacity {
 }
 
 @media (max-width: 1467px) {
-  .classic-menu .flexnav li a span {
+  /* .classic-menu .flexnav li a span {
     height: 63px;
-  }
+  } */
 }
 @media (min-width: 1025px) {
   .classic-menu .flexnav li a {

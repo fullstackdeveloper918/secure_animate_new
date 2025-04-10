@@ -75,9 +75,9 @@ const AnimationHeader = () => {
               {menuItems.map((item, idx) => (
                 <li
                   key={idx}
-                  className={`menu-timeline link header-link ${
-                    activeItem === item ? 'active' : ''
-                  }`}
+                  className={`menu-timeline link header-link ${activeItem === item ? 'active' : ''}`}
+                  onMouseEnter={() => handleMouseEnter(item)}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <Link
                     className="ajax-link"
@@ -88,9 +88,25 @@ const AnimationHeader = () => {
                           ? '/why-choose'
                           : `/${item.toLowerCase().replace(/\s+/g, '-')}`
                     }
+                    onClick={() => handleClick(item)} // Set the clicked item as active
                   >
                     <ScrambleText text={item} />
                   </Link>
+
+                  {/* Only show the submenu for "Service" */}
+                  {item === 'Service' && (
+                    <div className="sub-menu">
+                      <a href="/service/serversetupconfiguration">Server & Cloud Management</a>
+                      <a href="/service/threatdetection">Cybersecurity Solutions Service</a>
+                      <a href="/service/technicalsupport">Support Service</a>
+                      <a href="/service/keywordoptimization">Business SEO & Digital Visibility</a>
+                      <a href="/service/contentwriting">Content Creation & Marketing Services</a>
+                      <a href="/service/inventorytracking">Inventory Management Solutions</a>
+                      <a href="/service/userinterfacedesign">UX/UI Design & Website Development</a>
+                      <a href="/service/fraudinvestigation">IT Detective Services & Scam Recovery</a>
+                      <a href="/service/paymentgatewayintegration">Secure Payments & Fraud Detection</a>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>

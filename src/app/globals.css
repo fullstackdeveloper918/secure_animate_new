@@ -2028,13 +2028,22 @@ scale-up .link,
     transform: translate(-50%, -40%);
     margin: auto;
   }
-
+  .clapat-header.classic-menu .clapat-nav-wrapper {
+    position: unset !important;
+    opacity: unset !important;
+    top: unset !important;
+    left: unset !important;
+    transform: unset !important;
+    height: auto !important;
+    width: auto !important;
+    display: flex !important;
+  }
   .classic-menu .flexnav {
     display: block;
     float: right;
     position: relative;
     width: auto;
-    max-height: 60px;
+    max-height: 40px;
   }
 
   .classic-menu .flexnav .touch-button {
@@ -2480,7 +2489,19 @@ scale-up .link,
     overflow: visible;
   }
 }
-
+.pre-load-main h1{
+  font-size: 3vw;
+  color: white;
+  text-align: center;
+}
+@media (max-width:1024px){
+  .classic-menu .flexnav li a span {
+    height: fit-content;
+}
+.pre-load-main h1{
+  font-size: 5vw;
+}
+}
 .clapat-nav-wrapper,
 .clapat-nav-wrapper.open {
   background: transparent;
@@ -2623,7 +2644,7 @@ scale-up .link,
   width: 100%;
   opacity: 1;
   right: 0;
-  background-color: currentColor;
+  background-color: rgb(255 255 255);
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -3607,6 +3628,9 @@ p .link-text {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+  .newservice_sec{
+    display: none;
   }
   .parallax-wrap {
     transform: none !important;
@@ -4993,16 +5017,7 @@ section.aboutsec {
   top: 15% !important;
 }
 
-.clapat-header.classic-menu .clapat-nav-wrapper {
-  position: unset !important;
-  opacity: unset !important;
-  top: unset !important;
-  left: unset !important;
-  transform: unset !important;
-  height: auto !important;
-  width: auto !important;
-  display: flex !important;
-}
+
 
 .bg-space-gradient {
   position: relative;
@@ -5065,10 +5080,23 @@ section.aboutsec {
     opacity: 0;
   }
 } */
+/* .innersecvice { */
+.innersecvice {
+  border: 1px solid #141414;
+  background: #000000;
+}
+.innersecvice p {
+  color: #858585;
+}
+.minheight400{
+  min-height: 300px;
+}
+
+/* .innersecvice end{ */
 .classic-menu .flexnav li {
   background: transparent none repeat scroll 0 0;
-  padding: 0 8px;
-  width: 140px;
+  padding: 0 12px;
+  /* width: 140px; */
   justify-content: center;
   display: flex;
 }
@@ -5095,10 +5123,4 @@ section.aboutsec {
 
 .pre-load-main.slide-up {
   transform: translateY(-100%); /* Move the loader off-screen */
-}
-
-h1 {
-  color: white;
-  font-size: 2rem;
-  text-align: center;
 }
