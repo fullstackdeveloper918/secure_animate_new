@@ -18,7 +18,7 @@ export default function FooterFour() {
                   <div className="tp-footer-3-menu">
                     <ul>
                       <li>
-                        <Link href="#">Home</Link>
+                        <Link href="/">Home</Link>
                       </li>
                       <li>
                         <Link href="/about-us">About</Link>
@@ -27,11 +27,11 @@ export default function FooterFour() {
                         <Link href="/service">Service</Link>
                       </li>
                       <li>
-                        <Link href="/Why-Choose-Us">Why Choose Us</Link>
+                        <Link href="/why-choose">Why Choose Us</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href="#">Blog</Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/contact">Contact</Link>
                       </li>

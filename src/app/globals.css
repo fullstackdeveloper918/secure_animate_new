@@ -1830,7 +1830,7 @@ scale-up .link,
   height: fit-content;
   left: 0;
   top: 0;
-  background-color: transparent;
+  /* background-color: transparent; */
   position: fixed;
   box-sizing: border-box;
   z-index: 1000;
@@ -2489,18 +2489,18 @@ scale-up .link,
     overflow: visible;
   }
 }
-.pre-load-main h1{
+.pre-load-main h1 {
   font-size: 3vw;
   color: white;
   text-align: center;
 }
-@media (max-width:1024px){
+@media (max-width: 1024px) {
   .classic-menu .flexnav li a span {
     height: fit-content;
-}
-.pre-load-main h1{
-  font-size: 5vw;
-}
+  }
+  .pre-load-main h1 {
+    font-size: 5vw;
+  }
 }
 .clapat-nav-wrapper,
 .clapat-nav-wrapper.open {
@@ -3629,7 +3629,7 @@ p .link-text {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-  .newservice_sec{
+  .newservice_sec {
     display: none;
   }
   .parallax-wrap {
@@ -5017,8 +5017,6 @@ section.aboutsec {
   top: 15% !important;
 }
 
-
-
 .bg-space-gradient {
   position: relative;
   background: url(../../public/blue-print.d573005f.png);
@@ -5088,13 +5086,13 @@ section.aboutsec {
 .innersecvice p {
   color: #858585;
 }
-.minheight400{
+.minheight400 {
   min-height: 300px;
 }
 
 /* .innersecvice end{ */
 .classic-menu .flexnav li {
-  background: transparent none repeat scroll 0 0;
+  /* background: transparent none repeat scroll 0 0; */
   padding: 0 12px;
   /* width: 140px; */
   justify-content: center;
@@ -5123,4 +5121,13 @@ section.aboutsec {
 
 .pre-load-main.slide-up {
   transform: translateY(-100%); /* Move the loader off-screen */
+}
+
+.clapat-item:hover {
+  flex: 0 0 56%;
+  max-width: calc(56% - 80px);
+}
+
+.scrolled {
+  background-color: #000000d7 !important;
 }

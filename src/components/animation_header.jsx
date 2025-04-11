@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ScrambleText from './ScrambleText';
+import { usePathname } from 'next/navigation';
 
 // Typing Effect Component
 const TypingEffect = ({ text }) => {
@@ -28,6 +29,14 @@ const TypingEffect = ({ text }) => {
 const AnimationHeader = () => {
   const [hoveredText, setHoveredText] = useState(null);
   const [activeItem, setActiveItem] = useState(null); // Track the active menu item
+  const [scrolled, setScrolled] = useState(false); // Track if the page has been scrolled
+
+  const pathname = usePathname();
+
+  // Extract the route name after the last '/'
+  const routeName = pathname ? pathname.substring(pathname.lastIndexOf('/') + 1) : '';
+
+  console.log(routeName, 'currentRoute');
 
   const handleMouseEnter = (text) => {
     setHoveredText(text); // Set the hovered text to show typing effect
@@ -41,6 +50,26 @@ const AnimationHeader = () => {
     setActiveItem(text); // Set the clicked item as active
   };
 
+  // Detect scroll and add/remove class based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        // Change the threshold to your preference
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   // Define the menu items
   const menuItems = ['Home', 'About Us', 'Service', 'Why Choose Us', 'Contact Us'];
 
@@ -48,7 +77,12 @@ const AnimationHeader = () => {
     <>
       <div className="word"></div>
 
-      <header className="clapat-header classic-menu invert-header" data-menucolor="#0c0c0c">
+      <header
+        className={`clapat-header classic-menu invert-header ${
+          routeName == 'contact-us' || routeName == 'about-us' || routeName == '' ? '' : 'scrolled'
+        } ${scrolled ? 'scrolled' : ''}`}
+        data-menucolor="#0c0c0c"
+      >
         <div className="header-gradient"></div>
 
         <div id="header-container">
@@ -103,8 +137,12 @@ const AnimationHeader = () => {
                       <a href="/service/contentwriting">Content Creation & Marketing Services</a>
                       <a href="/service/inventorytracking">Inventory Management Solutions</a>
                       <a href="/service/userinterfacedesign">UX/UI Design & Website Development</a>
-                      <a href="/service/fraudinvestigation">IT Detective Services & Scam Recovery</a>
-                      <a href="/service/paymentgatewayintegration">Secure Payments & Fraud Detection</a>
+                      <a href="/service/fraudinvestigation">
+                        IT Detective Services & Scam Recovery
+                      </a>
+                      <a href="/service/paymentgatewayintegration">
+                        Secure Payments & Fraud Detection
+                      </a>
                     </div>
                   )}
                 </li>
