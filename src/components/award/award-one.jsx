@@ -3,6 +3,21 @@ import React from 'react';
 import Link from 'next/link';
 
 const AwardOne = ({ cls = 'pt-md-125 pb-md-125 pt-50 pb-50', abStyle = false, data }) => {
+
+  const services = [
+    { id: 1, title: 'Server & Cloud Management', link: '/service/serversetupconfiguration' },
+    { id: 2, title: 'Cybersecurity Solutions Service', link: '/service/threatdetection' },
+    { id: 3, title: 'Support Service', link: '/service/technicalsupport' },
+    { id: 4, title: 'Business SEO & Digital Visibility', link: '/service/keywordoptimization' },
+    { id: 5, title: 'Content Creation & Marketing Services', link: '/service/contentwriting' },
+    { id: 6, title: 'Inventory Management Solutions', link: '/service/inventorytracking' },
+    { id: 7, title: 'UX/UI Design & Website Development', link: '/service/userinterfacedesign' },
+    { id: 8, title: 'IT Detective Services & Scam Recovery', link: '/service/fraudinvestigation' },
+    { id: 9, title: 'Secure Payments & Fraud Detection', link: '/service/paymentgatewayintegration' },
+  ];
+
+
+  console.log("dataof", data)
   const [activeThumb, setActiveThumb] = React.useState(1);
   return (
     <div className={`tp-award-area ${cls}`}>
@@ -61,9 +76,11 @@ const AwardOne = ({ cls = 'pt-md-125 pb-md-125 pt-50 pb-50', abStyle = false, da
             </div>
           </div>
 
-          <div className="col-xl-7 col-lg-7 col-md-12">
-            <div className="tp-award-list-wrap">
-              {data &&
+          {/* <div className="col-xl-7 col-lg-7 col-md-12">
+            <div className="tp-award-list-wrap"> */}
+
+
+          {/* {data &&
                 data?.home_page_service_section_loop_data?.map((item, index) => (
                   <div
                     key={item.id}
@@ -79,9 +96,30 @@ const AwardOne = ({ cls = 'pt-md-125 pb-md-125 pt-50 pb-50', abStyle = false, da
                       <span>See More</span>
                     </div>
                   </div>
-                ))}
+                ))} */}
+          {/* </div> */}
+          {/* </div> */}
+
+          <div className="col-xl-7 col-lg-7 col-md-12">
+            <div className="tp-award-list-wrap">
+              {services.map((item) => (
+                <div
+                  key={item.id}
+                  onMouseEnter={() => setActiveThumb(item.id)}
+                  className="tp-award-list-item d-flex align-items-center justify-content-between tp_fade_bottom"
+                  rel={`tp-award-list-thumb-${item.id}`}
+                >
+                  <div className="tp-award-list-content-left d-flex align-items-center">
+                    <a href={item.link}>{item.title}</a>
+                  </div>
+                  <div className="tp-award-list-content-right">
+                    <a href={item.link}>See More</a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+
         </div>
       </div>
     </div>
