@@ -51,7 +51,7 @@ const slider_setting = {
 };
 const TestimonialOne = ({ data }) => {
   return (
-    <div className="tp-testimonial-area pb-120">
+    <div className="tp-testimonial-area pb-120 pt-120">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-10 tp_fade_bottom">

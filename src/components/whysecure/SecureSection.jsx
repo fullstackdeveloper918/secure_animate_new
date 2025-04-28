@@ -56,7 +56,7 @@ const SecureSection = () => {
         }}
       >
         <h2>
-          <strong>but, why </strong>Secure365?{' '}
+          <strong>But, why </strong>Secure365?{' '}
         </h2>
         <p className={isVisible ? styles.fadeIn : ''}>
           At Secure 365, we understand that navigating the digital world can be overwhelming. That's

@@ -98,7 +98,7 @@ function PainSection() {
           transition={{ duration: 0.8 }}
           className="absolute top-[576px] inset-0 flex flex-col items-center justify-center bg-black text-white md:p-10 blacksec p-2 overflow-hidden"
         >
-          <motion.h2 className=" text-white font-bold text-center z-10 xl:mb-20 md:mb-12 mb-10 xxl:text-7xl xl:text-5xl text-3xl ">
+          <motion.h2 className=" text-white font-bold text-center z-10 xl:mb-5 md:mb-12 mb-10 xxl:text-7xl xl:text-5xl text-3xl ">
             What Makes Us Different?
           </motion.h2>
           <div className="w-full sliderSec">

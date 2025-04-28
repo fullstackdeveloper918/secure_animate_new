@@ -38,7 +38,7 @@
 .rocketContainer svg {
   width: 100%;
   height: 100%;
-  max-width: 430px;
+  max-width: 330px;
 }
 
 .rocket {
@@ -176,7 +176,7 @@
   .rocketContainer svg {
     width: 100%;
     height: 100%;
-    max-width: 270px;
+    max-width: 200px;
   }
   .content h2 {
     font-size: 32px;

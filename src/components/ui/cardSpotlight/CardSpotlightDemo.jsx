@@ -86,16 +86,16 @@ function CardSpotlightDemo() {
   return (
     <div className="relative w-full overflow-hidden py-8">
       <motion.div
-        className="flex gap-8 w-max"
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{
-          ease: "linear",
-          duration: 20,
-          repeat: Infinity,
-        }}
+        className=" card-sec gap-8 "
+        // animate={{ x: ["0%", "-50%"] }}
+        // transition={{
+        //   ease: "linear",
+        //   duration: 20,
+        //   repeat: Infinity,
+        // }}
       >
-        {duplicatedCards.map((card, index) => (
-          <div key={index} className="flex-shrink-0 w-[400px] ">
+        {cards.map((card, index) => (
+          <div key={index} className="flex-shrink-0 card-width">
             <SpotlightCard {...card} />
           </div>
         ))}

@@ -7,8 +7,11 @@ export default function ProjectSix() {
   const [isThirdHovered, setIsThirdHovered] = React.useState(false);
   return (
     <section className="showcasePportfolio" onMouseLeave={() => setIsSecondHovered(true)}>
-      <div className="bg-[#EBEBEB]">
+      <div className="bg-[#fff]">
         <h2 className="main_heading font-bold pt-10">Latest Projects</h2>
+        <p className='project-subheading'>
+        Take a closer look at our recent work that speaks volumes about our capabilities and vision. These projects are a testament to our passion for building with purpose and precision.
+        </p>
         <div
           className="showcase-portfolio expand-grid filp-grid flip-completed"
           onMouseLeave={() => setIsSecondHovered(true)}
@@ -20,7 +23,7 @@ export default function ProjectSix() {
           >
             <div className="slide-inner trigger-item">
               <div className="img-mask pixels-cover animated">
-                <a className="slide-link" href="https://essentialclimbing.com/">
+                <a className="slide-link" href="#">
                   <img src="/images/01hero05.png" className="item-image grid__item-img" alt="" />
                   <div className="flip-thumb-inner" data-flip-id="auto-1">
                     <div className="flip-thumb-effects">
@@ -51,7 +54,7 @@ export default function ProjectSix() {
           >
             <div className="slide-inner trigger-item" data-centerline="OPEN">
               <div className="img-mask pixels-cover animated">
-                <a className="slide-link" href="https://workit.com.au/">
+                <a className="slide-link" href="#">
                   {/* <img src="/assets/img/home-01/project/project-1-2.jpg" className="grid__item-img grid__item-img--large" alt="" /> */}
                   <div className="flip-thumb-inner" data-flip-id="auto-2">
                     <div className="flip-thumb-effects">
@@ -85,7 +88,7 @@ export default function ProjectSix() {
           >
             <div className="slide-inner trigger-item" data-centerline="OPEN">
               <div className="img-mask pixels-cover animated">
-                <a className="slide-link" href="https://darcymillerdev.wpengine.com/">
+                <a className="slide-link" href="#">
                   <img src="/images/01hero04.png" className="item-image grid__item-img" alt="" />
                   <div className="flip-thumb-inner" data-flip-id="auto-3">
                     <div className="flip-thumb-effects">

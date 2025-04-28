@@ -163,17 +163,17 @@ export default function HeroSection() {
             backfaceVisibility: 'hidden',
           }}
         >
-          <motion.div
+          {/* <motion.div
             className="mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            {/* <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium border bgtrans ">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium border bgtrans ">
               <Shield className="w-4 h-4 mr-2" /> Secure365 Cybersecurity
-            </span> */}
-          </motion.div>
+            </span>
+          </motion.div> */}
 
           <motion.h1
             className="text-3xl lg:text-6xl text-[80px] mb-6 text-center"

@@ -43,28 +43,31 @@ export default function BlogOne() {
   const blog_items = [...blog_home_five];
   return (
     <>
-      <div className="tp-blog-area pb-[18px] blogOnemain border">
-        <div className="flex flex-col items-center container-1775 mx-auto">
-          <div className="blog_sec">
-            <h2 className="text-center">Our Blog</h2>
-            <p>Check the best marketing resources and the latest blogs about our company.</p>
-          </div>
-          <div className="mainblogdiv">
-            {newsData?.map((item) => (
-              <div key={item.id} className="percolumn">
-                <BlogItemTwo item={item} />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div
-          className="flex items-center justify-center"
+      <div className="tp-blog-area blogOnemain border">
+        <div className="lg:flex items-center container-1775 mx-auto" style={{maxWidth: '85%'}}>
+          <div className="blog_sec lg:w-1/4" style={{paddingRight: '40px'}}>
+            <h2>Our Blog</h2>
+            <p style={{textAlign: 'left'}}>Check the best marketing resources and the latest blogs about our company.</p>
+            <div
+          className="flex items-center"
           style={{ marginTop: '43px', marginBottom: '30px' }}
         >
           <Link href={newsLink} className="BtnOne btnWrapper px-12">
             Read All Articles
           </Link>
         </div>
+          </div>
+          <div className="mainblogdiv grid-cols-3 lg:w-3/4"
+          
+           >
+            {newsData?.slice(1)?.map((item) => (
+              <div key={item.id} className="percolumn">
+                <BlogItemTwo item={item} />
+              </div>
+            ))}
+          </div>
+        </div>
+       
       </div>
       {/* margin-top: 38px;
     position: center;

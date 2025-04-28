@@ -1844,7 +1844,7 @@ scale-up .link,
 #header-container {
   box-sizing: border-box;
   height: fit-content;
-  padding: 20px 80px;
+  padding: 20px 15px;
   margin: 0 auto;
   position: relative;
   width: 100%;
@@ -1853,8 +1853,8 @@ scale-up .link,
   align-items: center;
   justify-content: space-between;
   /* background: #f9f9f9; */
-  backdrop-filter: blur(14px);
-  max-width: 106rem;
+  /* backdrop-filter: blur(14px); */
+  max-width: 1536px;
   box-shadow: none;
 }
 .header-gradient {
@@ -1995,7 +1995,7 @@ scale-up .link,
 @media all and (min-width: 1025px) {
   .mainblogdiv {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
@@ -2019,6 +2019,22 @@ scale-up .link,
     opacity: 1 !important;
   }
 
+  .clapat-nav-wrapper-show{
+    position: relative;
+    width: auto;
+    top: 0px;
+    -webkit-transition: all 0.2s ease-in-out 0.5s;
+    transition: all 0.2s ease-in-out 0.5s;
+    display: block;
+    height: 60px;
+    margin: 10px 0;
+    background-color: transparent !important;
+    opacity: 1 !important;
+    float: left;
+    width: 100%;
+    background-color: black;
+  }
+
   .clapat-header.classic-menu .clapat-nav-wrapper {
     position: absolute;
     display: table;
@@ -2027,6 +2043,8 @@ scale-up .link,
     left: 50%;
     transform: translate(-50%, -40%);
     margin: auto;
+    display: none !important;
+
   }
   .clapat-header.classic-menu .clapat-nav-wrapper {
     position: unset !important;
@@ -2036,7 +2054,8 @@ scale-up .link,
     transform: unset !important;
     height: auto !important;
     width: auto !important;
-    display: flex !important;
+    /* display: flex !important; */
+    display: none !important;
   }
   .classic-menu .flexnav {
     display: block;
@@ -2086,7 +2105,9 @@ scale-up .link,
     display: block;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 16px;
+    font-size: 46px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   .light-content .classic-menu .flexnav li a {
@@ -2521,9 +2542,9 @@ scale-up .link,
   pointer-events: initial;
 }
 
-.classic-menu .button-wrap.right.menu {
+/* .classic-menu .button-wrap.right.menu {
   display: none;
-}
+} */
 
 .burger-dots #menu-burger {
   top: 0px;
@@ -3191,8 +3212,8 @@ scale-up .link,
 }
 
 .icon-wrap {
-  width: 80px;
-  height: 80px;
+  /* width: 80px; */
+  /* height: 80px; */
   display: flex;
   position: relative;
   justify-content: center;
@@ -3218,11 +3239,14 @@ scale-up .link,
 }
 
 .button-icon {
-  height: 40px;
-  width: 40px;
-  color: currentColor;
+  /* height: 40px; */
+  /* width: 40px; */
+  color: white;
   text-align: center;
   line-height: 40px;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 0px 30px;
 }
 
 .button-icon i.fa-solid.fa-sort {
@@ -3248,7 +3272,7 @@ scale-up .link,
 .button-text {
   line-height: 30px;
   margin: 25px 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: auto;
   padding: 0 10px;
   color: currentColor;
@@ -3303,9 +3327,9 @@ scale-up .link,
   float: right;
 }
 
-.button-wrap.right .button-text {
+/* .button-wrap.right .button-text {
   padding-left: 0px;
-}
+} */
 
 .button-link .button-text,
 #main .button-link .button-text {
@@ -3573,6 +3597,9 @@ p .link-text {
   #header-container {
     padding: 20px 30px;
   }
+  .bannercontent {
+    padding-inline: 2rem;
+}
 }
 @media only screen and (max-width: 1466px) {
   .row_padding_all {
@@ -3622,8 +3649,13 @@ p .link-text {
     -webkit-transform: translateY(20px) translateX(5px);
   }
 }
-
+@media (max-width:1100px){
+  .bannercontent {
+    padding-inline: 0px !important;
+}
+}
 @media only screen and (max-width: 1024px) {
+
   .mainblogdiv {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -4249,7 +4281,11 @@ p .link-text {
     transform: translateX(0px) translateY(0px) !important;
     -webkit-transform: translateX(0px) translateY(0px) !important;
   }
-
+  .button-icon {
+    line-height: 30px;
+    padding: 0px 17px;
+    font-size: 12px;
+}
   .socials-wrap .socials {
     text-align: center;
     margin: 0 auto;
@@ -4354,10 +4390,19 @@ p .link-text {
   .button-wrap.right.menu {
     right: -6px;
   }
-
-  .button-wrap.right.menu.burger-lines {
-    right: -10px;
+  .blogOnemain  .flex.items-center{
+    margin-top: 0;
   }
+  .blog_sec {
+    padding-right: 0;
+  }
+  .blogOnemain .container-1775 {
+    max-width: 100%;
+  }
+
+  /* .button-wrap.right.menu.burger-lines {
+    right: -10px;
+  } */
 
   #footer-container {
     padding: 0px;
@@ -4587,21 +4632,21 @@ section.aboutsec {
   background: rgba(204, 0, 0, 0.007);
   border-radius: 10px;
 } */
-::-webkit-scrollbar-track {
-  background: #f0f0f0; /* Grey background for the track */
+/* ::-webkit-scrollbar-track {
+  background: #f0f0f0; 
   border-radius: 10px;
-}
+} */
 /* Scrollbar Thumb */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, rgba(0, 153, 255, 0.8), rgba(136, 0, 255, 0.8));
   border-radius: 10px;
   transition: background 0.3s ease-in-out;
-}
+} */
 
 /* Scrollbar Hover Effect */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, rgba(0, 153, 255, 1), rgba(136, 0, 255, 1));
-}
+} */
 
 /* Scrollbar Corner (where vertical & horizontal bars meet) */
 ::-webkit-scrollbar-corner {
@@ -5019,12 +5064,15 @@ section.aboutsec {
 
 .bg-space-gradient {
   position: relative;
-  background: url(../../public/blue-print.d573005f.png);
+  /* background: url(../../public/blue-print.d573005f.png); */
+  /* background: url(../../public/banner-video.mp4); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
+video.banner-video {
+  position: absolute;
+}
 .bg-space-gradient::before {
   content: '';
   position: absolute;
@@ -5032,8 +5080,8 @@ section.aboutsec {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(4 8 34 / 12%);
-  z-index: -1;
+  background-color: rgb(4 8 34 / 36%);
+  z-index: 1;
 }
 
 #hero {
@@ -5087,7 +5135,7 @@ section.aboutsec {
   color: #858585;
 }
 .minheight400 {
-  min-height: 300px;
+  min-height: 350px;
 }
 
 /* .innersecvice end{ */

@@ -768,6 +768,9 @@
   .showcase-portfolio {
     width: calc(100% - 30px);
   }
+  .showcase-portfolio {
+    flex-wrap: wrap;
+  }
 
   .showcase-portfolio.expand-grid .clapat-item {
     width: calc(100% - 30px);

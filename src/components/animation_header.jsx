@@ -27,10 +27,10 @@ const TypingEffect = ({ text }) => {
 };
 
 const AnimationHeader = () => {
-  const [hoveredText, setHoveredText] = useState(null);
+  // const [hoveredText, setHoveredText] = useState(null);
   const [activeItem, setActiveItem] = useState(null); // Track the active menu item
   const [scrolled, setScrolled] = useState(false); // Track if the page has been scrolled
-
+  const [active, setActive] = useState(false)
   const pathname = usePathname();
 
   // Extract the route name after the last '/'
@@ -39,11 +39,11 @@ const AnimationHeader = () => {
   console.log(routeName, 'currentRoute');
 
   const handleMouseEnter = (text) => {
-    setHoveredText(text); // Set the hovered text to show typing effect
+    // setHoveredText(text); // Set the hovered text to show typing effect
   };
 
   const handleMouseLeave = () => {
-    setHoveredText(null); // Reset the hovered text when hover ends
+    // setHoveredText(null); // Reset the hovered text when hover ends
   };
 
   const handleClick = (text) => {
@@ -73,9 +73,14 @@ const AnimationHeader = () => {
   // Define the menu items
   const menuItems = ['Home', 'About Us', 'Service', 'Why Choose Us', 'Contact Us'];
 
+  const handleClickActive = (active) =>{
+setActive(!active)
+  }
+
+  console.log(active,"active enhe")
   return (
     <>
-      <div className="word"></div>
+      {/* <div className="word"></div> */}
 
       <header
         className={`clapat-header classic-menu invert-header ${
@@ -104,14 +109,15 @@ const AnimationHeader = () => {
               />
             </Link>
           </div>
-          <nav className="clapat-nav-wrapper">
-            <ul data-breakpoint="1025" className="flexnav">
+          <nav  className={active ? "clapat-nav-wrapper-show" : "clapat-nav-wrapper"}>
+  
+            <ul data-breakpoint="1025" className={active ? "flexnav flexnav-show" : "flexnav"} >
               {menuItems.map((item, idx) => (
                 <li
                   key={idx}
                   className={`menu-timeline link header-link ${activeItem === item ? 'active' : ''}`}
-                  onMouseEnter={() => handleMouseEnter(item)}
-                  onMouseLeave={handleMouseLeave}
+                    // onMouseEnter={() => handleMouseEnter(item)}
+                    // onMouseLeave={handleMouseLeave}
                 >
                   <Link
                     className="ajax-link"
@@ -123,12 +129,12 @@ const AnimationHeader = () => {
                           : `/${item.toLowerCase().replace(/\s+/g, '-')}`
                     }
                     onClick={() => handleClick(item)} // Set the clicked item as active
-                  >
-                    <ScrambleText text={item} />
+                  >{item}
+                    {/* <ScrambleText text={item} /> */}
                   </Link>
 
                   {/* Only show the submenu for "Service" */}
-                  {item === 'Service' && (
+                  {/* {item === 'Service' && (
                     <div className="sub-menu">
                       <a href="/service/serversetupconfiguration">Server & Cloud Management</a>
                       <a href="/service/threatdetection">Cybersecurity Solutions Service</a>
@@ -144,12 +150,12 @@ const AnimationHeader = () => {
                         Secure Payments & Fraud Detection
                       </a>
                     </div>
-                  )}
+                  )} */}
                 </li>
               ))}
             </ul>
           </nav>
-          <Link className="header-button ajax-link" href="/contact-us">
+          {/* <Link className="header-button ajax-link" href="/contact-us">
             <div className="button-icon-link right">
               <div className="icon-wrap-scale">
                 <div className="icon-wrap parallax-wrap">
@@ -162,24 +168,38 @@ const AnimationHeader = () => {
                 <span data-hover="Let's Talk">Let's Talk</span>
               </div>
             </div>
-          </Link>
+          </Link> */}
 
           <div className="button-wrap right menu burger-lines">
-            <div className="icon-wrap parallax-wrap">
-              <div className="button-icon parallax-element">
-                <div id="burger-wrapper">
-                  <div id="menu-burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="button-text sticky right">
-              <span data-hover="Menu">Menu</span>
-            </div>
-          </div>
+  <div className="icon-wrap parallax-wrap" onClick={() => setActive(prev => !prev)}>
+    <div className="button-icon parallax-element">
+    <div className="sticky right">
+        <span data-hover={active ? "Close" : "Menu"}>
+          {active ? "Close" : "Menu"}
+        </span>
+      </div>
+      {/* <div id="burger-wrapper">
+      {active ? (
+              // Close Icon
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <line x1="4" y1="4" x2="20" y2="20" stroke="white" strokeWidth="2" />
+                <line x1="20" y1="4" x2="4" y2="20" stroke="white" strokeWidth="2" />
+              </svg>
+            ) : (
+              // Burger Icon
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="6" width="18" height="2" fill="white" />
+                <rect x="3" y="11" width="18" height="2" fill="white" />
+                <rect x="3" y="16" width="18" height="2" fill="white" />
+              </svg>
+            )}
+      </div> */}
+    </div>
+  </div>
+
+</div>
+
+
         </div>
       </header>
     </>

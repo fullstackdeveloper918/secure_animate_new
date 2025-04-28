@@ -107,24 +107,103 @@ Flex Nav
   cursor: pointer;
 }
 .flexnav {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-transform-style: preserve-3d;
-  overflow: hidden;
+  transition: none !important ;
+  transform: unset !important;
   max-height: 0;
 }
 .flexnav.opacity {
   opacity: 0;
 }
 .flexnav.flexnav-show {
-  max-height: 2000px;
+  max-height: unset;
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  /* transition: unset !important; */
+  float: left;
+  width: 100%;
+  z-index: 999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999;
+  max-width: 30rem;
+  align-items: flex-start !important;
+  gap: 15px;
+}
+.clapat-nav-wrapper{
+  display: none !important;
+}
+.clapat-nav-wrapper-show svg {
+  position:absolute ;
+  right: 30px;
+  top: 30px;
+}
+.clapat-nav-wrapper-show {
+  position: fixed;
+  width: auto;
+  top: 0px;
+  /* -webkit-transition: all 0.2s ease-in-out 0.5s; */
+  transition: unset !important;
+  display: flex;
+  height: 100vh;
+  margin: 0px 0;
+  background-color: transparent !important;
+  opacity: 1 !important;
+  float: left;
+  width: 100%;
+  /* background-color: black !important; */
+  /* margin-top: 151px; */
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  padding: 0px 0px;
+  flex-direction: column;
+  background-image: url(https://dorier-group.com/_nuxt/image/8dea07.webp);
+  translate: none;
+  rotate: none;
+  scale: none;
+  transform: translate(0px, 0px);
+  -webkit-animation: moon-travel-data-v-34f673e0 40s linear infinite;
+  animation: moon-travel-data-v-34f673e0 40s linear infinite;
+  background-size: 1024px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+@keyframes moon-travel-data-v-34f673e0 {
+  0% {
+      background-position-x: 0;
+      background-position-y: 0
+  }
+
+  to {
+      background-position-x: -1024px;
+      background-position-y: 1024px
+  }
+}
+
+.clapat-nav-wrapper-show::after {
+background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+position: absolute;
+content: '';
+inset: 0;
+opacity: .9;
+}
+
+.clapat-nav-wrapper-show  li a
+.button-wrap.right.menu.burger-lines span {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 22px !important;
+}
+nav.clapat-nav-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
 }
 .flexnav.one-page {
   position: fixed;

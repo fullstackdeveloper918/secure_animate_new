@@ -248,7 +248,7 @@
   }
   .statbox3,
   .statbox4 {
-    bottom: 3rem;
+    bottom: 0rem;
   }
   .statsContainer {
     max-width: 100%;
@@ -276,7 +276,7 @@
   }
   .secureSection p {
     font-size: 13px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
   }
   .Btnthree.btnWrapper {
     font-size: 16px;
