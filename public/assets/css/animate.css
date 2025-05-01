@@ -1729,7 +1729,7 @@ img.rightImage {
 }
 .bannercontent h1, .bannercontent h1 span {
   text-transform: uppercase;
-  font-weight: 700 !important;
+  font-weight: 300 !important;
   max-width: 69rem;
   font-size: 6vw;
   font-family: "Squada One", sans-serif !important;
