@@ -2331,6 +2331,9 @@ img.rightImage {
     font-size: 8vw;
     line-height: 8vw;
 }
+	.main_banner {
+    padding: 0px 20px;
+}
 section#hero {
   display: flex;
   align-items: end;
