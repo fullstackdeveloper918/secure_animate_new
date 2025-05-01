@@ -130,7 +130,7 @@ setActive(!active)
                     }
                     onClick={() => handleClick(item)} // Set the clicked item as active
                   >{item}
-                    {/* <ScrambleText text={item} /> */}
+                    <ScrambleText text={item} />
                   </Link>
 
                   {/* Only show the submenu for "Service" */}
@@ -171,11 +171,16 @@ setActive(!active)
           </Link> */}
 
           <div className="button-wrap right menu burger-lines">
-  <div className="icon-wrap parallax-wrap" onClick={() => setActive(prev => !prev)}>
+  <div className="icon-wrap parallax-wrap" 
+  // onClick={() => setActive(prev => !prev)}
+  >
     <div className="button-icon parallax-element">
     <div className="sticky right">
-        <span data-hover={active ? "Close" : "Menu"}>
-          {active ? "Close" : "Menu"}
+        <span 
+        // data-hover={active ? "Close" : "Menu"}
+        >
+          Contact Us
+          {/* {active ? "Close" : "Menu"} */}
         </span>
       </div>
       {/* <div id="burger-wrapper">

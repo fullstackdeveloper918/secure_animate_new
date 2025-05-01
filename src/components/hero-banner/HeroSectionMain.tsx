@@ -80,7 +80,7 @@ export default function HeroSection() {
       {/* Content - using simpler transforms */}
       <div className="container mx-auto relative z-[9999] bannercontent">
         <motion.div
-          className="main_banner px-7"
+          className="main_banner"
           style={{
             y: textY,
             opacity: textOpacity,

@@ -1844,7 +1844,7 @@ scale-up .link,
 #header-container {
   box-sizing: border-box;
   height: fit-content;
-  padding: 20px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
   position: relative;
   width: 100%;
@@ -2035,7 +2035,7 @@ scale-up .link,
     background-color: black;
   }
 
-  .clapat-header.classic-menu .clapat-nav-wrapper {
+  /* .clapat-header.classic-menu .clapat-nav-wrapper {
     position: absolute;
     display: table;
     height: 40px;
@@ -2045,8 +2045,8 @@ scale-up .link,
     margin: auto;
     display: none !important;
 
-  }
-  .clapat-header.classic-menu .clapat-nav-wrapper {
+  } */
+  /* .clapat-header.classic-menu .clapat-nav-wrapper {
     position: unset !important;
     opacity: unset !important;
     top: unset !important;
@@ -2054,9 +2054,9 @@ scale-up .link,
     transform: unset !important;
     height: auto !important;
     width: auto !important;
-    /* display: flex !important; */
+    display: flex !important;
     display: none !important;
-  }
+  } */
   .classic-menu .flexnav {
     display: block;
     float: right;
@@ -2101,12 +2101,12 @@ scale-up .link,
     position: relative;
     border-left: medium none;
     color: #fff !important;
-    line-height: 46px;
+    line-height: 60px;
     display: block;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 46px;
-    font-weight: bold;
+    font-size: 16px;
+    /* font-weight: bold; */
     text-transform: uppercase;
   }
 
@@ -2128,6 +2128,7 @@ scale-up .link,
     -webkit-transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
     transform-origin: 100% 0%;
+    display: none;
   }
 
   .classic-menu .flexnav li a span::before {
@@ -3595,7 +3596,7 @@ p .link-text {
 
 @media (max-width: 1536px) {
   #header-container {
-    padding: 20px 30px;
+    padding: 0px 30px;
   }
   .bannercontent {
     padding-inline: 2rem;
@@ -3628,7 +3629,7 @@ p .link-text {
 } */
 
   #header-container {
-    padding: 10px 60px;
+    padding: 0px 60px;
   }
 
   .flexnav li {
@@ -4163,7 +4164,7 @@ p .link-text {
   }
 
   #clapat-logo {
-    left: 30px;
+    left: 0px;
   }
 
   .button-wrap.right.menu {
@@ -4384,7 +4385,7 @@ p .link-text {
   }
 
   #clapat-logo {
-    left: 20px;
+    left: 0px;
   }
 
   .button-wrap.right.menu {
@@ -5177,5 +5178,60 @@ video.banner-video {
 }
 
 .scrolled {
-  background-color: #000000d7 !important;
+  /* background-color: #000000d7 !important; */
+  background: #121212 !important;
+  backdrop-filter: blur(11px);
+}
+
+
+
+/* 
+body {
+  overflow: hidden;
+  margin: 0px;
+  font-family: monospace;
+  color: white;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  overflow: scroll !important;
+
+  left: 0;
+}
+
+.scrolling main {
+  width: 100vw;
+  height: 200vw;
+  z-index: 99;
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  font-size: 5vh;
+  overflow: scroll !important;
+
+}
+
+.scrolling section {
+  min-height: 100vh;
+  padding: 20px;
+  font-size: 4vh;
+  overflow: scroll !important;
+}
+ #scrollProgress {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 99;
+  font-size: 3vh;
+}
+
+#vwSrcLink {
+  position: fixed;
+  z-index: 99;
+} */
+h2.text-4xl.md\:text-6xl.font-bold.mb-4 {
+  color: #fff;
 }

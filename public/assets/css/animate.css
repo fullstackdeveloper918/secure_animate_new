@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Squada+One&display=swap');
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -1727,10 +1729,11 @@ img.rightImage {
 }
 .bannercontent h1, .bannercontent h1 span {
   text-transform: uppercase;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
   max-width: 69rem;
   font-size: 6vw;
   font-family: "Squada One", sans-serif !important;
+  font-family: "Anton", sans-serif !important;
   color: #ffffff;
   line-height: 6vw;
   margin-top: 0px;
@@ -2013,9 +2016,9 @@ img.rightImage {
     max-width: 96%;
     margin: 0px auto;
   }
-  .classic-menu .flexnav li a {
+  /* .classic-menu .flexnav li a {
     font-size: 24px !important;
-  }
+  } */
   .sub-menu {
     top: 50px !important;
   }
@@ -2027,6 +2030,9 @@ img.rightImage {
     background: transparent;
     height: fit-content;
   }
+  .bannercontent {
+    padding-inline: 15px !important;
+}
   nav.clapat-nav-wrapper ul li a span {
     color: #fff;
   }

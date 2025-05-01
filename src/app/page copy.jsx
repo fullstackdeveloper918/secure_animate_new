@@ -12,15 +12,13 @@ import FooterFour from '@/layouts/footers/footer-four';
 import SecureSection from '@/components/whysecure/SecureSection';
 import ProjectSix from '@/components/project/project-six';
 import ClientWrapper from '@/components/ClientWrapper';
-import GalaxyBackground from '@/components/project/galaxy-background';
 import ProjectSeven from '@/components/project/project-seven';
-import BeamsBackground from '@/components/project/project-eight';
 
 export default function Home() {
   return (
     <ClientWrapper>
       {(data) => (
-        < >
+        <div id="clapat-page-content" className="dark-content" data-bgcolor="#ebebeb">
           <div id="content-scroll">
             <div id="main">
               <HeroSectionMain />
@@ -29,9 +27,8 @@ export default function Home() {
               <PainSection />
               {/* <AnimatedPinDemo /> */}
              
-              <div className="awardsSec">
-                {/* <AwardOne data={data} /> */}
-                <BeamsBackground data={data}/>
+              <div className="awardsSec pt-10">
+                <AwardOne data={data} />
               </div>
             </div>
 
@@ -98,9 +95,8 @@ export default function Home() {
 
           <main>
           
-            {/* <ProjectSix /> */}
+            <ProjectSix />
             <ProjectSeven />
-            
             {/* <div className="container-fluid p-0">
               <div className="row g-0">
                 <div className="col-xl-12">
@@ -114,10 +110,7 @@ export default function Home() {
             <div className="awardsSec">
               <BlogOne />
             </div>
- 
           </main>
-          {/* <GalaxyBackground /> */}
-
           <FooterFour />
 
           {/* Additional HTML */}
@@ -133,7 +126,7 @@ export default function Home() {
             <div className="hero-translate"></div>
           </div>
           <div id="rotate-device"></div>
-        </>
+        </div>
       )}
     </ClientWrapper>
   );

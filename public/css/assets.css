@@ -133,19 +133,19 @@ Flex Nav
   align-items: flex-start !important;
   gap: 15px;
 }
-.clapat-nav-wrapper{
+/* .clapat-nav-wrapper{
   display: none !important;
-}
+} */
 .clapat-nav-wrapper-show svg {
   position:absolute ;
   right: 30px;
   top: 30px;
 }
-.clapat-nav-wrapper-show {
+/* .clapat-nav-wrapper-show {
   position: fixed;
   width: auto;
   top: 0px;
-  /* -webkit-transition: all 0.2s ease-in-out 0.5s; */
+  -webkit-transition: all 0.2s ease-in-out 0.5s;
   transition: unset !important;
   display: flex;
   height: 100vh;
@@ -154,8 +154,8 @@ Flex Nav
   opacity: 1 !important;
   float: left;
   width: 100%;
-  /* background-color: black !important; */
-  /* margin-top: 151px; */
+  background-color: black !important;
+  margin-top: 151px;
   justify-content: center;
   align-items: center;
   left: 0;
@@ -171,7 +171,7 @@ Flex Nav
   background-size: 1024px;
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-}
+} */
 @keyframes moon-travel-data-v-34f673e0 {
   0% {
       background-position-x: 0;
@@ -200,11 +200,11 @@ opacity: .9;
   color: #fff;
   font-size: 22px !important;
 }
-nav.clapat-nav-wrapper {
+/* nav.clapat-nav-wrapper {
   opacity: 0;
   visibility: hidden;
   display: none;
-}
+} */
 .flexnav.one-page {
   position: fixed;
   top: 50px;

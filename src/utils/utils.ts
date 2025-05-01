@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import product_data from '@/data/product-data';
+import clsx from 'clsx';
 
 // Get max price
 export function maxPrice(): number {
