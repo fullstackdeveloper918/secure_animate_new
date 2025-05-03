@@ -32,7 +32,7 @@ export default function Home() {
               <PainSection />
               {/* <AnimatedPinDemo /> */}
              
-              <div className="awardsSec">
+              <div className="awardsSec" data-aos="fade-up">
                 <AwardOne data={data} />
                 {/* <BeamsBackground data={data}/> */}
               </div>

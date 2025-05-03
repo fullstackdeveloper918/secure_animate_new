@@ -76,7 +76,7 @@ function PainSection() {
   console.log('fixed', isFixed);
 
   return (
-    <div className="relative">
+    <div className="relative " data-aos="fade-right">
       <div ref={firstSectionRef} className="mainCoantinersec">
         <motion.section
           style={{ backgroundColor }}
