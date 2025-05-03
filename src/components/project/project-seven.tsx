@@ -128,7 +128,7 @@ export default function ProjectSeven() {
           </div>
 
           {/* Navigation Arrows */}
-          <div className="absolute bottom-8 right-8 flex space-x-4">
+          <div className="absolute bottom-8 right-8 flex space-x-4 bottom-position">
             <button
               onClick={prevSlide}
               className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"

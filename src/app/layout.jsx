@@ -93,7 +93,6 @@ export default function RootLayout({ children }) {
           defer
         />
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js" defer />
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer />
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"
           defer

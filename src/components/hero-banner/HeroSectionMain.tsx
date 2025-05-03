@@ -133,14 +133,29 @@ export default function HeroSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.6 }}
           >
-            <button className="relative z-[9999]">
-              <Link
+            <button className="relative z-[9999] bannerbtn">
+              <Link className="header-button ajax-link" href="/contact-us">
+                          <div className="button-icon-link right">
+                            <div className="icon-wrap-scale">
+                              <div className="icon-wrap parallax-wrap">
+                                <div className="button-icon parallax-element">
+                                  {/* <i className="fa-solid fa-arrow-right"></i> */}
+                                  <Rocket className="ml-2 h-5 w-5" />
+                                </div>
+                              </div>
+                            </div>
+                            <div className="button-text sticky right">
+                              <span data-hover="Let's Talk">Start Your Mission <Rocket className="ml-2 h-5 w-5" /></span>
+                            </div>
+                          </div>
+                        </Link>
+              {/* <Link
                 href="/contact-us"
                 id="btnTwo"
                 className="BtnTwo btnWrapper rounded-[50px] text-white px-6 py-3 flex items-center justify-center"
               >
                 Start Your Mission <Rocket className="ml-2 h-5 w-5" />
-              </Link>
+              </Link> */}
             </button>
 
           </motion.div>

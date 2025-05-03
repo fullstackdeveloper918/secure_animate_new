@@ -473,6 +473,9 @@
   width: 100%;
   max-width: 70% !important;
 }
+.cn-contactform-area {
+  padding-top: 8vw !important;
+}
 .conatct-col h2,
 .conatct-col p {
   color: #000 !important;
@@ -498,6 +501,12 @@
   .cn-contact-right h2 {
     font-size: 30px;
   }
+}
+
+@media (max-width:1300px){
+  .contact-container {
+    max-width: 100% !important;
+}
 }
 
 @media screen and (max-width: 1299px) {
@@ -646,6 +655,7 @@
   }
   .contact-container {
     max-width: 100% !important;
+    padding-inline: 20px;
   }
   .contactDiv {
     gap: 30px;

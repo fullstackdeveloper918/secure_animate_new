@@ -134,7 +134,7 @@ setActive(!active)
                   </Link>
 
                   {/* Only show the submenu for "Service" */}
-                  {/* {item === 'Service' && (
+                  {item === 'Service' && (
                     <div className="sub-menu">
                       <a href="/service/serversetupconfiguration">Server & Cloud Management</a>
                       <a href="/service/threatdetection">Cybersecurity Solutions Service</a>
@@ -150,12 +150,12 @@ setActive(!active)
                         Secure Payments & Fraud Detection
                       </a>
                     </div>
-                  )} */}
+                  )}
                 </li>
               ))}
             </ul>
           </nav>
-          {/* <Link className="header-button ajax-link" href="/contact-us">
+          <Link className="header-button ajax-link" href="/contact-us">
             <div className="button-icon-link right">
               <div className="icon-wrap-scale">
                 <div className="icon-wrap parallax-wrap">
@@ -168,22 +168,16 @@ setActive(!active)
                 <span data-hover="Let's Talk">Let's Talk</span>
               </div>
             </div>
-          </Link> */}
+          </Link>
 
-          <div className="button-wrap right menu burger-lines">
+          <div className="button-wrap right menu burger-lines d-none mobile-menu">
   <div className="icon-wrap parallax-wrap" 
-  // onClick={() => setActive(prev => !prev)}
+  onClick={() => setActive(prev => !prev)}
   >
     <div className="button-icon parallax-element">
     <div className="sticky right">
-        <span 
-        // data-hover={active ? "Close" : "Menu"}
-        >
-          Contact Us
-          {/* {active ? "Close" : "Menu"} */}
-        </span>
       </div>
-      {/* <div id="burger-wrapper">
+      <div id="burger-wrapper">
       {active ? (
               // Close Icon
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -198,7 +192,7 @@ setActive(!active)
                 <rect x="3" y="16" width="18" height="2" fill="white" />
               </svg>
             )}
-      </div> */}
+      </div>
     </div>
   </div>
 

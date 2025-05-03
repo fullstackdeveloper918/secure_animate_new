@@ -1904,7 +1904,7 @@ scale-up .link,
   display: block;
   pointer-events: initial;
   z-index: 10;
-  max-width: 210px;
+  max-width: 310px;
 }
 
 #clapat-page-content:not(.no-css-animation) #clapat-logo img {
@@ -2647,7 +2647,7 @@ scale-up .link,
 }
 
 .button-wrap.right.burger-lines {
-  right: -30px;
+  right: 0px;
 }
 
 .burger-lines #menu-burger {
@@ -2822,6 +2822,7 @@ scale-up .link,
   font-size: 14px;
   background-color: #ffba00;
   border-radius: 36px;
+  padding: 0px;
 }
 
 .light-content .button-icon-link .button-icon {
@@ -3600,6 +3601,7 @@ p .link-text {
   }
   .bannercontent {
     padding-inline: 2rem;
+    padding-top: 30px;
 }
 }
 @media only screen and (max-width: 1466px) {

@@ -1,0 +1,90 @@
+.button {
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+  border: 1px solid var(--gray-800);
+  background-color: var(--gray-800);
+  color: var(--gray-25);
+  text-align: center;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: .6rem;
+  justify-content: center;
+  align-items: center;
+  padding: .6rem 1.35rem;
+  font-size: .875rem;
+  text-decoration: none;
+  transition: color .6s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.button.is-green {
+  border-color: var(--green);
+  background-color: var(--green);
+  color: var(--gray-900);
+}
+
+.button.is-secondary {
+  color: var(--gray-900);
+  background-color: transparent;
+  transition: border-color .6s, color .6s;
+}
+
+.button.is-green.is-secondary {
+  color: var(--gray-25);
+  background-color: rgba(97, 255, 201, 0);
+}
+
+.button-text {
+  z-index: 2;
+  position: relative;
+}
+
+.button-circle-wrapper {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-icon {
+  z-index: 2;
+  width: 1rem;
+  height: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.button-circlee {
+  color: var(--white);
+  width: 80%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--border-radius--button-circle);
+  position: absolute;
+  top: 0;
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  height: 250px;
+  transition: all .2s ease-in-out;
+  will-change: transform, width, height, color;
+  border: 1px solid transparent;
+}
+
+.button.is-green.is-secondary:hover {
+  color: var(--gray-800);
+  border-color: var(--green);
+}
+
+.button.is-green.is-secondary:hover .button-circlee {
+  background-color: var(--green);
+  transform: translate3d(0px, -43%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  width: 100%;
+}

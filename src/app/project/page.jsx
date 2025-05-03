@@ -1,15 +1,13 @@
 'use client';
-// import ClapatSlider from '@/components/sliderProject/sliderProject';
 import React, { useEffect } from 'react';
 import Justfor from '../../../public/images/just-for.png';
 import Link from 'next/link';
 import Image from 'next/image';
 const page = () => {
   useEffect(() => {
-    // Example DOM manipulation (ensure elements exist before accessing them)
     const preloaderWrap = document.querySelector('.preloader-wrap');
     if (preloaderWrap) {
-      preloaderWrap.classList.add('loaded'); // Add a class to indicate loaded state
+      preloaderWrap.classList.add('loaded');
     }
   }, []);
 

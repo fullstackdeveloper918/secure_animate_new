@@ -7,7 +7,7 @@
   position: relative;
   overflow: hidden;
   margin-top: 0rem;
-  height: 50vw;
+  height: 65vw;
 }
 
 .content h2 {
@@ -20,9 +20,9 @@
 }
 
 .content p {
-  font-size: 1.2em;
-  color: #666;
-  max-width: 800px;
+  font-size: 1.4em;
+  color: #bdbdbd;
+  max-width: 880px;
   margin: 0 auto;
 }
 
@@ -179,7 +179,7 @@
     max-width: 200px;
   }
   .content h2 {
-    font-size: 32px;
+    font-size: 42px;
     max-width: 800px;
     line-height: 1.2;
   }

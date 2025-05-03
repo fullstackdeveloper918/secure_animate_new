@@ -7,14 +7,17 @@ import AwardOne from '@/components/award/award-one';
 import ProjectTextLine from '@/components/project/project-text-line';
 import TeamOne from '@/components/team/team-one';
 import TestimonialOne from '@/components/testimonial/testimonial-one';
-import BlogOne from '@/components/blog/blog-one';
+// import BlogOne from '@/components/blog/blog-one';
+import { BlogSection } from '@/components/new-blog/BlogSection';
 import FooterFour from '@/layouts/footers/footer-four';
 import SecureSection from '@/components/whysecure/SecureSection';
 import ProjectSix from '@/components/project/project-six';
 import ClientWrapper from '@/components/ClientWrapper';
-import GalaxyBackground from '@/components/project/galaxy-background';
+// import GalaxyBackground from '@/components/project/galaxy-background';
 import ProjectSeven from '@/components/project/project-seven';
-import BeamsBackground from '@/components/project/project-eight';
+import ContactOne from '@/components/contact/contact-one';
+import ContactTwo from '@/components/contact/contact-two';
+// import BeamsBackground from '@/components/project/project-eight';
 
 export default function Home() {
   return (
@@ -30,10 +33,11 @@ export default function Home() {
               {/* <AnimatedPinDemo /> */}
              
               <div className="awardsSec">
-                {/* <AwardOne data={data} /> */}
-                <BeamsBackground data={data}/>
+                <AwardOne data={data} />
+                {/* <BeamsBackground data={data}/> */}
               </div>
             </div>
+
 
             {/* Footer */}
             <footer className="clapat-footer hidden">
@@ -112,9 +116,13 @@ export default function Home() {
             <TeamOne data={data} /> */}
             {/* <TestimonialOne data={data} /> */}
             <div className="awardsSec">
-              <BlogOne />
+              {/* <BlogOne /> */}
+              <BlogSection />
             </div>
  
+            <div>
+              <ContactTwo />
+            </div>
           </main>
           {/* <GalaxyBackground /> */}
 
