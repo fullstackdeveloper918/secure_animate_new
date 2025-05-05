@@ -2657,8 +2657,8 @@ scale-up .link,
     background-color: transparent;
     display: block;
     width: auto;
-    height: 44px;
-    line-height: 44px;
+    height: 35px;
+    line-height: 30px;
     border-radius: 44px;
     position: relative;
     cursor: pointer;
@@ -2709,9 +2709,14 @@ scale-up .link,
     opacity: 0;
 }
 
+header.clapat-header.classic-menu.invert-header .button-icon-link.right .icon-wrap-scale {
+    left: auto;
+    right: -5px;
+    top: -4px;
+}
 .button-icon-link.right .icon-wrap-scale {
     left: auto;
-    right: 0;
+    right: 0px;
 }
 
 .button-icon-link:hover .icon-wrap-scale {
@@ -2757,7 +2762,7 @@ scale-up .link,
 .button-icon-link .button-text {
     font-weight: 500;
     font-size: 14px;
-    line-height: 40px;
+    line-height: 30px;
     margin: 0;
     overflow: hidden;
     width: auto;
@@ -2772,7 +2777,7 @@ scale-up .link,
 }
 
 .button-icon-link.right:hover .button-text {
-    padding: 0 50px 0 25px;
+    padding: 0 40px 0 15px;
 }
 
 .button-icon-link .button-text span {

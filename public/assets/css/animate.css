@@ -1800,6 +1800,17 @@ a#btnTwo {
   padding: 0 60px 0 25px;
 }
 /* banner-btn end*/
+
+section#hero::before {
+  position: absolute;
+  content: '';
+  background: linear-gradient(45deg, #000000c4, transparent);
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
 @media (max-width: 1440px) {
   .astronutImgcircle > div:first-child {
     height: 30px;
@@ -2579,7 +2590,33 @@ p.bigger.has-opacity {
 .header-link .sub-menu a:hover {
   text-decoration: underline;
 }
+/* blog */
+.awardsSec h2.heading-style-h3 {
+  font-size: 10vw;
+  width: 100%;
+  white-space: pre;
+}
 
+.awardsSec .max-width-small.align-center {
+  max-width: 100% !important;
+}
+
+.awardsSec .text-align-center {
+  width: 100%;
+  max-width: 100%;
+  left: 0 !important;
+}
+
+.awardsSec p.text-size-medium {
+  font-size: 2vw;
+  width: 100%;
+  max-width: 100%;
+  white-space: pre;
+}
+.banner_changes button {
+  background: #fff;
+}
+/* blog end */
 @media (max-width: 1467px) {
   /* .classic-menu .flexnav li a span {
     height: 63px;

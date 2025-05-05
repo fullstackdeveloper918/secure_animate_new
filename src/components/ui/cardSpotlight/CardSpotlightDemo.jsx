@@ -1,5 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { GraduationCap, Sparkles, Code2, ArrowRight } from "lucide-react";
+
 import { motion } from "framer-motion";
 function SpotlightCard({ icon: Icon, title, description }) {
   const divRef = useRef(null);
@@ -27,8 +28,11 @@ function SpotlightCard({ icon: Icon, title, description }) {
     setOpacity(0);
   };
 
+  
+
   return (
     <div
+
       ref={divRef}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
@@ -36,17 +40,20 @@ function SpotlightCard({ icon: Icon, title, description }) {
       className={`relative overflow-hidden rounded-xl border border-gray-800 bg-black px-8 py-8 shadow-lg transition-all duration-500 minheight400 ${
         isFocused ? "scale-[1.02]" : ""
       }`}
+      
     >
       <div
         className="pointer-events-none absolute -inset-px transition duration-300"
+       
         style={{
           opacity,
           background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(231, 228, 228, 0.15), transparent 40%)`,
         }}
+         
       />
       <Icon className="h-10 w-10 text-white" />
-      <h3 className="mt-4 text-xl font-medium text-white">{title}</h3>
-      <p className="mt-2 text-gray-400">{description}</p>
+      <h3 className="mt-4 text-xl font-medium text-white" >{title}</h3>
+      <p className="mt-2 text-gray-400" >{description}</p>
       {/* <button className="mt-4 flex items-center text-white ">
         Learn more <ArrowRight className="ml-2 h-4 w-4" />
       </button> */}
@@ -95,7 +102,7 @@ function CardSpotlightDemo() {
         // }}
       >
         {cards.map((card, index) => (
-          <div key={index} className="flex-shrink-0 card-width">
+          <div key={index} className="flex-shrink-0 card-width" >
             <SpotlightCard {...card} />
           </div>
         ))}

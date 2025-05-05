@@ -62,7 +62,7 @@ export default function HeroSection() {
 
 
       {/* Waving astronaut - optimized animation */}
-      <motion.div
+      {/* <motion.div
         className="absolute w-[350px] h-[350px] z-20 astronuts"
         animate={controls}
         initial={{ x: 100, opacity: 0 }}
@@ -74,8 +74,8 @@ export default function HeroSection() {
           backfaceVisibility: 'hidden',
         }}
       >
-        {/* <Astronaut /> */}
-      </motion.div>
+        <Astronaut />
+      </motion.div> */}
 
       {/* Content - using simpler transforms */}
       <div className="container mx-auto relative z-[9999] bannercontent">
@@ -110,7 +110,7 @@ export default function HeroSection() {
             <span className="text-white block">
             Secure  
             </span>
-            <span className=" colorblue">This Galaxy </span>
+            <span className=" colorblue">Your Galaxy </span>
             <br />
             <span className="bg-clip-text text-transparent ">And Beyond</span>
           </motion.h1>

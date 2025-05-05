@@ -47,7 +47,7 @@ export default function BlogOne() {
         <div className="lg:flex items-center container-1775 mx-auto" style={{maxWidth: '85%'}}>
           <div className="blog_sec lg:w-1/4" style={{paddingRight: '40px'}}>
             <h2>Our Blog</h2>
-            <p style={{textAlign: 'left'}}>Check the best marketing resources and the latest blogs about our company.</p>
+            <p >Check the best marketing resources and the latest blogs about our company.</p>
             <div
           className="flex items-center"
           style={{ marginTop: '43px', marginBottom: '30px' }}

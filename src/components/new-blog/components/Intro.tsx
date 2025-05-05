@@ -7,6 +7,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/Intro.css';
 // import { Link } from 'lucide-react';
 import { blog_home_five } from '@/data/blog-data';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 // import BlogItemTwo from './blog-item/blog-item-2';
 import Link from 'next/link';
 interface NewsProps {
@@ -27,6 +29,10 @@ const Intro: React.FC = () => {
   const [newsData, setNewsData] = useState<NewsProps[]>([]);
   const [newsLink, setNewsLink] = useState<any>('');
   const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
+
   useEffect(() => {
     const fetchBlogData = async () => {
       try {
@@ -75,11 +81,11 @@ const Intro: React.FC = () => {
         <div className="text-align-center" ref={textRef}>
           <div className="max-width-small align-center">
             <div className="margin-small">
-              <h2 className="heading-style-h3">
+              <h2 className="heading-style-h3" data-aos="fade-down">
                 <span className="light-green-underline">Our Blog</span>
               </h2>
             </div>
-            <p className="text-size-medium">
+            <p className="text-size-medium mt-10" data-aos="fade-down">
               Check the best marketing resources and the latest blogs about our company.
             </p>
 

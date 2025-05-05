@@ -8,6 +8,8 @@ import Image from 'next/image';
 import whatusImage4 from '../../../public/images/4.svg';
 import whatusImage5 from '../../../public/images/5.svg';
 import CardSpotlightDemo from '@/components/ui/cardSpotlight/CardSpotlightDemo.jsx';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function PainSection() {
   const firstSectionRef = useRef(null);
@@ -18,6 +20,10 @@ function PainSection() {
     target: firstSectionRef,
     offset: ['start end', 'end start'],
   });
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
 
   const smoothProgress = useSpring(firstSectionProgress, {
     stiffness: 100,
@@ -98,7 +104,7 @@ function PainSection() {
           transition={{ duration: 0.8 }}
           className="absolute top-[576px] inset-0 flex flex-col items-center justify-center bg-black text-white md:p-10 blacksec p-2 overflow-hidden"
         >
-          <motion.h2 className=" text-white font-bold text-center z-10 xl:mb-5 md:mb-12 mb-10 xxl:text-7xl xl:text-5xl text-3xl ">
+          <motion.h2 className=" text-white font-bold text-center z-10 xl:mb-5 md:mb-12 mb-10 xxl:text-7xl xl:text-5xl text-3xl " data-aos="fade-down">
             What Makes Us Different?
           </motion.h2>
           <div className="w-full sliderSec">

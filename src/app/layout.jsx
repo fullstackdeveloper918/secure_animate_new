@@ -82,6 +82,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/css/portfolio.css" />
         <link rel="stylesheet" href="/css/shortcodes.css" />
         <link rel="stylesheet" href="/css/assets.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
           rel="stylesheet"
@@ -107,6 +108,7 @@ export default function RootLayout({ children }) {
         <Script src="/js/common.js" defer />
         <Script src="/js/contact.js" defer />
         <Script src="/js/scripts.js" defer />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       </head>
       <body
         id="body"
@@ -115,9 +117,11 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider defaultTheme="light">
           {/* <ClientWrapper> */}
-            {children}
-            {/* </ClientWrapper> */}
+          {children}
+          {/* </ClientWrapper> */}
         </ThemeProvider>
+
+        {/* <script>AOS.init();</script> */}
       </body>
     </html>
   );

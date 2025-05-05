@@ -1,9 +1,7 @@
 "use client"
-
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-
 const slides = [
   {
     id: 1,
@@ -24,21 +22,17 @@ const slides = [
     image: "/images/01hero04.png?height=600&width=800",
   },
 ]
-
 export default function ProjectSeven() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isShattered, setIsShattered] = useState(false)
   const [hasShattered, setHasShattered] = useState(false) // Track if shattered once
   const imageRefs = useRef<(HTMLDivElement | null)[]>([])
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
-
   const handleImageHover = () => {
     if (!hasShattered) {
       setIsShattered(true)
@@ -48,32 +42,27 @@ export default function ProjectSeven() {
       }, 120)
     }
   }
-
   useEffect(() => {
     setIsShattered(false)
     setHasShattered(false) // Reset on slide change
   }, [currentSlide])
-
   const setImageRef = (index: number) => (el: HTMLDivElement | null) => {
     imageRefs.current[index] = el
   }
-  
   return (
     <section
       id="slider-section"
       className="relative min-h-screen flex items-center justify-center   transition-opacity duration-500"
     >
       <div className="absolute inset-0 bg-black z-0"></div>
-
       {/* Background Text */}
       <div className="absolute inset-0 flex items-center justify-center z-10 overflow-hidden">
-        <h1 className="text-[20vw] font-bold text-white opacity-5 transition-all duration-700 transform">
+        <h1 className="text-[20vw] font-bold text-white opacity-15 transition-all duration-700 transform">
           {slides[currentSlide].title}
         </h1>
       </div>
-
       {/* Slider Content */}
-      <div className="container mx-auto px-4 z-20 relative">
+      <div className="container mx-auto px-4 z-20 relative banner_changes">
         <div className="flex flex-col items-center">
           {/* Image with shatter effect */}
           <div className="relative w-full max-w-4xl h-[60vh] mb-8">
@@ -83,12 +72,10 @@ export default function ProjectSeven() {
                   const randomDelay = Math.random() * 0.5
                   const randomTranslate = `${(Math.random() - 0.5) * 20}px, ${(Math.random() - 0.5) * 20}px`
                   const randomRotate = `${(Math.random() - 0.5) * 10}deg`
-
                   return (
                     <div
                       key={i}
                       ref={setImageRef(i)}
-
                       className="relative overflow-hidden transition-all duration-300"
                       style={{
                         transform: `translate(${randomTranslate}) rotate(${randomRotate})`,
@@ -120,13 +107,11 @@ export default function ProjectSeven() {
               </div>
             )}
           </div>
-
           {/* Text Content */}
           <div className="text-center mb-12 transition-all duration-500 transform">
             <h2 className="text-4xl md:text-6xl font-bold mb-4">{slides[currentSlide].title}</h2>
             <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">{slides[currentSlide].description}</p>
           </div>
-
           {/* Navigation Arrows */}
           <div className="absolute bottom-8 right-8 flex space-x-4 bottom-position">
             <button

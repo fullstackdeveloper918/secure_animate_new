@@ -1,6 +1,8 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AwardOne = ({ cls = 'pt-md-125 pb-md-125 pt-50 pb-50', abStyle = false, data }) => {
 
@@ -19,11 +21,14 @@ const AwardOne = ({ cls = 'pt-md-125 pb-md-125 pt-50 pb-50', abStyle = false, da
 
   console.log("dataof", data)
   const [activeThumb, setActiveThumb] = React.useState(1);
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
   return (
     <div className={`tp-award-area ${cls}`}>
       <div className="container-1630 mx-auto">
         <div className="row">
-          <div className="col-xl-5 col-lg-5 col-md-12">
+          <div className="col-xl-5 col-lg-5 col-md-12" >
             <div className="tp-award-title-box">
               <span className="aboutIcon">
                 <svg
@@ -41,20 +46,20 @@ const AwardOne = ({ cls = 'pt-md-125 pb-md-125 pt-50 pb-50', abStyle = false, da
                     height="20"
                   ></path>
                 </svg>
-                <span>{data?.home_advanced_it_and_cyber_security_first_heading}</span>
+                <span data-aos="fade-right">{data?.home_advanced_it_and_cyber_security_first_heading}</span>
               </span>
-              <h4 className="tp-section-title">
+              <h4 className="tp-section-title" data-aos="fade-right">
                 {data?.home_advanced_it_and_cyber_security_second} <br />
                 {data?.home_advanced_it_and_cyber_security_third}
                 <br /> <span> {data?.home_advanced_it_and_cyber_security_fourth}</span>
               </h4>
-              <p className="awardsContent">{data?.home_advanced_it_and_cyber_security_paragraph}</p>
+              <p className="awardsContent" data-aos="fade-right">{data?.home_advanced_it_and_cyber_security_paragraph}</p>
               <div className="btn_sec flex gap-3 flex-wrap">
                 {/* <Link href="/contact" className="BtnOne btnWrapper">
                     Get started
                     </Link> */}
 
-                <Link href="/contact-us" className="BtnTwo btnWrapper">
+                <Link href="/contact-us" className="BtnTwo btnWrapper" data-aos="fade-right">
                   Let's Connect
                   <span>
                     <svg
@@ -109,10 +114,10 @@ const AwardOne = ({ cls = 'pt-md-125 pb-md-125 pt-50 pb-50', abStyle = false, da
                   className="tp-award-list-item d-flex align-items-center justify-content-between tp_fade_bottom"
                   rel={`tp-award-list-thumb-${item.id}`}
                 >
-                  <div className="tp-award-list-content-left d-flex align-items-center">
+                  <div className="tp-award-list-content-left d-flex align-items-center"  data-aos="fade-left">
                     <a href={item.link}>{item.title}</a>
                   </div>
-                  <div className="tp-award-list-content-right">
+                  <div className="tp-award-list-content-right"  data-aos="fade-left">
                     <a href={item.link}>See More</a>
                   </div>
                 </div>

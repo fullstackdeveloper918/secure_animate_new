@@ -9,10 +9,16 @@ import countryImage from '../../../public/images/country.png';
 import logoImg from '../../../public/images/secure365-logo-black.png';
 import styles from './SecureSection.module.css';
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SecureSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -47,7 +53,7 @@ const SecureSection = () => {
   console.log('mousePositon', mousePosition);
   // console.log("mousePositona",mousePositiona)
   return (
-    <section id="secure-section" className={styles.secureSection}>
+    <section id="secure-section" data-aos="fade-up-right" className={styles.secureSection}>
       <div
         className={`${styles.statsContainer}`}
         style={{
@@ -87,8 +93,9 @@ const SecureSection = () => {
           transform: `translate(${-mousePosition.x * 0.5}px, ${-mousePosition.y * 0.5}px)`,
           transition: 'transform 0.1s ease-out',
         }}
+        data-aos="flip-left"
       >
-        <div className={styles.changePosition}>
+        <div className={styles.changePosition} data-aos="flip-left">
           <Image src={Secure100} width={100} height={100} alt="Projects Icon" />
         </div>
         <h3>100+</h3>
@@ -102,7 +109,7 @@ const SecureSection = () => {
           transition: 'transform 0.1s ease-out',
         }}
       >
-        <div className={styles.changePosition}>
+        <div className={styles.changePosition} data-aos="flip-up">
           <Image src={projectImages} width={100} height={100} alt="Projects Delivered Icon" />
         </div>
         <h3>2500+</h3>
@@ -116,7 +123,7 @@ const SecureSection = () => {
           transition: 'transform 0.1s ease-out',
         }}
       >
-        <div className={styles.yearImages}>
+        <div className={styles.yearImages} data-aos="flip-right">
           <Image src={secureYear} width={100} height={100} alt="Years Icon" />
         </div>
         <h3>13+</h3>
@@ -130,7 +137,7 @@ const SecureSection = () => {
           transition: 'transform 0.1s ease-out',
         }}
       >
-        <div className={styles.addbgImages}>
+        <div className={styles.addbgImages} data-aos="flip-right">
           <Image src={countryImage} width={300} height={300} alt="Countries Served Icon" />
         </div>
         <h3>32+</h3>

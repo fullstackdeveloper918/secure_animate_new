@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 import styles from './RealEstateSection.module.css'; // We will use CSS Modules for styling
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const RealEstateSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
   useEffect(() => {
     const section = document.querySelector('#real-estate-section');
     const rocket = document.querySelector('.rocket');
@@ -35,14 +39,21 @@ const RealEstateSection = () => {
     };
   }, []);
 
+
+  
+
   // Adjust the formula to move the rocket further upwards
-  const rocketPosition = Math.min(scrollY / 4, 400); // Adjust 300 to move the rocket higher (the larger the value, the higher it moves)
+  const rocketPosition = Math.min(scrollY/2, 900); // Adjust 300 to move the rocket higher (the larger the value, the higher it moves)
+  // const rocketPosition =
+  // scrollY < 1800
+  //   ? Math.min(scrollY / 6, 800)
+  //   : Math.min(scrollY, 800);
 
   return (
-    <section id="real-estate-section" className={styles.realEstateSection}>
+    <section id="real-estate-section"  className={styles.realEstateSection}>
       <div className={styles.content}>
-        <h2>Navigating Your Business Through the Stars… and Safeguarding Every Step</h2>
-        <p>
+        <h2 data-aos="flip-right">Navigating Your Business Through the Stars… and Safeguarding Every Step</h2>
+        <p className='text-gray-50'>
           Think of Secure365 as your interstellar co-pilot, guiding you safely through the
           ever-expanding cosmos of modern technology. We blend visionary web development with
           rock-solid IT services, cloud solutions, and cybersecurity—ensuring that no matter which
@@ -56,7 +67,7 @@ const RealEstateSection = () => {
           className={styles.rocket}
           style={{
             transform: `translateY(-${rocketPosition}px)`, // Adjust the translateY to move up more
-            opacity: Math.max(1 - rocketPosition / 400, 0), // Optional: fade out effect as it moves up
+            opacity: Math.max(1 - rocketPosition / 1200, 0), // Optional: fade out effect as it moves up
           }}
         >
           {' '}
