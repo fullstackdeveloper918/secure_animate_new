@@ -17,27 +17,28 @@ import ClientWrapper from '@/components/ClientWrapper';
 import ProjectSeven from '@/components/project/project-seven';
 import ContactOne from '@/components/contact/contact-one';
 import ContactTwo from '@/components/contact/contact-two';
+// import Main from '@/components/astronaut/Main';
 // import BeamsBackground from '@/components/project/project-eight';
 
 export default function Home() {
   return (
     <ClientWrapper>
       {(data) => (
-        < >
+        <>
           <div id="content-scroll">
             <div id="main">
+              {/* <Main /> */}
               <HeroSectionMain />
               <RealEstateSection />
               <SecureSection />
               <PainSection />
               {/* <AnimatedPinDemo /> */}
-             
-              <div className="awardsSec" data-aos="fade-up">
+
+              <div className="awardsSec">
                 <AwardOne data={data} />
                 {/* <BeamsBackground data={data}/> */}
               </div>
             </div>
-
 
             {/* Footer */}
             <footer className="clapat-footer hidden">
@@ -101,10 +102,9 @@ export default function Home() {
           </div>
 
           <main>
-          
             {/* <ProjectSix /> */}
             <ProjectSeven />
-            
+
             {/* <div className="container-fluid p-0">
               <div className="row g-0">
                 <div className="col-xl-12">
@@ -119,7 +119,7 @@ export default function Home() {
               {/* <BlogOne /> */}
               <BlogSection />
             </div>
- 
+
             <div>
               <ContactTwo />
             </div>

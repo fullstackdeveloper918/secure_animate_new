@@ -92,7 +92,7 @@ function PainSection() {
             style={{ fontSize, scale }}
             className="text-center font-bold px-4 transition-colors duration-300 whitespace-nowrap"
           >
-            We Understand Your Pain
+            What Makes Us Different?
           </motion.h2>
         </motion.section>
       </div>
@@ -104,7 +104,10 @@ function PainSection() {
           transition={{ duration: 0.8 }}
           className="absolute top-[576px] inset-0 flex flex-col items-center justify-center bg-black text-white md:p-10 blacksec p-2 overflow-hidden"
         >
-          <motion.h2 className=" text-white font-bold text-center z-10 xl:mb-5 md:mb-12 mb-10 xxl:text-7xl xl:text-5xl text-3xl " data-aos="fade-down">
+          <motion.h2
+            className=" text-white font-bold text-center z-10 xl:mb-5 md:mb-12 mb-10 xxl:text-7xl xl:text-5xl text-3xl "
+            data-aos="fade-down"
+          >
             What Makes Us Different?
           </motion.h2>
           <div className="w-full sliderSec">

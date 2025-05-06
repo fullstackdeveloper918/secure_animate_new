@@ -1,54 +1,54 @@
-"use client"
-import { useState, useEffect, useRef } from "react"
-import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+'use client';
+import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 const slides = [
   {
     id: 1,
-    title: "INNOVATION",
-    description: "Pushing boundaries with cutting-edge technology",
-    image: "/images/01hero05.png?height=600&width=800",
+    title: 'INNOVATION',
+    description: 'Pushing boundaries with cutting-edge technology',
+    image: '/images/01hero05.png?height=600&width=800',
   },
   {
     id: 2,
-    title: "PERFORMANCE",
-    description: "Delivering exceptional results every time",
-    image: "/images/01hero03.png?height=600&width=800",
+    title: 'PERFORMANCE',
+    description: 'Delivering exceptional results every time',
+    image: '/images/01hero03.png?height=600&width=800',
   },
   {
     id: 3,
-    title: "EXCELLENCE",
-    description: "Setting new standards in the industry",
-    image: "/images/01hero04.png?height=600&width=800",
+    title: 'EXCELLENCE',
+    description: 'Setting new standards in the industry',
+    image: '/images/01hero04.png?height=600&width=800',
   },
-]
+];
 export default function ProjectSeven() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [isShattered, setIsShattered] = useState(false)
-  const [hasShattered, setHasShattered] = useState(false) // Track if shattered once
-  const imageRefs = useRef<(HTMLDivElement | null)[]>([])
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isShattered, setIsShattered] = useState(false);
+  const [hasShattered, setHasShattered] = useState(false); // Track if shattered once
+  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
   const handleImageHover = () => {
     if (!hasShattered) {
-      setIsShattered(true)
-      setHasShattered(true)
+      setIsShattered(true);
+      setHasShattered(true);
       setTimeout(() => {
-        setIsShattered(false)
-      }, 120)
+        setIsShattered(false);
+      }, 120);
     }
-  }
+  };
   useEffect(() => {
-    setIsShattered(false)
-    setHasShattered(false) // Reset on slide change
-  }, [currentSlide])
+    setIsShattered(false);
+    setHasShattered(false); // Reset on slide change
+  }, [currentSlide]);
   const setImageRef = (index: number) => (el: HTMLDivElement | null) => {
-    imageRefs.current[index] = el
-  }
+    imageRefs.current[index] = el;
+  };
   return (
     <section
       id="slider-section"
@@ -69,9 +69,9 @@ export default function ProjectSeven() {
             {isShattered ? (
               <div className="absolute inset-0 grid grid-cols-4 grid-rows-4 gap-1">
                 {Array.from({ length: 16 }).map((_, i) => {
-                  const randomDelay = Math.random() * 0.5
-                  const randomTranslate = `${(Math.random() - 0.5) * 20}px, ${(Math.random() - 0.5) * 20}px`
-                  const randomRotate = `${(Math.random() - 0.5) * 10}deg`
+                  const randomDelay = Math.random() * 0.5;
+                  const randomTranslate = `${(Math.random() - 0.5) * 20}px, ${(Math.random() - 0.5) * 20}px`;
+                  const randomRotate = `${(Math.random() - 0.5) * 10}deg`;
                   return (
                     <div
                       key={i}
@@ -84,7 +84,7 @@ export default function ProjectSeven() {
                       }}
                     >
                       <Image
-                        src={slides[currentSlide].image || "/01hero05.png"}
+                        src={slides[currentSlide].image || '/01hero05.png'}
                         alt={slides[currentSlide].title}
                         fill
                         className="object-cover"
@@ -93,13 +93,13 @@ export default function ProjectSeven() {
                         }}
                       />
                     </div>
-                  )
+                  );
                 })}
               </div>
             ) : (
               <div className="relative w-full h-full" onMouseEnter={handleImageHover}>
                 <Image
-                  src={slides[currentSlide].image || "/placeholder.svg"}
+                  src={slides[currentSlide].image || '/placeholder.svg'}
                   alt={slides[currentSlide].title}
                   fill
                   className="object-cover transition-all duration-500"
@@ -110,23 +110,25 @@ export default function ProjectSeven() {
           {/* Text Content */}
           <div className="text-center mb-12 transition-all duration-500 transform">
             <h2 className="text-4xl md:text-6xl font-bold mb-4">{slides[currentSlide].title}</h2>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">{slides[currentSlide].description}</p>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
+              {slides[currentSlide].description}
+            </p>
           </div>
           {/* Navigation Arrows */}
           <div className="absolute bottom-8 right-8 flex space-x-4 bottom-position">
             <button
               onClick={prevSlide}
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="p-2 rounded-full text-black bg-white/10 hover:bg-white/20 hover:text-white transition-colors"
               aria-label="Previous slide"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft className="hover:text-white" size={24} />
             </button>
             <button
               onClick={nextSlide}
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="p-2 rounded-full text-black bg-white/10 hover:bg-white/20 hover:text-white transition-colors"
               aria-label="Next slide"
             >
-              <ChevronRight size={24} />
+              <ChevronRight className="hover:text-white" size={24} />
             </button>
           </div>
           {/* <div className="discoverBtn">
@@ -139,5 +141,5 @@ export default function ProjectSeven() {
         </div>
       </div>
     </section>
-  )
+  );
 }
