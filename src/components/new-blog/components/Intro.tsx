@@ -5,12 +5,9 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/Intro.css';
-// import { Link } from 'lucide-react';
-import { blog_home_five } from '@/data/blog-data';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-// import BlogItemTwo from './blog-item/blog-item-2';
 import Link from 'next/link';
+import 'aos/dist/aos.css';
+
 interface NewsProps {
   id: number;
   title: string;
@@ -25,13 +22,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Intro: React.FC = () => {
   const textRef = useRef<HTMLDivElement>(null);
-
   const [newsData, setNewsData] = useState<NewsProps[]>([]);
-  const [newsLink, setNewsLink] = useState<any>('');
+  const [newsLink, setNewsLink] = useState<string>('');
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
-  }, []);
 
   useEffect(() => {
     const fetchBlogData = async () => {
@@ -45,20 +38,17 @@ const Intro: React.FC = () => {
         const data = await response.json();
         console.log('fetchBlogData', data);
         setNewsData(data.news);
-        setNewsLink(data.link); // Ensure API response structure is correct
+        setNewsLink(data.link);
       } catch (error) {
         console.error('Error fetching blog data:', error);
       } finally {
-        setLoading(false); // Stop loading when fetch is complete
+        setLoading(false);
       }
     };
     fetchBlogData();
   }, []);
-  console.log('fetchBlogDatasss', newsData);
-  // const blog_items = [...blog_home_five];
 
   useEffect(() => {
-    // Pin the intro text section
     if (textRef.current) {
       ScrollTrigger.create({
         trigger: '.intro-wrapper',
@@ -70,7 +60,6 @@ const Intro: React.FC = () => {
     }
 
     return () => {
-      // Clean up ScrollTrigger on unmount
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
@@ -89,12 +78,48 @@ const Intro: React.FC = () => {
               Check the best marketing resources and the latest blogs about our company.
             </p>
 
-            {/* <div className="flex items-center" style={{ marginTop: '43px', marginBottom: '30px' }}>
-              <Link href={newsLink} className="BtnOne btnWrapper px-12">
-                Read All Articles
-              </Link>
-            </div> */}
+            {!loading && newsLink && (
+              <div
+                className="flex items-center justify-center"
+                style={{ marginTop: '43px', marginBottom: '30px' }}
+              >
+                <Link href={newsLink} className="BtnOne btnWrapper px-12">
+                  Read All Articles
+                </Link>
+              </div>
+            )}
           </div>
+        </div>
+
+        {/* Render Blog Posts */}
+        <div className="blog-list-container">
+          {loading ? (
+            <p className="text-center">Loading...</p>
+          ) : (
+            newsData.map((news) => (
+              <div key={news.id} className="blog-card" data-aos="fade-up">
+                <img
+                  src={news.featured_image}
+                  alt={news.title}
+                  className="blog-image"
+                />
+                <h3 className="blog-title">{news.title}</h3>
+                <p className="blog-date">{news.date}</p>
+                <div
+                  className="blog-excerpt"
+                  dangerouslySetInnerHTML={{ __html: news.content.slice(0, 150) + '...' }}
+                />
+                <Link
+                  href={news.external_link || news.link}
+                  className="read-more"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read More
+                </Link>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>
