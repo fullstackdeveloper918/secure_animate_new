@@ -92,7 +92,7 @@ const Intro: React.FC = () => {
         </div>
 
         {/* Render Blog Posts */}
-        <div className="blog-list-container">
+        {/* <div className="blog-list-container">
           {loading ? (
             <p className="text-center">Loading...</p>
           ) : (
@@ -120,7 +120,7 @@ const Intro: React.FC = () => {
               </div>
             ))
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );
