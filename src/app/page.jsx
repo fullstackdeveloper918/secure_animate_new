@@ -7,7 +7,6 @@ import AwardOne from '@/components/award/award-one';
 import ProjectTextLine from '@/components/project/project-text-line';
 import TeamOne from '@/components/team/team-one';
 import TestimonialOne from '@/components/testimonial/testimonial-one';
-// import BlogOne from '@/components/blog/blog-one';
 import { BlogSection } from '@/components/new-blog/BlogSection';
 import FooterFour from '@/layouts/footers/footer-four';
 import SecureSection from '@/components/whysecure/SecureSection';
@@ -17,6 +16,8 @@ import ClientWrapper from '@/components/ClientWrapper';
 import ProjectSeven from '@/components/project/project-seven';
 import ContactOne from '@/components/contact/contact-one';
 import ContactTwo from '@/components/contact/contact-two';
+import BlogOne from '@/components/blog/blog-one';
+
 // import Main from '@/components/astronaut/Main';
 // import BeamsBackground from '@/components/project/project-eight';
 
@@ -116,8 +117,8 @@ export default function Home() {
             <TeamOne data={data} /> */}
             {/* <TestimonialOne data={data} /> */}
             <div className="awardsSec">
-              {/* <BlogOne /> */}
-              <BlogSection />
+              <BlogOne />
+{/*               <BlogSection /> */}
             </div>
 
             <div>
