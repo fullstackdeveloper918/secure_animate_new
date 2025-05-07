@@ -32,7 +32,7 @@ const ServiceDetailsMain = ({ serviceBannerData }) => {
 
   return (
     <Wrapper>
-      {/* <AnimationHeader /> */}
+      <AnimationHeader />
 
       {/* <div id="smooth-wrapper">
         <div id="smooth-content"> */}

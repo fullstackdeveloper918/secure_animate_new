@@ -503,10 +503,10 @@
   }
 }
 
-@media (max-width:1300px){
+@media (max-width: 1300px) {
   .contact-container {
     max-width: 100% !important;
-}
+  }
 }
 
 @media screen and (max-width: 1299px) {

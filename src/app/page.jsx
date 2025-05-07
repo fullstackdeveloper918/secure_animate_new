@@ -37,7 +37,7 @@ export default function Home() {
 
               <div className="awardsSec">
                 <AwardOne data={data} />
-                {/* <BeamsBackground data={data}/> */}
+                {/* <BeamsBackground data={data} /> */}
               </div>
             </div>
 
@@ -118,7 +118,7 @@ export default function Home() {
             {/* <TestimonialOne data={data} /> */}
             <div className="awardsSec">
               <BlogOne />
-{/*               <BlogSection /> */}
+              {/*               <BlogSection /> */}
             </div>
 
             <div>

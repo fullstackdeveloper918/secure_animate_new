@@ -37,7 +37,7 @@ const AboutUsMain = ({ aboutResponse, bannerResponse }) => {
 
   return (
     <Wrapper>
-      <div id="clapat-page-content">{/* <AnimationHeader /> */}</div>
+      <div id="clapat-page-content"> <AnimationHeader /> </div>
 
       {/* <div id="smooth-wrapper">
         <div id="smooth-content"> */}

@@ -34,7 +34,7 @@ const ServiceMain = ({ serviceData, serviceBannerData }) => {
 
   return (
     <Wrapper>
-      <div className="cd-index cd-main-content">{/* <AnimationHeader /> */}</div>
+      <div className="cd-index cd-main-content"> <AnimationHeader /> </div>
 
       {/* <div id="smooth-wrapper">
         <div id="smooth-content"> */}
